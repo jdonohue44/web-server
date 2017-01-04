@@ -12,8 +12,7 @@
   $database = mysqli_select_db($connection, DB_DATABASE);
 
   /* Ensure that tables exists. */
-  VerifyUsersTable($connection, DB_DATABASE);
-//   VerifyInterestsTable($connection, DB_DATABASE);
+  VerifyTables($connection, DB_DATABASE);
 
   /* If input fields are populated, add a row to the Employees table. */
   $user_name = htmlentities($_POST['Name']);
