@@ -2,7 +2,6 @@
 <html>
 <body>
 <h1>Espress</h1>
-<!-- 
 <?php
 
   /* Connect to MySQL and select the database. */
@@ -13,8 +12,8 @@
   $database = mysqli_select_db($connection, DB_DATABASE);
 
   /* Ensure that tables exists. */
-  VerifyUsersTable($connection, DB_DATABASE); 
-//   VerifyInterestsTable($connection, DB_DATABASE); 
+  VerifyUsersTable($connection, DB_DATABASE);
+//   VerifyInterestsTable($connection, DB_DATABASE);
 
   /* If input fields are populated, add a row to the Employees table. */
   $user_name = htmlentities($_POST['Name']);
@@ -24,7 +23,6 @@
     AddUser($connection, $user_name, $user_email);
   }
 ?>
- -->
 
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -55,10 +53,9 @@
     <td>Email</td>
   </tr>
 
-<!-- 
 <?php
 
-$result = mysqli_query($connection, "SELECT * FROM USERS"); 
+$result = mysqli_query($connection, "SELECT * FROM USERS");
 
 while($query_data = mysqli_fetch_row($result)) {
   echo "<tr>";
@@ -68,25 +65,20 @@ while($query_data = mysqli_fetch_row($result)) {
   echo "</tr>";
 }
 ?>
- -->
 
 </table>
 
 <!-- Clean up. -->
-<!-- 
 <?php
 
   mysqli_free_result($result);
   mysqli_close($connection);
 
 ?>
- -->
 
 </body>
 </html>
 
-
-<!-- 
 <?php
 
 /* Add an employee to the table. */
@@ -102,16 +94,16 @@ function AddUser($connection, $name, $email) {
 /* Check whether the table exists and, if not, create it. */
 /*
 	USERS
-		
+
 		ID	EMAIL	NAME
-	
+
 	INTERESTS
 		ID 	NAME	USER
 
 */
 function VerifyTables($connection, $dbName) {
-  if(!TableExists("USERS", $connection, $dbName)) 
-  { 
+  if(!TableExists("USERS", $connection, $dbName))
+  {
      $query = "CREATE TABLE `USERS` (
          `ID` int(11) NOT NULL AUTO_INCREMENT,
          `Name` varchar(45) DEFAULT NULL,
@@ -122,9 +114,9 @@ function VerifyTables($connection, $dbName) {
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating users table.</p>");
   }
-  
-//     if(!TableExists("INTERESTS", $connection, $dbName)) 
-//   { 
+
+//     if(!TableExists("INTERESTS", $connection, $dbName))
+//   {
 //      $query = "CREATE TABLE `INTERESTS` (
 //          `ID` int(11) NOT NULL AUTO_INCREMENT,
 //          `Interest` varchar(45) DEFAULT NULL,
@@ -133,7 +125,7 @@ function VerifyTables($connection, $dbName) {
 //          FOREIGN KEY (`User_Id`),
 //          UNIQUE KEY `ID_UNIQUE` (`ID`)
 //        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
-// 
+//
 //      if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
 //   }
 }
@@ -144,7 +136,7 @@ function TableExists($tableName, $connection, $dbName) {
   $t = mysqli_real_escape_string($connection, $tableName);
   $d = mysqli_real_escape_string($connection, $dbName);
 
-  $checktable = mysqli_query($connection, 
+  $checktable = mysqli_query($connection,
       "SELECT TABLE_NAME FROM information_schema.TABLES WHERE TABLE_NAME = '$t' AND TABLE_SCHEMA = '$d'");
 
   if(mysqli_num_rows($checktable) > 0) return true;
@@ -152,4 +144,3 @@ function TableExists($tableName, $connection, $dbName) {
   return false;
 }
 ?>
- -->
