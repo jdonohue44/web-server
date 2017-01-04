@@ -111,7 +111,7 @@ function AddUser($connection, $name, $email) {
   //  $present = sprintf("SELECT * FROM USERS where Name='%s'",
   //  mysqli_real_escape_string($n));
   //  if(!$present){
-     $query = "INSERT INTO USERS VALUES ('$n', '$e');";
+     $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
   //  }
 
    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
