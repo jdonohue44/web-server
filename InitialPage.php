@@ -13,7 +13,7 @@
 
   /* Ensure that tables exists. */
   VerifyUsersTable($connection, DB_DATABASE); 
-  VerifyInterestsTable($connection, DB_DATABASE); 
+//   VerifyInterestsTable($connection, DB_DATABASE); 
 
   /* If input fields are populated, add a row to the Employees table. */
   $user_name = htmlentities($_POST['Name']);
