@@ -2,6 +2,7 @@
 <html>
 <body>
 <h1>Espress</h1>
+<!-- 
 <?php
 
   /* Connect to MySQL and select the database. */
@@ -23,6 +24,7 @@
     AddUser($connection, $user_name, $user_email);
   }
 ?>
+ -->
 
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -53,6 +55,7 @@
     <td>Email</td>
   </tr>
 
+<!-- 
 <?php
 
 $result = mysqli_query($connection, "SELECT * FROM USERS"); 
@@ -65,21 +68,25 @@ while($query_data = mysqli_fetch_row($result)) {
   echo "</tr>";
 }
 ?>
+ -->
 
 </table>
 
 <!-- Clean up. -->
+<!-- 
 <?php
 
   mysqli_free_result($result);
   mysqli_close($connection);
 
 ?>
+ -->
 
 </body>
 </html>
 
 
+<!-- 
 <?php
 
 /* Add an employee to the table. */
@@ -145,3 +152,4 @@ function TableExists($tableName, $connection, $dbName) {
   return false;
 }
 ?>
+ -->
