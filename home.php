@@ -109,7 +109,7 @@ function AddUser($connection, $name, $email) {
    $n = mysqli_real_escape_string($connection, $name);
    $e = mysqli_real_escape_string($connection, $email);
 
-   $query = "REPLACE INTO `USERS` (`Name`, `Email`) VALUES ('$n', '$e');";
+   $query = "INSERT INTO `USERS` (`Name`, `Email`) VALUES ('$n', '$e');";
 
    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 }
