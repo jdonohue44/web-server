@@ -23,6 +23,8 @@
 
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
+    $user_name = '';
+    $user_email = '';
   }
 ?>
 
@@ -66,7 +68,7 @@
 </form>
 
 <br /><br /><br />
-<h3>DB:</h3>
+<h4>DB:</h4>
 
 <!-- Display table data. -->
 <table border="1" cellpadding="2" cellspacing="2">
@@ -93,10 +95,8 @@ while($query_data = mysqli_fetch_row($result)) {
 
 <!-- Clean up. -->
 <?php
-
   mysqli_free_result($result);
   mysqli_close($connection);
-
 ?>
 
 </body>
