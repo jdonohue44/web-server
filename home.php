@@ -108,11 +108,10 @@ while($query_data = mysqli_fetch_row($result)) {
 function AddUser($connection, $name, $email) {
    $n = mysqli_real_escape_string($connection, $name);
    $e = mysqli_real_escape_string($connection, $email);
-  //  $present = sprintf("SELECT * FROM USERS where Name='%s'",
-  //  mysqli_real_escape_string($n));
-  //  if(!$present){
+   $present = "SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Name` = '$n';";
+   if(mysqli_num_rows($present)==0){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
-  //  }
+   }
 
    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 }
