@@ -1,7 +1,10 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 <body>
-<h1>Espress</h1>
+<h1 align="center" id="banner">Espress</h1>
 <?php
 
   /* Connect to MySQL and select the database. */
@@ -23,6 +26,7 @@
   }
 ?>
 
+<h2>Contact Information</h2>
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0">
@@ -43,6 +47,26 @@
     </tr>
   </table>
 </form>
+
+<h2>Interests</h2>
+<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+  <table border="0">
+    <tr>
+      <td>Interest</td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" name="Interest" maxlength="45" size="30" />
+      </td>
+      <td>
+        <input type="submit" value="Add" />
+      </td>
+    </tr>
+  </table>
+</form>
+
+<br /><br /><br />
+<h3>DB:</h3>
 
 <!-- Display table data. -->
 <table border="1" cellpadding="2" cellspacing="2">
