@@ -19,7 +19,7 @@
   $user_name = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
 
-  if (strlen($user_name) || strlen($user_email)) {
+  if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
   }
 ?>
@@ -116,19 +116,19 @@ function VerifyTables($connection, $dbName) {
      if(!mysqli_query($connection, $query)) echo("<p>Error creating users table.</p>");
   }
   
-    if(!TableExists("INTERESTS", $connection, $dbName)) 
-  { 
-     $query = "CREATE TABLE `INTERESTS` (
-         `ID` int(11) NOT NULL AUTO_INCREMENT,
-         `Interest` varchar(45) DEFAULT NULL,
-         `User_Id` int(11) NOT NULL,
-         PRIMARY KEY (`ID`),
-         FOREIGN KEY (`User_Id`),
-         UNIQUE KEY `ID_UNIQUE` (`ID`)
-       ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
-
-     if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
-  }
+//     if(!TableExists("INTERESTS", $connection, $dbName)) 
+//   { 
+//      $query = "CREATE TABLE `INTERESTS` (
+//          `ID` int(11) NOT NULL AUTO_INCREMENT,
+//          `Interest` varchar(45) DEFAULT NULL,
+//          `User_Id` int(11) NOT NULL,
+//          PRIMARY KEY (`ID`),
+//          FOREIGN KEY (`User_Id`),
+//          UNIQUE KEY `ID_UNIQUE` (`ID`)
+//        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
+// 
+//      if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
+//   }
 }
 
 
