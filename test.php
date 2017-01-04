@@ -1,8 +1,7 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <html>
 <body>
-<h1>Espress</h1>
-<!-- 
+<h1>Sample page</h1>
 <?php
 
   /* Connect to MySQL and select the database. */
@@ -12,36 +11,34 @@
 
   $database = mysqli_select_db($connection, DB_DATABASE);
 
-  /* Ensure that tables exists. */
-  VerifyUsersTable($connection, DB_DATABASE); 
-//   VerifyInterestsTable($connection, DB_DATABASE); 
+  /* Ensure that the Employees table exists. */
+  VerifyEmployeesTable($connection, DB_DATABASE); 
 
   /* If input fields are populated, add a row to the Employees table. */
-  $user_name = htmlentities($_POST['Name']);
-  $user_email = htmlentities($_POST['Email']);
+  $employee_name = htmlentities($_POST['Name']);
+  $employee_address = htmlentities($_POST['Address']);
 
-  if (strlen($user_name) && strlen($user_email)) {
-    AddUser($connection, $user_name, $user_email);
+  if (strlen($employee_name) || strlen($employee_address)) {
+    AddEmployee($connection, $employee_name, $employee_address);
   }
 ?>
- -->
 
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0">
     <tr>
       <td>Name</td>
-      <td>Email</td>
+      <td>Address</td>
     </tr>
     <tr>
       <td>
         <input type="text" name="Name" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" name="Email" maxlength="90" size="60" />
+        <input type="text" name="Address" maxlength="90" size="60" />
       </td>
       <td>
-        <input type="submit" value="Signup" />
+        <input type="submit" value="Add Data" />
       </td>
     </tr>
   </table>
@@ -52,13 +49,12 @@
   <tr>
     <td>ID</td>
     <td>Name</td>
-    <td>Email</td>
+    <td>Address</td>
   </tr>
 
-<!-- 
 <?php
 
-$result = mysqli_query($connection, "SELECT * FROM USERS"); 
+$result = mysqli_query($connection, "SELECT * FROM Employees"); 
 
 while($query_data = mysqli_fetch_row($result)) {
   echo "<tr>";
@@ -68,76 +64,48 @@ while($query_data = mysqli_fetch_row($result)) {
   echo "</tr>";
 }
 ?>
- -->
 
 </table>
 
 <!-- Clean up. -->
-<!-- 
 <?php
 
   mysqli_free_result($result);
   mysqli_close($connection);
 
 ?>
- -->
 
 </body>
 </html>
 
 
-<!-- 
 <?php
 
 /* Add an employee to the table. */
-function AddUser($connection, $name, $email) {
+function AddEmployee($connection, $name, $address) {
    $n = mysqli_real_escape_string($connection, $name);
-   $e = mysqli_real_escape_string($connection, $email);
+   $a = mysqli_real_escape_string($connection, $address);
 
-   $query = "REPLACE INTO `USERS` (`Name`, `Email`) VALUES ('$n', '$e');";
+   $query = "INSERT INTO `Employees` (`Name`, `Address`) VALUES ('$n', '$a');";
 
    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
 }
 
 /* Check whether the table exists and, if not, create it. */
-/*
-	USERS
-		
-		ID	EMAIL	NAME
-	
-	INTERESTS
-		ID 	NAME	USER
-
-*/
-function VerifyTables($connection, $dbName) {
-  if(!TableExists("USERS", $connection, $dbName)) 
+function VerifyEmployeesTable($connection, $dbName) {
+  if(!TableExists("Employees", $connection, $dbName)) 
   { 
-     $query = "CREATE TABLE `USERS` (
+     $query = "CREATE TABLE `Employees` (
          `ID` int(11) NOT NULL AUTO_INCREMENT,
          `Name` varchar(45) DEFAULT NULL,
-         `Email` varchar(90) DEFAULT NULL,
+         `Address` varchar(90) DEFAULT NULL,
          PRIMARY KEY (`ID`),
          UNIQUE KEY `ID_UNIQUE` (`ID`)
        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
 
-     if(!mysqli_query($connection, $query)) echo("<p>Error creating users table.</p>");
+     if(!mysqli_query($connection, $query)) echo("<p>Error creating table.</p>");
   }
-  
-//     if(!TableExists("INTERESTS", $connection, $dbName)) 
-//   { 
-//      $query = "CREATE TABLE `INTERESTS` (
-//          `ID` int(11) NOT NULL AUTO_INCREMENT,
-//          `Interest` varchar(45) DEFAULT NULL,
-//          `User_Id` int(11) NOT NULL,
-//          PRIMARY KEY (`ID`),
-//          FOREIGN KEY (`User_Id`),
-//          UNIQUE KEY `ID_UNIQUE` (`ID`)
-//        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
-// 
-//      if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
-//   }
 }
-
 
 /* Check for the existence of a table. */
 function TableExists($tableName, $connection, $dbName) {
@@ -152,4 +120,3 @@ function TableExists($tableName, $connection, $dbName) {
   return false;
 }
 ?>
- -->
