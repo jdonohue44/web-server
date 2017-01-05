@@ -112,10 +112,10 @@ while($query_data = mysqli_fetch_row($result)) {
 ?>
 
 <script>
-  document.getElementById('validate_button').disabled = true;
-  document.getElementById('add_interest_button').disabled = true;
-  document.getElementById('interest_text').disabled = true;
-  document.getElementById('email_text').disabled = true;
+  $('#validate_button').disabled = true;
+  $('#add_interest_button').disabled = true;
+  $('#interest_text').disabled = true;
+  $('#email_text').disabled = true;
 
   // enable Email text when Name is entered
   $('#name_text').blur(function()
@@ -158,7 +158,11 @@ while($query_data = mysqli_fetch_row($result)) {
     $('#contact_h2').remove();
     $('#contact_table').remove();
     $('#validation_typing').remove();
+  }
 
+  function enableInterests(){
+    $('#add_interest_button').disabled = false;
+    $('#interest_text').disabled = false;
   }
 
 $("#validate").bind("click", validate);
