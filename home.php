@@ -113,6 +113,7 @@ function AddUser($connection, $name, $email) {
    $check_query = "SELECT * FROM `USERS` (`Name`,`Email`)";
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
+   echo "<h6>$num_rows</h6>";
    if($num_rows<1){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
