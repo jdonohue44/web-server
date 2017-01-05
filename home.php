@@ -42,7 +42,7 @@
 
 <h2 id="contact_h2">Contact Information</h2>
 <!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST" onsubmit="return removeContactInfo();">
+<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0" id="contact_table">
     <tr>
       <td>Name</td>
@@ -153,7 +153,6 @@ while($query_data = mysqli_fetch_row($result)) {
     $('#contact_h2').remove();
     $('#contact_table').remove();
     $('#validation_typing').remove();
-    return true;
   }
 
   function enableInterests(){
