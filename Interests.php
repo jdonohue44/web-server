@@ -32,15 +32,12 @@
     </table>
   </form>
 
-  <table id="interest_table">
-  </table>
+  <ul>
+  </ul>
 
   <script>
     $('#add_interest_button').click(function(){
-      $('#interest_table').find('tbody')
-      .append($('tr')
-        .append($('td')
-          .text($('#interest_text'))));
+      $('ul').append('<li>hi</li>');
       });
   // document.getElementById('interest_text').disabled = true;
   </script>
