@@ -39,10 +39,10 @@
 
 
 
-<h2>Contact Information</h2>
+<h2 id="contact_h2">Contact Information</h2>
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
-  <table border="0">
+  <table border="0" id="contact_table">
     <tr>
       <td>Name</td>
       <td>Email</td>
@@ -143,9 +143,21 @@ while($query_data = mysqli_fetch_row($result)) {
     $('h5').text(text);
   });
 
+  $(document).ready(function() {
+    $("#validate_button").click(function(){
+        removeContactInfo();
+    });
+});
+
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+  }
+
+  function removeContactInfo(){
+    $('#contact_h2').remove();
+    $('#contact_table').remove();
+
   }
 
 $("#validate").bind("click", validate);
