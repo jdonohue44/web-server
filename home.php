@@ -20,7 +20,6 @@
   /* If input fields are populated, add a row to the Employees table. */
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
-  $interest   = htmlentities($_POST['Interest']);
 
 
   if (strlen($user_name) && strlen($user_email)) {
