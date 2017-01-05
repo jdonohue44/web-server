@@ -19,10 +19,8 @@
   VerifyTables($connection, DB_DATABASE);
 
   /* If input fields are populated, add a row to the Employees table. */
-  $user_name  = htmlentities($_POST['name_text']);
-  $user_email = htmlentities($_POST['email_text']);
-
-  echo "<h1>HERE</h1>";
+  $user_name  = htmlentities($_POST['Name']);
+  $user_email = htmlentities($_POST['Email']);
 
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
@@ -50,10 +48,10 @@
     </tr>
     <tr>
       <td>
-        <input type="text" id="name_text" maxlength="45" size="30" />
+        <input type="text" name="Name" id="name_text" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" id="email_text" maxlength="55" size="40" />
+        <input type="text" name="Email" id="email_text" maxlength="55" size="40" />
       </td>
       <td>
         <input type="submit" id="validate_button" value="Validate/Register"/>
