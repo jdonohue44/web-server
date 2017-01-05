@@ -120,7 +120,10 @@ while($query_data = mysqli_fetch_row($result)) {
     document.getElementById('email_text').disabled = false;
   });
   $('#email_text').bind('input propertychange', function() {
-    console.log($(this).val());
+    var text = $(this).val();
+    function(text){
+      console.log(text);
+    }
   });
 </script>
 </body>
