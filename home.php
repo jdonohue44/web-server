@@ -128,19 +128,19 @@ while($query_data = mysqli_fetch_row($result)) {
   // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
     var text = $(this).val();
-    $("h5").text("");
+    $("#validation_typing").text("");
     var email = $("#email_text").val();
     if (validateEmail(email)) {
-      $("h5").text(email + " is valid!");
-      $("h5").css("color", "green");
+      $("#validation_typing").text(email + " is valid!");
+      $("#validation_typing").css("color", "green");
       document.getElementById('validate_button').disabled = false;
     } else {
-      $("h5").text(email + " is not valid.");
-      $("h5").css("color", "red");
+      $("#validation_typing").text(email + " is not valid.");
+      $("#validation_typing").css("color", "red");
       document.getElementById('validate_button').disabled = true;
     }
     return false;
-    $('h5').text(text);
+    $('#validation_typing').text(text);
   });
 
   $(document).ready(function() {
@@ -157,6 +157,7 @@ while($query_data = mysqli_fetch_row($result)) {
   function removeContactInfo(){
     $('#contact_h2').remove();
     $('#contact_table').remove();
+    $('#validation_typing').remove();
 
   }
 
