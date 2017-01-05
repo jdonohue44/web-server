@@ -56,7 +56,7 @@
         <input type="text" name="Email" id="email_text" maxlength="55" size="40" />
       </td>
       <td>
-        <input type="submit" name="validate_button" onclick="removeContactInfo();" value="Validate/Register"/>
+        <input type="submit" name="validate_button" value="Validate/Register"/>
       </td>
     </tr>
   </table>
@@ -144,7 +144,6 @@ while($query_data = mysqli_fetch_row($result)) {
     $('#validation_typing').text(text);
   });
 
-
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -160,6 +159,8 @@ while($query_data = mysqli_fetch_row($result)) {
     document.getElementById('add_interest_button').disabled = false;
     document.getElementById('interest_text').disabled = false;
   }
+
+  document.getElementsByName("validate_button")[0].onclick = function() {removeContactInfo()};
 
 </script>
 </body>
