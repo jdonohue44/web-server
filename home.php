@@ -22,6 +22,9 @@
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
 
+  echo "<h3>$user_name</h3>";
+  echo "<h3>$user_email</h3>";
+
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
     $user_name  = '';
