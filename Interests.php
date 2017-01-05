@@ -37,7 +37,8 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      $('#interest_table tbody').append($('tr')
+      $('#interest_table').find('tbody')
+      .append($('tr')
         .append($('td')
           .text($('#interest_text'))));
       });
