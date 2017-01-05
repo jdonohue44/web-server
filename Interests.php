@@ -33,14 +33,14 @@
   </form>
 
   <script>
-    $('#add_interest_button').click(
+    $('#add_interest_button').click(function(){
       $("table").find('tbody')
         .append($('<tr>')
           .append($('<td>')
               .text('#interest_text');
           )
         )
-      );
+      });
   // document.getElementById('interest_text').disabled = true;
   </script>
 </body>
