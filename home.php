@@ -22,17 +22,7 @@
   $user_name  = htmlentities($_POST['name_text']);
   $user_email = htmlentities($_POST['email_text']);
 
-  foreach ($_POST as $key => $value) {
- echo '<p>'.$key.'</p>';
- foreach($value as $k => $v)
- {
- echo '<p>'.$k.'</p>';
- echo '<p>'.$v.'</p>';
- echo '<hr />';
- }
-
-} 
-
+  echo "<h1>HERE</h1>";
 
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
@@ -66,7 +56,7 @@
         <input type="text" id="email_text" maxlength="55" size="40" />
       </td>
       <td>
-        <input id="validate_button" type="submit" value="Validate/Register"/>
+        <input type="submit" id="validate_button" value="Validate/Register"/>
       </td>
     </tr>
   </table>
