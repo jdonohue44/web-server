@@ -1,6 +1,7 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <html>
 <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
   <?php
@@ -20,7 +21,7 @@
           <input id="interest_text" type="text" name="Interest" maxlength="45" size="30" />
         </td>
         <td>
-          <button type="button">Add</button>
+          <button type="button" id="add_interest_button">Add</button>
         </td>
       </tr>
       <tr>
@@ -32,7 +33,14 @@
   </form>
 
   <script>
-  // document.getElementById('add_interest_button').disabled = true;
+    $('#add_interest_button').click(function(){
+      $("table").find('tbody')
+        .append($('<tr>')
+          .append($('<td>')
+              .text('#interest_text');
+          )
+        );
+    });
   // document.getElementById('interest_text').disabled = true;
   </script>
 </body>
