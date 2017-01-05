@@ -137,6 +137,7 @@ while($query_data = mysqli_fetch_row($result)) {
     } else {
       $("h5").text(email + " is not valid.");
       $("h5").css("color", "red");
+      document.getElementById('validate_button').disabled = false;
     }
     return false;
     $('h5').text(text);
