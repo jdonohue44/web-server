@@ -121,9 +121,9 @@ while($query_data = mysqli_fetch_row($result)) {
   });
   $('#email_text').bind('input propertychange', function() {
     var text = $(this).val();
-    function(text){
+    function(text) {
       console.log(text);
-    }
+    });
   });
 </script>
 </body>
