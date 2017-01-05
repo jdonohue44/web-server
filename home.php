@@ -110,7 +110,7 @@ function AddUser($connection, $name, $email) {
    $e = mysqli_real_escape_string($connection, $email);
   //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
   //  mysqli_real_escape_string($e));
-  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`)";
+   $check_query = "SELECT * FROM `USERS` (`Name`,`Email`)";
    $present = mysqli_query($connection, $check_query);
    echo "<h1>$present</h1>";
    echo "<h1>WTF</h1>";
