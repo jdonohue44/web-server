@@ -45,7 +45,7 @@
         <input type="text" name="Email" maxlength="90" size="60" />
       </td>
       <td>
-        <input type="submit" value="Sign up"/>
+        <input type="submit" value="Validate/Register"/>
       </td>
     </tr>
   </table>
@@ -150,6 +150,7 @@ function VerifyTables($connection, $dbName) {
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating users table.</p>");
   }
+}
 
 //     if(!TableExists("INTERESTS", $connection, $dbName))
 //   {
