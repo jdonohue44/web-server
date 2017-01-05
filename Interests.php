@@ -20,8 +20,11 @@
           <input id="interest_text" type="text" name="Interest" maxlength="45" size="30" />
         </td>
         <td>
-          <input type="submit" value="Add"/>
+          <button type="button" value="Add"/>
         </td>
+      </tr>
+      <tr>
+        <input type="submit" value="submit" />
       </tr>
     </table>
   </form>
