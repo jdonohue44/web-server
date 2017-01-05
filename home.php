@@ -60,6 +60,7 @@
     </tr>
   </table>
 </form>
+<h5 id="validation_typing"></h5>
 
 <h2>Interests</h2>
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -124,8 +125,9 @@ while($query_data = mysqli_fetch_row($result)) {
   });
 
   $('#email_text').bind('input propertychange', function() {
+    document.getElementById('validate_button').disabled = false;
     var text = $(this).val();
-    console.log(text);
+    $('h5').text(text);
   });
 </script>
 </body>
