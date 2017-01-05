@@ -19,8 +19,8 @@
   VerifyTables($connection, DB_DATABASE);
 
   /* If input fields are populated, add a row to the Employees table. */
-  $user_name  = htmlentities($_POST['Name']);
-  $user_email = htmlentities($_POST['Email']);
+  $user_name  = htmlentities($_POST['name_text']);
+  $user_email = htmlentities($_POST['email_text']);
 
 
   if (strlen($user_name) && strlen($user_email)) {
