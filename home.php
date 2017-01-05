@@ -128,6 +128,7 @@ while($query_data = mysqli_fetch_row($result)) {
 
   // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
+    console.log("here");
     var text = $(this).val();
     $("#validation_typing").text("");
     var email = $('#email_text').val();
