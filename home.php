@@ -113,15 +113,15 @@ while($query_data = mysqli_fetch_row($result)) {
 
 <script>
   document.getElementById('validate_button').disabled = true;
-  $('#add_interest_button').disabled = true;
-  $('#interest_text').disabled = true;
-  $('#email_text').disabled = true;
+  document.getElementById('add_interest_button').disabled = true;
+  document.getElementById('interest_text').disabled = true;
+  document.getElementById('email_text').disabled = true;
 
   // enable Email text when Name is entered
   $('#name_text').blur(function()
   {
       if( $(this).val() ) {
-            $('#email_text').disabled = false;
+            document.getElementById('email_text').disabled = false;
       }
   });
 
@@ -137,7 +137,7 @@ while($query_data = mysqli_fetch_row($result)) {
     } else {
       $("#validation_typing").text(email + " is not valid.");
       $("#validation_typing").css("color", "red");
-      $('#validate_button').disabled = true;
+      document.getElementById('validate_button').disabled = true;
     }
     return false;
     $('#validation_typing').text(text);
@@ -161,8 +161,8 @@ while($query_data = mysqli_fetch_row($result)) {
   }
 
   function enableInterests(){
-    $('#add_interest_button').disabled = false;
-    $('#interest_text').disabled = false;
+    document.getElementById('add_interest_button').disabled = false;
+    document.getElementById('interest_text').disabled = false;
   }
 
 </script>
