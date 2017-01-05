@@ -118,7 +118,7 @@ while($query_data = mysqli_fetch_row($result)) {
   $('#email_text').disabled = true;
 
   // enable Email text when Name is entered
-  $('$name_text').blur(function()
+  $('#name_text').blur(function()
   {
       if( $(this).val() ) {
             $('#email_text').disabled = false;
