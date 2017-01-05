@@ -59,7 +59,7 @@
         <input type="text" name="Email" id="email_text" maxlength="55" size="40" />
       </td>
       <td>
-        <input type="submit" value="Validate/Register"/>
+        <input type="submit" name="validate_button" value="Validate/Register"/>
       </td>
     </tr>
   </table>
@@ -116,7 +116,7 @@ while($query_data = mysqli_fetch_row($result)) {
 ?>
 
 <script>
-  document.getElementById('validate_button').disabled = true;
+  document.getElementsByName('validate_button')[0].disabled = true;
   document.getElementById('add_interest_button').disabled = true;
   document.getElementById('interest_text').disabled = true;
   document.getElementById('email_text').disabled = true;
@@ -137,18 +137,18 @@ while($query_data = mysqli_fetch_row($result)) {
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
       $("#validation_typing").css("color", "green");
-      document.getElementById('validate_button').disabled = false;
+      document.getElementsByName('validate_button')[0].disabled = false;
     } else {
       $("#validation_typing").text(email + " is not valid.");
       $("#validation_typing").css("color", "red");
-      document.getElementById('validate_button').disabled = true;
+      document.getElementsByName('validate_button')[0].disabled = true;
     }
     return false;
     $('#validation_typing').text(text);
   });
 
   $(document).ready(function() {
-    $("#validate_button").click(function(){
+    document.getElementsByName$("validate_button")[0].click(function(){
         removeContactInfo();
     });
 });
