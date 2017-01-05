@@ -34,7 +34,7 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      $('table').append($('tr')
+      $('table tbody').append($('tr')
         .append($('td')
           .text($('#interest_text'))));
       });
