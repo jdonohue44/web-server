@@ -59,7 +59,7 @@
         <input type="text" name="Email" id="email_text" maxlength="55" size="40" />
       </td>
       <td>
-        <input type="submit" id="validate_button" value="Validate/Register"/>
+        <input type="submit" value="Validate/Register"/>
       </td>
     </tr>
   </table>
