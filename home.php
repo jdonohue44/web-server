@@ -49,13 +49,13 @@
     </tr>
     <tr>
       <td>
-        <input type="text" id="name_text"  name="Name" maxlength="45" size="30" />
+        <input id="name_text" type="text" name="Name" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" id="email_text" name="Email" maxlength="55" size="40" />
+        <input id="email_text" type="text" name="Email" maxlength="55" size="40" />
       </td>
       <td>
-        <input type="submit" id="validate_button" value="Validate/Register"/>
+        <input id="validate_button" type="submit" value="Validate/Register"/>
       </td>
     </tr>
   </table>
@@ -70,10 +70,10 @@
     </tr>
     <tr>
       <td>
-        <input type="text" name="Interest" id="interest_text" maxlength="45" size="30" />
+        <input id="interest_text" type="text" name="Interest" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="submit" value="Add" id="add_interest_button"/>
+        <input id="add_interest_button" type="submit" value="Add"/>
       </td>
     </tr>
   </table>
