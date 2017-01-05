@@ -58,7 +58,7 @@
     </tr>
     <tr>
       <td>
-        <input type="text" name="Interest" maxlength="45" size="30" />
+        <input type="text" name="Interest" id="interest_text" maxlength="45" size="30" />
       </td>
       <td>
         <input type="submit" value="Add" id="add_interest_button"/>
@@ -99,7 +99,8 @@ while($query_data = mysqli_fetch_row($result)) {
   mysqli_close($connection);
 ?>
 <script>
-document.getElementById('add_interest_button').disabled = true;
+  document.getElementById('add_interest_button').disabled = true;
+  document.getElementById('interest_text').disabled = true;
 </script>
 </body>
 </html>
