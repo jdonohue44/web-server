@@ -127,8 +127,25 @@ while($query_data = mysqli_fetch_row($result)) {
   $('#email_text').bind('input propertychange', function() {
     document.getElementById('validate_button').disabled = false;
     var text = $(this).val();
+    $("h5").text("");
+    var email = $("#email_text").val();
+    if (validateEmail(email)) {
+      $("h5").text(email + " is valid!");
+      $("h5").css("color", "green");
+    } else {
+      $("h5").text(email + " is not valid.");
+      $("h5").css("color", "red");
+    }
+    return false;
     $('h5').text(text);
   });
+
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+
+$("#validate").bind("click", validate);
 </script>
 </body>
 </html>
@@ -160,7 +177,7 @@ function AddUser($connection, $name, $email) {
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
    }else{
-     echo "<script> alert('Email already registered.'); </script>";
+     echo "<script> alert('Email already registered. Weclome back.'); </script>";
    }
 }
 
