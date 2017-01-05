@@ -100,7 +100,7 @@ while($query_data = mysqli_fetch_row($result)) {
 ?>
 
 <script>
-  function test(){
+  public function test(){
     console.log("I AM HERE");
   }
 </script>
