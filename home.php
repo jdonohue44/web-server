@@ -117,6 +117,7 @@ while($query_data = mysqli_fetch_row($result)) {
   document.getElementById('interest_text').disabled = true;
   document.getElementById('email_text').disabled = true;
 
+  // enable Email text when Name is entered
   $('#name_text').blur(function()
   {
       if( $(this).val() ) {
@@ -124,14 +125,15 @@ while($query_data = mysqli_fetch_row($result)) {
       }
   });
 
+  // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
-    document.getElementById('validate_button').disabled = false;
     var text = $(this).val();
     $("h5").text("");
     var email = $("#email_text").val();
     if (validateEmail(email)) {
       $("h5").text(email + " is valid!");
       $("h5").css("color", "green");
+      document.getElementById('validate_button').disabled = false;
     } else {
       $("h5").text(email + " is not valid.");
       $("h5").css("color", "red");
