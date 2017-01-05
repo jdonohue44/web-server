@@ -98,7 +98,9 @@ while($query_data = mysqli_fetch_row($result)) {
   mysqli_free_result($result);
   mysqli_close($connection);
 ?>
-
+<script>
+document.getElementById('add_interest_button').disabled = true;
+</script>
 </body>
 </html>
 
@@ -117,7 +119,7 @@ function AddUser($connection, $name, $email) {
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
    }else{
-     echo "<script> console.log('I AM HERE'); </script>";
+     echo "<script> console.log('Email already registered.'); </script>";
    }
 }
 
