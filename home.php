@@ -18,9 +18,14 @@
   /* Ensure that tables exists. */
   VerifyTables($connection, DB_DATABASE);
 
+  echo "<pre>";
+  print_r($_POST);
+  echo "</pre>";
   /* If input fields are populated, add a row to the Employees table. */
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
+
+
 
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
@@ -28,24 +33,6 @@
     $user_email = '';
   }
 ?>
-<table>
-<?php
-
-
-    foreach ($_POST as $key => $value) {
-        echo "<tr>";
-        echo "<td>";
-        echo $key;
-        echo "</td>";
-        echo "<td>";
-        echo $value;
-        echo "</td>";
-        echo "</tr>";
-    }
-
-
-?>
-</table>
 
 
 
