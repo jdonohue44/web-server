@@ -108,7 +108,7 @@ while($query_data = mysqli_fetch_row($result)) {
 function AddUser($connection, $name, $email) {
    $n = mysqli_real_escape_string($connection, $name);
    $e = mysqli_real_escape_string($connection, $email);
-   $present = "SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Name` = '$n';";
+   $present = "SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '$e';";
    if(mysqli_num_rows($present)==0){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
    }
