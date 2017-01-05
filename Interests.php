@@ -25,5 +25,10 @@
       </tr>
     </table>
   </form>
+
+  <script>
+  // document.getElementById('add_interest_button').disabled = true;
+  // document.getElementById('interest_text').disabled = true;
+  </script>
 </body>
 </html>
