@@ -29,6 +29,15 @@
   }
 ?>
 
+
+
+
+
+
+
+
+
+
 <h2>Contact Information</h2>
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -39,13 +48,13 @@
     </tr>
     <tr>
       <td>
-        <input type="text" name="Name" maxlength="45" size="30" />
+        <input type="text" id="name_text"  name="Name" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" name="Email" maxlength="90" size="60" />
+        <input type="text" id="email_text" name="Email" maxlength="55" size="40" />
       </td>
       <td>
-        <input type="submit" value="Validate/Register"/>
+        <input type="submit" id="validate_button" value="Validate/Register"/>
       </td>
     </tr>
   </table>
@@ -101,12 +110,32 @@ while($query_data = mysqli_fetch_row($result)) {
 ?>
 
 <script>
-  document.getElementById('add_interest_button').disabled = true;
-  document.getElementById('interest_text').disabled = true;
-</script>
+  $('#validate_button').disabled = true;
+  $('#add_interest_button').disabled = true;
+  $('#interest_text').disabled = true;
+  $('#email_text').disabled = true;
 
+  $('#name_text').bind('input propertychange', function() {
+    $('#email_text').disabled = false;
+  });
+  $('#email_text').bind('input propertychange', function() {
+    console.log($(this).val());
+  });
+</script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <?php
 
