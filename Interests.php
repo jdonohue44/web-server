@@ -20,7 +20,7 @@
           <input id="interest_text" type="text" name="Interest" maxlength="45" size="30" />
         </td>
         <td>
-          <button type="button" value="Add"/>
+          <button type="button">Add</button>
         </td>
       </tr>
       <tr>
