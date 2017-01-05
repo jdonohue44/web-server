@@ -42,7 +42,7 @@
 
 <h2 id="contact_h2">Contact Information</h2>
 <!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST" onsubmit="return removeContactInfo();">
   <table border="0" id="contact_table">
     <tr>
       <td>Name</td>
@@ -117,7 +117,6 @@ while($query_data = mysqli_fetch_row($result)) {
   document.getElementById('add_interest_button').disabled = true;
   document.getElementById('interest_text').disabled = true;
   document.getElementById('email_text').disabled = true;
-  document.getElementsByName('validate_button')[0].onsubmit = removeContactInfo();
 
   // enable Email text when Name is entered
   $('#name_text').blur(function()
@@ -154,6 +153,7 @@ while($query_data = mysqli_fetch_row($result)) {
     $('#contact_h2').remove();
     $('#contact_table').remove();
     $('#validation_typing').remove();
+    return true;
   }
 
   function enableInterests(){
