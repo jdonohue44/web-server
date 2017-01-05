@@ -7,7 +7,6 @@
 <body>
 <h1 align="center" id="banner">Espress</h1>
 <?php
-
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
 
@@ -19,12 +18,15 @@
   VerifyTables($connection, DB_DATABASE);
 
   /* If input fields are populated, add a row to the Employees table. */
-  $user_name = htmlentities($_POST['Name']);
+  $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
+  $interest   = htmlentities($_POST['Interest']);
+
+  echo "<h6>Interest = $interest </h6>";
 
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
-    $user_name = '';
+    $user_name  = '';
     $user_email = '';
   }
 ?>
@@ -45,7 +47,7 @@
         <input type="text" name="Email" maxlength="90" size="60" />
       </td>
       <td>
-        <input type="submit" value="Sign up" id="signup_button"/>
+        <input type="submit" value="Sign up"/>
       </td>
     </tr>
   </table>
@@ -164,7 +166,7 @@ function VerifyTables($connection, $dbName) {
 //
 //      if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
 //   }
-}
+
 
 /* Check for the existence of a table. */
 function TableExists($tableName, $connection, $dbName) {
