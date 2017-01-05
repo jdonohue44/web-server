@@ -39,7 +39,8 @@
           .append($('<td>')
               .text('#interest_text');
           )
-        );
+        )
+      );
     });
   // document.getElementById('interest_text').disabled = true;
   </script>
