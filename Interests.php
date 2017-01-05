@@ -33,7 +33,7 @@
   </form>
 
   <script>
-    $('#add_interest_button').click(function(){
+    $('#add_interest_button').click(
       $("table").find('tbody')
         .append($('<tr>')
           .append($('<td>')
@@ -41,7 +41,6 @@
           )
         )
       );
-    });
   // document.getElementById('interest_text').disabled = true;
   </script>
 </body>
