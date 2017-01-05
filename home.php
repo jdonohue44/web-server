@@ -112,7 +112,7 @@ while($query_data = mysqli_fetch_row($result)) {
 ?>
 
 <script>
-  $('#validate_button').disabled = true;
+  document.getElementById('validate_button').disabled = true;
   $('#add_interest_button').disabled = true;
   $('#interest_text').disabled = true;
   $('#email_text').disabled = true;
