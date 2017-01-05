@@ -116,9 +116,13 @@ while($query_data = mysqli_fetch_row($result)) {
   document.getElementById('interest_text').disabled = true;
   document.getElementById('email_text').disabled = true;
 
-  $('#name_text').bind('input propertychange', function() {
-    document.getElementById('email_text').disabled = false;
+  $('#name_text').blur(function()
+  {
+      if( !$(this).val() ) {
+            $(this).parents('p').addClass('warning');
+      }
   });
+
   $('#email_text').bind('input propertychange', function() {
     var text = $(this).val();
     console.log(text);
