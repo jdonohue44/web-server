@@ -32,9 +32,12 @@
     </table>
   </form>
 
+  <table id="interest_table">
+  </table>
+
   <script>
     $('#add_interest_button').click(function(){
-      $('table tbody').append($('tr')
+      $('#interest_table tbody').append($('tr')
         .append($('td')
           .text($('#interest_text'))));
       });
