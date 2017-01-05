@@ -37,7 +37,7 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      $('ul').append('<li>hi</li>');
+      $('ul').append('<li>'+$('#interest_text').val()+'</li>');
       });
   // document.getElementById('interest_text').disabled = true;
   </script>
