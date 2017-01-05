@@ -49,10 +49,10 @@
     </tr>
     <tr>
       <td>
-        <input type="text" id = "name_text" maxlength="45" size="30" />
+        <input type="text" id="name_text" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" id = "email_text" maxlength="55" size="40" />
+        <input type="text" id="email_text" maxlength="55" size="40" />
       </td>
       <td>
         <input id="validate_button" type="submit" value="Validate/Register"/>
@@ -126,10 +126,10 @@ while($query_data = mysqli_fetch_row($result)) {
   });
 
   // enable Validate button when Email is Valid
-  $('$email_text').bind('input propertychange', function() {
+  $('#email_text').bind('input propertychange', function() {
     var text = $(this).val();
     $("#validation_typing").text("");
-    var email = $('$email_text').val();
+    var email = $('#email_text').val();
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
       $("#validation_typing").css("color", "green");
@@ -137,7 +137,7 @@ while($query_data = mysqli_fetch_row($result)) {
     } else {
       $("#validation_typing").text(email + " is not valid.");
       $("#validation_typing").css("color", "red");
-      document.getElementById('validate_button').disabled = true;
+      $('#validate_button').disabled = true;
     }
     return false;
     $('#validation_typing').text(text);
@@ -164,7 +164,7 @@ while($query_data = mysqli_fetch_row($result)) {
     $('#add_interest_button').disabled = false;
     $('#interest_text').disabled = false;
   }
-  
+
 </script>
 </body>
 </html>
