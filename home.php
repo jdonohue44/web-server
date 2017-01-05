@@ -2,6 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script type="text/javascript" src="js/handlers.js"></script>
 </head>
 <body>
 <h1 align="center" id="banner">Espress</h1>
@@ -44,7 +45,7 @@
         <input type="text" name="Email" maxlength="90" size="60" />
       </td>
       <td>
-        <input type="submit" value="Signup" />
+        <input type="submit" value="Sign up" id="signup_button"/>
       </td>
     </tr>
   </table>
@@ -98,10 +99,6 @@ while($query_data = mysqli_fetch_row($result)) {
   mysqli_free_result($result);
   mysqli_close($connection);
 ?>
-<script>
-  document.getElementById('add_interest_button').disabled = true;
-  document.getElementById('interest_text').disabled = true;
-</script>
 </body>
 </html>
 
