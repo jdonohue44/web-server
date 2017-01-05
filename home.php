@@ -110,9 +110,9 @@ function AddUser($connection, $name, $email) {
    $e = mysqli_real_escape_string($connection, $email);
   //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
   //  mysqli_real_escape_string($e));
-   $check_query = "SELECT * FROM `USERS`";
+   $check_query = "SELECT * FROM USERS";
    $present = mysqli_query($connection, $check_query);
-   $num_rows = mysql_num_rows($present);
+   $num_rows = mysqli_num_rows($present);
    echo "<h6>Num Rows = $num_rows</h6>";
    if($num_rows<1){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
