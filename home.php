@@ -118,8 +118,8 @@ while($query_data = mysqli_fetch_row($result)) {
 
   $('#name_text').blur(function()
   {
-      if( !$(this).val() ) {
-            $(this).parents('p').addClass('warning');
+      if( $(this).val() ) {
+            document.getElementById('email_text').disabled = false;
       }
   });
 
