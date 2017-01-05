@@ -49,7 +49,7 @@
     </tr>
     <tr>
       <td>
-        <input id="name_text" type="text" name="Name" maxlength="45" size="30" />
+        <input type="text" name="Name" maxlength="45" size="30" />
       </td>
       <td>
         <input id="email_text" type="text" name="Email" maxlength="55" size="40" />
@@ -118,7 +118,7 @@ while($query_data = mysqli_fetch_row($result)) {
   $('#email_text').disabled = true;
 
   // enable Email text when Name is entered
-  $('#name_text').blur(function()
+  $("input[name = 'Name']").blur(function()
   {
       if( $(this).val() ) {
             document.getElementById('email_text').disabled = false;
