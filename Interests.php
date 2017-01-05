@@ -24,7 +24,9 @@
         </td>
       </tr>
       <tr>
-        <input type="submit" value="submit" />
+        <td>
+        <input type="submit" value="Submit" />
+        </td>
       </tr>
     </table>
   </form>
