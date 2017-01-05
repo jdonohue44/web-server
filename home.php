@@ -18,9 +18,6 @@
   /* Ensure that tables exists. */
   VerifyTables($connection, DB_DATABASE);
 
-  echo "<pre>";
-  print_r($_POST);
-  echo "</pre>";
   /* If input fields are populated, add a row to the Employees table. */
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
@@ -148,7 +145,7 @@ while($query_data = mysqli_fetch_row($result)) {
   });
 
   $(document).ready(function() {
-    document.getElementsByName$("validate_button")[0].click(function(){
+    document.getElementsByName("validate_button")[0].click(function(){
         removeContactInfo();
     });
 });
