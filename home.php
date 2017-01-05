@@ -99,6 +99,12 @@ while($query_data = mysqli_fetch_row($result)) {
   mysqli_free_result($result);
   mysqli_close($connection);
 ?>
+
+<script>
+  document.getElementById('add_interest_button').disabled = true;
+  document.getElementById('interest_text').disabled = true;
+</script>
+
 </body>
 </html>
 
@@ -159,7 +165,6 @@ function VerifyTables($connection, $dbName) {
 //      if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
 //   }
 }
-
 
 /* Check for the existence of a table. */
 function TableExists($tableName, $connection, $dbName) {
