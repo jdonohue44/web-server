@@ -22,7 +22,6 @@
   $user_email = htmlentities($_POST['Email']);
   $interest   = htmlentities($_POST['Interest']);
 
-  echo "<h6>Interest=</h6>";
 
   if (strlen($user_name) && strlen($user_email)) {
     AddUser($connection, $user_name, $user_email);
