@@ -61,7 +61,7 @@
         <input type="text" name="Interest" maxlength="45" size="30" />
       </td>
       <td>
-        <input type="submit" value="Add" />
+        <input type="submit" value="Add" id="add_interest_button"/>
       </td>
     </tr>
   </table>
@@ -99,6 +99,12 @@ while($query_data = mysqli_fetch_row($result)) {
   mysqli_close($connection);
 ?>
 
+<script>
+  function test(){
+    console.log("I AM HERE");
+  }
+</script>
+
 </body>
 </html>
 
@@ -113,10 +119,11 @@ function AddUser($connection, $name, $email) {
    $check_query = "SELECT * FROM USERS WHERE Email = '$e'";
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
-   echo "<h6>Num Rows = $num_rows</h6>";
    if($num_rows<1){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
+   }else{
+     echo "<script> test(); </script>";
    }
 }
 
