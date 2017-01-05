@@ -1,8 +1,8 @@
 <?php include "../inc/dbinfo.inc"; ?>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/styles.css">
-  <script type="text/javascript" src="js/handlers.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <script type="text/javascript" src="./js/handlers.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
