@@ -112,9 +112,7 @@ function AddUser($connection, $name, $email) {
   //  mysqli_real_escape_string($e));
    $check_query = "SELECT * FROM `USERS` (`Name`,`Email`)";
    $present = mysqli_query($connection, $check_query);
-   echo "<h1>$present</h1>";
-   echo "<h1>WTF</h1>";
-   if(!$present){
+   if(mysqli_num_rows($present) == 0){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
    }
