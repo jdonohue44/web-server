@@ -34,7 +34,9 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      console.log('click');
+      $('table').append($('tr')
+        .append($('td')
+          .text($('#interest_text'))));
       });
   // document.getElementById('interest_text').disabled = true;
   </script>
