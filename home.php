@@ -99,12 +99,6 @@ while($query_data = mysqli_fetch_row($result)) {
   mysqli_close($connection);
 ?>
 
-<script>
-  public function test(){
-    console.log("I AM HERE");
-  }
-</script>
-
 </body>
 </html>
 
@@ -123,7 +117,7 @@ function AddUser($connection, $name, $email) {
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
    }else{
-     echo "<script> test(); </script>";
+     echo "<script> console.log("I AM HERE"); </script>";
    }
 }
 
