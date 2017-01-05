@@ -117,6 +117,7 @@ while($query_data = mysqli_fetch_row($result)) {
   document.getElementById('add_interest_button').disabled = true;
   document.getElementById('interest_text').disabled = true;
   document.getElementById('email_text').disabled = true;
+  document.getElementsByName('validate_button')[0].onsubmit = removeContactInfo();
 
   // enable Email text when Name is entered
   $('#name_text').blur(function()
@@ -159,8 +160,6 @@ while($query_data = mysqli_fetch_row($result)) {
     document.getElementById('add_interest_button').disabled = false;
     document.getElementById('interest_text').disabled = false;
   }
-
-  document.getElementsByName("validate_button")[0].onclick = function() {removeContactInfo()};
 
 </script>
 </body>
