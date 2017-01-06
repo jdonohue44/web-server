@@ -113,7 +113,7 @@ while($query_data = mysqli_fetch_row($result)) {
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
       $("#validation_typing").css("color", "green");
-      if($.trim($('name_text').val()).length > 0){
+      if($.trim($('#name_text').val()).length > 0){
         document.getElementsByName('validate_button')[0].disabled = false;
       }
     } else {
