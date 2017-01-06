@@ -6,7 +6,6 @@
 .delete_btn{
   width: 10px;
   height: 10px;
-  padding-left: 70px;
 }
 
 #interests_ul{
@@ -15,4 +14,8 @@
 
 #interests_ul li{
   width: 200px;
+}
+
+.space{
+  width: 20px;
 }
