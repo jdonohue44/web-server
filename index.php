@@ -21,7 +21,10 @@
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
 
-  if (strlen($user_name) && strlen($user_email)) {
+  if (strlen($user_email)) {
+    if(!strlen($user_name)){
+      $user_name = $user_email;
+    }
     AddUser($connection, $user_name, $user_email);
     $user_name  = '';
     $user_email = '';
@@ -113,9 +116,7 @@ while($query_data = mysqli_fetch_row($result)) {
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
       $("#validation_typing").css("color", "green");
-      if($.trim($('#name_text').val()).length > 0){
-        document.getElementsByName('validate_button')[0].disabled = false;
-      }
+      document.getElementsByName('validate_button')[0].disabled = false;
     } else {
       $("#validation_typing").text(email + " is not a valid email yet.");
       $("#validation_typing").css("color", "red");
