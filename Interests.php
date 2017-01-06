@@ -25,16 +25,12 @@
           <button type="button" id="add_interest_button">Add</button>
         </td>
       </tr>
-      <tr>
-        <td>
-        <input type="submit" value="Submit" />
-        </td>
-      </tr>
     </table>
-  </form>
 
   <ul id="interests_ul">
   </ul>
+  <input type="submit" value="Submit" />
+  </form>
 
   <script>
     $('#add_interest_button').click(function(){
