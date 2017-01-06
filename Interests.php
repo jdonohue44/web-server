@@ -38,11 +38,11 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      $('ul').append('<li>'+$('#interest_text').val()+'<button type="button" class="delete_btn">X</button></li>');
+      $('ul').append('<li>'+$('#interest_text').val()+'<button type="button" id="delete_btn">X</button></li>');
       $('#interest_text').val('')
       });
   // document.getElementById('interest_text').disabled = true;
-    $(".delete_btn").click(function(){
+    $("#delete_btn").click(function(){
       console.log("delete");
     });
   </script>
