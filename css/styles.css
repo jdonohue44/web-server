@@ -5,10 +5,10 @@
 
 .delete_div{
   background-color: red;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
-#interests_ul li{
-  width: 200px;
+#interests_ul{
+  width: 400px;
 }
