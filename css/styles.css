@@ -7,14 +7,9 @@
   background-color: red;
   width: 200px;
   height: 200px;
+  display: inline-block;
 }
 
 #interests_ul{
   width: 400px;
-  background-color: red;
-}
-
-h2{
-  color: red;
-  font: 48px;
 }
