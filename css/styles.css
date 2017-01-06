@@ -13,3 +13,8 @@
 #interests_ul{
   width: 800px;
 }
+
+#interests_ul li{
+  height: 200px;
+  width: 200px;
+}
