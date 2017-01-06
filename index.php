@@ -96,15 +96,14 @@ while($query_data = mysqli_fetch_row($result)) {
 
 <script>
   document.getElementsByName('validate_button')[0].disabled = true;
-  document.getElementById('email_text').disabled = true;
 
-  // enable Email text when Name is entered
-  $('#name_text').blur(function()
-  {
-      if( $(this).val() ) {
-            document.getElementById('email_text').disabled = false;
-      }
-  });
+  // // enable Email text when Name is entered
+  // $('#name_text').blur(function()
+  // {
+  //     if( $(this).val() ) {
+  //           document.getElementById('email_text').disabled = false;
+  //     }
+  // });
 
   // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
@@ -114,14 +113,14 @@ while($query_data = mysqli_fetch_row($result)) {
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
       $("#validation_typing").css("color", "green");
-      document.getElementsByName('validate_button')[0].disabled = false;
+      if($.trim($('name_text').val()).length > 0){
+        document.getElementsByName('validate_button')[0].disabled = false;
+      }
     } else {
       $("#validation_typing").text(email + " is not a valid email yet.");
       $("#validation_typing").css("color", "red");
       document.getElementsByName('validate_button')[0].disabled = true;
     }
-    return false;
-    $('#validation_typing').text(text);
   });
 
   function validateEmail(email) {
