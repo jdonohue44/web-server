@@ -2,6 +2,7 @@
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
 <body>
   <?php
@@ -37,7 +38,7 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      $('ul').append('<li>'+$('#interest_text').val()+'</li>');
+      $('ul').append('<li>'+$('#interest_text').val()+'</li><div class="delete_div"></div>');
       $('#interest_text').val('')
       });
   // document.getElementById('interest_text').disabled = true;
