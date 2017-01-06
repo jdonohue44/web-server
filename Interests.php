@@ -43,7 +43,7 @@
       });
   // document.getElementById('interest_text').disabled = true;
     $(".delete_btn").click(function(){
-      $(this).parent().remove();
+      console.log("delete");
     });
   </script>
 </body>
