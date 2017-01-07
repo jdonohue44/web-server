@@ -16,7 +16,7 @@ session_start();
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
     $database = mysqli_select_db($connection, DB_DATABASE);
     $interests  = htmlentities($_POST['interests']);
-    echo "<h1>$interests</h1>";
+    print_r($_POST);
     //updateInterestsTable($name, $email);
     ?>
   <h2>Interests</h2>
@@ -53,5 +53,6 @@ session_start();
       $('#interest_text').val('')
     });
   </script>
+
 </body>
 </html>
