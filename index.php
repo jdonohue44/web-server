@@ -1,4 +1,7 @@
-<?php include "../inc/dbinfo.inc"; ?>
+<?php
+include "../inc/dbinfo.inc";
+session_start();
+?>
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
@@ -26,6 +29,8 @@
       $user_name = $user_email;
     }
     AddUser($connection, $user_name, $user_email);
+    $_SESSION["name"] =  $user_name;
+    $_SESSION["email"] = $user_email;
     $user_name  = '';
     $user_email = '';
     header("Location: http://54.86.139.119/Interests.php");

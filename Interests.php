@@ -1,4 +1,7 @@
-<?php include "../inc/dbinfo.inc"; ?>
+<?php
+include "../inc/dbinfo.inc";
+session_start();
+?>
 <html>
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -6,6 +9,10 @@
 </head>
 <body>
   <?php
+    $name  = $_SESSION["name"];
+    $email = $_SESSION["email"];
+    echo "<h1>$name</h1>";
+    echo "<h1>$email</h1>";
     /* Connect to MySQL and select the database. */
     $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -34,12 +41,8 @@
 
   <script>
     $('#add_interest_button').click(function(){
-      $('ul').append('<li>'+$('#interest_text').val()+'<button type="button" id="delete_btn">X</button></li>');
+      $('ul').append('<li>'+$('#interest_text').val()+'</li>');
       $('#interest_text').val('')
-      });
-  // document.getElementById('interest_text').disabled = true;
-    $("#delete_btn").click(function(){
-      console.log("delete");
     });
   </script>
 </body>
