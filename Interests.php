@@ -11,12 +11,13 @@ session_start();
   <?php
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
-    echo "<h1>$name</h1>";
-    echo "<h1>$email</h1>";
     /* Connect to MySQL and select the database. */
     $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
     $database = mysqli_select_db($connection, DB_DATABASE);
+    $interests  = htmlentities($_POST['interests']);
+    echo "<h1>$interests</h1>";
+    //updateInterestsTable($name, $email);
     ?>
   <h2>Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -39,9 +40,16 @@ session_start();
   <input type="submit" value="Submit" />
   </form>
 
+  <?php
+  function updateInterestsTable(){
+    $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
+    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
+  }
+  ?>
+
   <script>
     $('#add_interest_button').click(function(){
-      $('ul').append('<li>'+$('#interest_text').val()+'</li>');
+      $('ul').append("<li>"+$('#interest_text').val()+"<input type='hidden' name='interests[]' /></li>");
       $('#interest_text').val('')
     });
   </script>
