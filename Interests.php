@@ -15,8 +15,10 @@ session_start();
     $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
     $database = mysqli_select_db($connection, DB_DATABASE);
-    $interests  = htmlentities($_POST['interests']);
-    print_r($_POST);
+    $interests  = htmlentities($_POST['Interest']['interests']);
+    for ($x = 0; $x <= 3; $x++) {
+      echo $interests[$x];
+    }
     //updateInterestsTable($name, $email);
     ?>
   <h2>Interests</h2>
