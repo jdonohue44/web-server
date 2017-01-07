@@ -17,7 +17,7 @@ session_start();
     $database = mysqli_select_db($connection, DB_DATABASE);
     $interests  = htmlentities($_POST['Interest']['interests']);
     for ($x = 0; $x <= 3; $x++) {
-      echo $interests[$x];
+      echo "<h2>$interests[$x]</h2>";
     }
     //updateInterestsTable($name, $email);
     ?>
