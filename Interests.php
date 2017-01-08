@@ -20,7 +20,7 @@ session_start();
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
-      for($i = 1; $i <= sizeof($user_interests); $i++){
+      for($i = 0; $i < sizeof($user_interests); $i++){
           echo "Interest: " . $user_interests[$i] .
            "size of array: " . sizeof($user_interests) ."\n";
 
@@ -28,7 +28,6 @@ session_start();
           AddUserInterest($connection, $email, $user_interests[$i]);
       }
     }
-    //updateInterestsTable($name, $email);
     ?>
   <h2>Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -50,13 +49,6 @@ session_start();
   </ul>
   <input type="submit" value="Submit" />
   </form>
-
-  <?php
-  function updateInterestsTable(){
-    $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
-    if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
-  }
-  ?>
 
   <script>
     $('#add_interest_button').click(function(){
@@ -89,8 +81,11 @@ function AddUserInterest($connection, $email, $interest) {
    $e = mysqli_real_escape_string($connection, $email);
    $i = mysqli_real_escape_string($connection, $interest);
 
-   $user_id = mysqli_query($connection, "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'");
-   $interest_id = mysqli_query($connection, "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'");
+   $user_result = mysqli_query($connection, "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'");
+   $user_id = mysqli_fetch_object($user_result)->ID;
+   $interest_result = mysqli_query($connection, "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'");
+   $interest_id = mysqli_fetch_object($interest_result)->ID;
+   
    echo "User id: " . $user_id . "\nInterest id: " . $interest_id;
    $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
    if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
