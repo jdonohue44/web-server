@@ -77,7 +77,7 @@ function AddInterest($connection, $interest) {
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
    if($num_rows<1){
-     $query = "INSERT INTO INTERESTS (Interest) VALUES ($i);";
+     $query = "INSERT INTO INTERESTS (Interest) VALUES ('$i');";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding interest data.</p>");
     }
 }
