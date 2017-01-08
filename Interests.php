@@ -90,6 +90,7 @@ function AddUserInterest($connection, $email, $interest) {
   //  $check_query = "SELECT * FROM USER_INTERESTS WHERE Interest_ID = '$i'";
     $user_id = "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'";
     $interest_id = "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'";
+    echo "user id: " . $user_id . "\ninterest id: " . $interest_id;
   //  $present = mysqli_query($connection, $check_query);
   //  $num_rows = mysqli_num_rows($present);
   //  if($num_rows<1){
