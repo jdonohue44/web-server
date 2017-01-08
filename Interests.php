@@ -96,7 +96,7 @@ function AddUserInterest($connection, $name, $interest) {
     // }
 }
 
-function VerifyInterestTable(){
+function VerifyInterestTable($connection, $dbName){
   if(!TableExists("INTERESTS", $connection, $dbName))
   {
      $query = "CREATE TABLE `INTERESTS` (
