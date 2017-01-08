@@ -20,7 +20,7 @@ session_start();
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
-      for($i = 0; $i < sizeof($user_interests); $i++){
+      for($i = 1; $i <= sizeof($user_interests); $i++){
           echo "Interest: " . $user_interests[$i] .
            "size of array: " . sizeof($user_interests) ."\n";
 
