@@ -113,7 +113,7 @@ function VerifyInterestTable($connection, $dbName){
      $query = "CREATE TABLE `USER_INTERESTS` (
          `User_ID` int(11) NOT NULL,
          `Interest_ID` int(11) NOT NULL,
-       ) ENGINE=InnoDB DEFAULT CHARSET=latin1";
+       ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating user interests table.</p>");
   }
