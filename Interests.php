@@ -51,7 +51,7 @@ session_start();
       var interest = $('#interest_text').val();
       $('ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
       +interest+"'/></li>");
-      // $('#interest_text').val('');
+      $('#interest_text').val('');
     });
   </script>
 
