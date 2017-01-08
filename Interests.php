@@ -88,7 +88,7 @@ function AddUserInterest($connection, $email, $interest) {
 
    $user_id = mysqli_query($connection, "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'");
    $interest_id = mysqli_query($connection, "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'");
-
+   echo "User id: " . $user_id . "\nInterest id: " . $interest_id;
    $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
    if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
 }
