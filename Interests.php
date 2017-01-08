@@ -18,7 +18,7 @@ session_start();
 
     $user_interests = $_POST['interests'];
     for($i = 0; $i < sizeof($user_interests); $i++){
-      echo $user_interests[$i] . "\n";
+      echo $user_interests[$i] . "<br />";
     }
     //updateInterestsTable($name, $email);
     ?>
