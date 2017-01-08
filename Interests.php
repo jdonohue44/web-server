@@ -22,7 +22,7 @@ session_start();
     if(sizeof($user_interests)>0){
       for($i = 0; $i < sizeof($user_interests); $i++){
           AddInterest($connection, $user_interests[$i]);
-          AddUserInterest($connection, $user_name, $user_interests[$i]);
+          AddUserInterest($connection, $email, $user_interests[$i]);
       }
     }
     //updateInterestsTable($name, $email);
@@ -82,17 +82,19 @@ function AddInterest($connection, $interest) {
     }
 }
 
-function AddUserInterest($connection, $name, $interest) {
-   $n = mysqli_real_escape_string($connection, $name);
+function AddUserInterest($connection, $email, $interest) {
+   $e = mysqli_real_escape_string($connection, $email);
    $i = mysqli_real_escape_string($connection, $interest);
   //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
   //  mysqli_real_escape_string($e));
   //  $check_query = "SELECT * FROM USER_INTERESTS WHERE Interest_ID = '$i'";
+    $user_id = "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'";
+    $interest_id = "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'";
   //  $present = mysqli_query($connection, $check_query);
   //  $num_rows = mysqli_num_rows($present);
   //  if($num_rows<1){
-     $query = "INSERT INTO `USER_INTERESTS` (`User_ID`, `Interest_ID`) VALUES (1,2);";
-     if(!mysqli_query($connection, $query)) echo("<p>Error adding interest data.</p>");
+     $query = "INSERT INTO `USER_INTERESTS` (`User_ID`, `Interest_ID`) VALUES ($user_id, $interest_id);";
+     if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
     // }
 }
 
@@ -112,7 +114,8 @@ function VerifyInterestTable($connection, $dbName){
   {
      $query = "CREATE TABLE `USER_INTERESTS` (
          `User_ID` int(11) NOT NULL,
-         `Interest_ID` int(11) NOT NULL
+         `Interest_ID` int(11) NOT NULL,
+         PRIMARY KEY (`USER_ID`,`Interest_ID`)
        )ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating user interests table.</p>");
