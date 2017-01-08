@@ -18,7 +18,7 @@ session_start();
   $database = mysqli_select_db($connection, DB_DATABASE);
 
   /* Ensure that tables exists. */
-  VerifyTables($connection, DB_DATABASE);
+  VerifyUserTable($connection, DB_DATABASE);
 
   /* If input fields are populated, add a row to the Employees table. */
   $user_name  = htmlentities($_POST['Name']);
@@ -170,17 +170,7 @@ function AddUser($connection, $name, $email) {
    }
 }
 
-/* Check whether the table exists and, if not, create it. */
-/*
-	USERS
-
-		ID	EMAIL	NAME
-
-	INTERESTS
-		ID 	NAME	USER
-
-*/
-function VerifyTables($connection, $dbName) {
+function VerifyUserTable($connection, $dbName) {
   if(!TableExists("USERS", $connection, $dbName))
   {
      $query = "CREATE TABLE `USERS` (
@@ -193,20 +183,6 @@ function VerifyTables($connection, $dbName) {
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating users table.</p>");
   }
-
-  // if(!TableExists("INTERESTS", $connection, $dbName))
-  // {
-  //    $query = "CREATE TABLE `INTERESTS` (
-  //        `ID` int(11) NOT NULL AUTO_INCREMENT,
-  //        `Interest` varchar(45) DEFAULT NULL,
-  //        `User_Id` int(11) NOT NULL,
-  //        PRIMARY KEY (`ID`),
-  //        FOREIGN KEY (`User_Id`),
-  //        UNIQUE KEY `ID_UNIQUE` (`ID`)
-  //      ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
-  //
-  //    if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
-  // }
 }
 
 
