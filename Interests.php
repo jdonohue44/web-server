@@ -48,7 +48,7 @@ session_start();
 
   <script>
     $('#add_interest_button').click(function(){
-      $('ul').append("<li><input type='hidden' name='interests[]' />"+$('#interest_text').val()+"</li>");
+      $('ul').append("<li>"+$('#interest_text').val()+"<input type='hidden' name='interests[]' /></li>");
       // $('#interest_text').val('');
     });
   </script>
