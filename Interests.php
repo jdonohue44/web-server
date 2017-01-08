@@ -77,7 +77,7 @@ function AddInterest($connection, $interest) {
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
    if($num_rows<1){
-     $query = "INSERT INTO `INTERESTS` (`Interest`) VALUES ('$i');";
+     $query = "INSERT INTO INTERESTS (Interest) VALUES ($i);";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding interest data.</p>");
     }
 }
@@ -93,7 +93,7 @@ function AddUserInterest($connection, $email, $interest) {
   //  $present = mysqli_query($connection, $check_query);
   //  $num_rows = mysqli_num_rows($present);
   //  if($num_rows<1){
-     $query = "INSERT INTO `USER_INTERESTS` (`User_ID`, `Interest_ID`) VALUES ('$user_id', '$interest_id');";
+     $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
      if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
     // }
 }
@@ -102,20 +102,20 @@ function VerifyInterestTable($connection, $dbName){
   if(!TableExists("INTERESTS", $connection, $dbName))
   {
      $query = "CREATE TABLE `INTERESTS` (
-         `ID` int(11) NOT NULL AUTO_INCREMENT,
-         `Interest` varchar(45) DEFAULT NULL,
-         PRIMARY KEY (`ID`),
-         UNIQUE KEY `ID_UNIQUE` (`ID`)
+         ID int(11) NOT NULL AUTO_INCREMENT,
+         Interest varchar(45) DEFAULT NULL,
+         PRIMARY KEY (ID),
+         UNIQUE KEY ID_UNIQUE (ID)
        ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1";
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating interests table.</p>");
   }
   if(!TableExists("USER_INTERESTS", $connection, $dbName))
   {
-     $query = "CREATE TABLE `USER_INTERESTS` (
-         `User_ID` int(11) NOT NULL,
-         `Interest_ID` int(11) NOT NULL,
-         PRIMARY KEY (`USER_ID`,`Interest_ID`)
+     $query = "CREATE TABLE USER_INTERESTS (
+         User_ID int(11) NOT NULL,
+         Interest_ID int(11) NOT NULL,
+         PRIMARY KEY (USER_ID,Interest_ID)
        )ENGINE=InnoDB DEFAULT CHARSET=latin1";
 
      if(!mysqli_query($connection, $query)) echo("<p>Error creating user interests table.</p>");
