@@ -85,18 +85,12 @@ function AddInterest($connection, $interest) {
 function AddUserInterest($connection, $email, $interest) {
    $e = mysqli_real_escape_string($connection, $email);
    $i = mysqli_real_escape_string($connection, $interest);
-  //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
-  //  mysqli_real_escape_string($e));
-  //  $check_query = "SELECT * FROM USER_INTERESTS WHERE Interest_ID = '$i'";
-    $user_id = "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'";
-    $interest_id = "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'";
-    echo "user id: " . $user_id . "\ninterest id: " . $interest_id;
-  //  $present = mysqli_query($connection, $check_query);
-  //  $num_rows = mysqli_num_rows($present);
-  //  if($num_rows<1){
-     $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
-     if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
-    // }
+
+   $user_id = mysqli_query($connection, "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'");
+   $interest_id = mysqli_query($connection, "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'");
+
+   $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
+   if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
 }
 
 function VerifyInterestTable($connection, $dbName){
