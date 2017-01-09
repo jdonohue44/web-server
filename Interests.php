@@ -24,8 +24,15 @@ session_start();
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i]);
       }
-
     }
+
+    $user_stocks = $_POST['stocks'];
+    if(sizeof($user_stocks)>0){
+      for($i = 0; $i < sizeof($user_stocks); $i++){
+        echo $user_stocks[$i];
+      }
+    }
+
     ?>
   <h2>Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
@@ -57,7 +64,7 @@ session_start();
 
   <ul id="socks_ul">
   </ul>
-  
+
   <input type="submit" value="Submit" />
   </form>
 
