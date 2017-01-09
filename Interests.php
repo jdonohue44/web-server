@@ -29,7 +29,7 @@ session_start();
     $user_stocks = $_POST['stocks'];
     if(sizeof($user_stocks)>0){
       for($i = 0; $i < sizeof($user_stocks); $i++){
-        echo $user_stocks[$i];
+        // echo $user_stocks[$i];
       }
     }
 
