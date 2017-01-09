@@ -42,11 +42,8 @@ session_start();
 
   <ul id="interests_ul">
   </ul>
-  <input type="submit" value="Submit" />
-  </form>
 
   <h2>Stocks</h2>
-  <form action="" method="POST">
     <table border="0">
       <tr>
         <td>
@@ -60,6 +57,7 @@ session_start();
 
   <ul id="socks_ul">
   </ul>
+  
   <input type="submit" value="Submit" />
   </form>
 
