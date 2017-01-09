@@ -24,17 +24,15 @@ session_start();
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i]);
       }
+
     }
     ?>
   <h2>Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
     <table border="0">
       <tr>
-        <td>Interest</td>
-      </tr>
-      <tr>
         <td>
-          <input id="interest_text" type="text" name="Interest" maxlength="45" size="30" />
+          <input id="interest_text" type="text" name="Interest" placeholder="Leonardo DiCaprio" maxlength="45" size="30" />
         </td>
         <td>
           <button type="button" id="add_interest_button">Add</button>
@@ -47,12 +45,37 @@ session_start();
   <input type="submit" value="Submit" />
   </form>
 
+  <h2>Stocks</h2>
+  <form action="" method="POST">
+    <table border="0">
+      <tr>
+        <td>
+          <input id="stock_text" type="text" name="Stock" placeholder="AMZN" maxlength="45" size="30" />
+        </td>
+        <td>
+          <button type="button" id="add_stock_button">Add</button>
+        </td>
+      </tr>
+    </table>
+
+  <ul id="socks_ul">
+  </ul>
+  <input type="submit" value="Submit" />
+  </form>
+
   <script>
     $('#add_interest_button').click(function(){
       var interest = $('#interest_text').val();
       $('ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
       +interest+"'/></li>");
       $('#interest_text').val('');
+    });
+
+    $('#add_stock_button').click(function(){
+      var stock = $('#stock_text').val();
+      $('ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
+      +stock+"'/></li>");
+      $('#stock_text').val('');
     });
   </script>
 
