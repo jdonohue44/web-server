@@ -62,7 +62,7 @@ session_start();
       </tr>
     </table>
 
-  <ul id="socks_ul">
+  <ul id="stocks_ul">
   </ul>
 
   <input type="submit" value="Submit" />
@@ -71,14 +71,14 @@ session_start();
   <script>
     $('#add_interest_button').click(function(){
       var interest = $('#interest_text').val();
-      $('ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
+      $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
       +interest+"'/></li>");
       $('#interest_text').val('');
     });
 
     $('#add_stock_button').click(function(){
       var stock = $('#stock_text').val();
-      $('ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
+      $('#stocks_ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
       +stock+"'/></li>");
       $('#stock_text').val('');
     });
