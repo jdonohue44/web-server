@@ -37,11 +37,6 @@ session_start();
   }
 ?>
 
-
-
-
-
-<h2 id="contact_h2">Contact Information</h2>
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0" id="contact_table">
@@ -64,33 +59,6 @@ session_start();
 </form>
 <h5 id="validation_typing"></h5>
 
-
-<br /><br /><br />
-<h4>DB:</h4>
-
-<!-- Display table data. -->
-<table border="1" cellpadding="2" cellspacing="2">
-  <tr>
-    <td>ID</td>
-    <td>Name</td>
-    <td>Email</td>
-  </tr>
-
-<?php
-
-$result = mysqli_query($connection, "SELECT * FROM USERS");
-
-while($query_data = mysqli_fetch_row($result)) {
-  echo "<tr>";
-  echo "<td>",$query_data[0], "</td>",
-       "<td>",$query_data[1], "</td>",
-       "<td>",$query_data[2], "</td>";
-  echo "</tr>";
-}
-?>
-
-</table>
-
 <!-- Clean up. -->
 <?php
   mysqli_free_result($result);
@@ -99,14 +67,6 @@ while($query_data = mysqli_fetch_row($result)) {
 
 <script>
   document.getElementsByName('validate_button')[0].disabled = true;
-
-  // // enable Email text when Name is entered
-  // $('#name_text').blur(function()
-  // {
-  //     if( $(this).val() ) {
-  //           document.getElementById('email_text').disabled = false;
-  //     }
-  // });
 
   // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
@@ -129,27 +89,9 @@ while($query_data = mysqli_fetch_row($result)) {
     return re.test(email);
   }
 
-  // function removeContactInfo(){
-  //   $('#contact_h2').remove();
-  //   $('#contact_table').remove();
-  //   $('#validation_typing').remove();
-  // }
-
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php
 
@@ -184,7 +126,6 @@ function VerifyUserTable($connection, $dbName) {
      if(!mysqli_query($connection, $query)) echo("<p>Error creating users table.</p>");
   }
 }
-
 
 /* Check for the existence of a table. */
 function TableExists($tableName, $connection, $dbName) {
