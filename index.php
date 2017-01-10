@@ -7,7 +7,7 @@ session_start();
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body>
+<body class="home">
 <h1 align="center" class="banner-lg">Espress</h1>
 <?php
   /* Connect to MySQL and select the database. */

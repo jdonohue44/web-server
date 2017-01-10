@@ -51,9 +51,7 @@ session_start();
 
   <ul id="interests_ul">
   </ul>
-</div>
 
-<div class="container">
   <h2 class="banner-md">Stocks</h2>
     <table border="0">
       <tr>

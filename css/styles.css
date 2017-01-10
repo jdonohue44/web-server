@@ -54,6 +54,6 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-body{
+body.home{
   background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
 }
