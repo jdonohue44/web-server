@@ -77,6 +77,7 @@ session_start();
       $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
       +interest+"'/></li>");
       $('#interest_text').val('');
+      checkListLength();
     });
 
     $('#add_stock_button').click(function(){
@@ -86,10 +87,12 @@ session_start();
       $('#stock_text').val('');
     });
 
-    var lis = $("#interests_ul li");
-    if(lis.length > 0) {
-      console.log("here");
-      document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
+    function checkListLength(){
+      var lis = $("#interests_ul li");
+      if(lis.length > 0) {
+        console.log("here");
+        document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
+      }
     }
   </script>
 
