@@ -35,7 +35,8 @@ session_start();
     }
 
     ?>
-  <h2>Interests</h2>
+<div class="container">
+  <h2 class="banner">Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
     <table border="0">
       <tr>
@@ -51,7 +52,7 @@ session_start();
   <ul id="interests_ul">
   </ul>
 
-  <h2>Stocks</h2>
+  <h2 class="banner">Stocks</h2>
     <table border="0">
       <tr>
         <td>
@@ -68,6 +69,7 @@ session_start();
 
   <input type="submit" value="Submit" />
   </form>
+</div>
 
   <script>
     $('#add_interest_button').click(function(){
