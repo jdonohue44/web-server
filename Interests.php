@@ -38,36 +38,20 @@ session_start();
 <div class="container">
   <h2 class="banner-md">Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
-    <table border="0">
-      <tr>
-        <td>
-          <input id="interest_text" type="text" name="Interest" placeholder="Leonardo DiCaprio" maxlength="45" size="30" />
-        </td>
-        <td>
-          <button type="button" id="add_interest_button">Add</button>
-        </td>
-      </tr>
-    </table>
+        <input id="interest_text" type="text" name="Interest" placeholder="Leonardo DiCaprio" maxlength="45" size="30" />
+        <button type="button" id="add_interest_button">Add</button>
 
-  <ul id="interests_ul">
-  </ul>
+        <ul id="interests_ul">
+        </ul>
 
-  <h2 class="banner-md">Stocks</h2>
-    <table border="0">
-      <tr>
-        <td>
-          <input id="stock_text" type="text" name="Stock" placeholder="AMZN" maxlength="45" size="30" />
-        </td>
-        <td>
-          <button type="button" id="add_stock_button">Add</button>
-        </td>
-      </tr>
-    </table>
+        <h2 class="banner-md">Stocks</h2>
+        <input id="stock_text" type="text" name="Stock" placeholder="AMZN" maxlength="45" size="30" />
+        <button type="button" id="add_stock_button">Add</button>
 
-  <ul id="stocks_ul">
-  </ul>
+        <ul id="stocks_ul">
+        </ul>
 
-  <input type="submit" name="submit_button" value="Submit" />
+        <input type="submit" name="submit_button" value="Submit" />
   </form>
 </div>
 
