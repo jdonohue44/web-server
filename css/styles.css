@@ -10,6 +10,7 @@
   width: 200px;
   background: #AAAAAA;
   padding: 5px;
+  list-style-type: none;
 }
 
 #stocks_ul{
@@ -20,6 +21,7 @@
   width: 200px;
   background: #AAAAAA;
   padding: 5px;
+  list-style-type: none;
 }
 
 input, label {
