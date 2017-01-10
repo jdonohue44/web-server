@@ -40,7 +40,7 @@ input[type=text], select {
 
 input[type=submit] {
   width: 100%;
-  background-color: #4CAF50;
+  background-color: #737373;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -49,9 +49,9 @@ input[type=submit] {
   cursor: pointer;
 }
 
-input[type=submit]:hover {
+/*input[type=submit]:hover {
     background-color: #45a049;
-}
+}*/
 
 body.home{
   background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
