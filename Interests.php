@@ -85,6 +85,11 @@ session_start();
       +stock+"'/></li>");
       $('#stock_text').val('');
     });
+
+    var lis = $("#interests_ul li");
+    if(lis.length > 0) {
+      $('form input[type="submit"]').css("background-color", "#4CAF50");
+    }
   </script>
 
 </body>
