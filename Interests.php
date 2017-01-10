@@ -95,7 +95,7 @@ session_start();
       var stocks_lis =   $("#stocks_ul li");
       if((stocks_lis.length + interest_lis.length) > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
-        document.getElementsByName('submit_button')[0].disabled = true;
+        document.getElementsByName('submit_button')[0].disabled = false;
       }
     }
   </script>
