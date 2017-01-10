@@ -1,5 +1,5 @@
 #validation_typing{
-  padding-left: 20%;
+  padding-left: 30%;
   color: green;
 }
 
@@ -50,5 +50,4 @@ input[type=submit]:hover {
 
 body{
   background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
-  opacity: 0.6;
 }
