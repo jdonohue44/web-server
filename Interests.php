@@ -67,7 +67,7 @@ session_start();
   <ul id="stocks_ul">
   </ul>
 
-  <input type="submit" value="Submit" />
+  <input type="submit" name="submit_button" value="Submit" />
   </form>
 </div>
 
@@ -88,7 +88,8 @@ session_start();
 
     var lis = $("#interests_ul li");
     if(lis.length > 0) {
-      $('form input[type="submit"]').css("background-color", "#4CAF50");
+      console.log("here");
+      document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
     }
   </script>
 
