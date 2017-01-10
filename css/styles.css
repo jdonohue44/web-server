@@ -56,3 +56,7 @@ input[type=submit] {
 body.home{
   background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
 }
+
+body.interests_page{
+  background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
+}
