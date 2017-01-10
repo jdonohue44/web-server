@@ -12,7 +12,7 @@
 
 .banner-lg{
   color: white;
-  font-size: 72px;
+  font-size: 86px;
   font-family: cursive;
 }
 
@@ -55,17 +55,10 @@ input[type=submit] {
 }*/
 
 body.home{
+  background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
+  background-repeat: no-repeat;
 }
 
 body.interest_page{
   background-color: #A69B79;
-}
-
-.espress-banner{
-  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
-  background-repeat: no-repeat;
-  border-radius: 5px;
-  padding: 20px;
-  margin: auto;
-  width: 50%;
 }
