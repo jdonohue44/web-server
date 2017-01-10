@@ -37,13 +37,10 @@ session_start();
   }
 ?>
 
+<div class="container">
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
   <table border="0" id="contact_table">
-    <tr>
-      <td>Name</td>
-      <td>Email</td>
-    </tr>
     <tr>
       <td>
         <input type="text" name="Name"  id="name_text" placeholder="Name" tabindex=1 maxlength="45" size="30" />
@@ -58,6 +55,7 @@ session_start();
   </table>
 </form>
 <h5 id="validation_typing"></h5>
+</div>
 
 <!-- Clean up. -->
 <?php
