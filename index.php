@@ -46,10 +46,10 @@ session_start();
     </tr>
     <tr>
       <td>
-        <input type="text" name="Name" id="name_text" tabindex=1 maxlength="45" size="30" />
+        <input type="text" name="Name"  id="name_text" placeholder="Name" tabindex=1 maxlength="45" size="30" />
       </td>
       <td>
-        <input type="text" name="Email" id="email_text" tabindex=2 maxlength="55" size="40" />
+        <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="55" size="40" />
       </td>
       <td>
         <input type="submit" name="validate_button" value="Validate/Register" />

@@ -13,5 +13,15 @@
 
 #banner{
   color: white;
-  font-size: 36px;
+  font-size: 72px;
+  font-family: cursive;
 }
+
+
+input[type=submit] {
+  padding:5px 15px;
+  background:#37FA2C;
+  border:0 none;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 7px;
