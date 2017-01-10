@@ -8,6 +8,18 @@
 
 #interests_ul li{
   width: 200px;
+  background: #AAAAAA;
+  padding: 5px;
+}
+
+#stocks_ul{
+  width: 800px;
+}
+
+#stocks_ul li{
+  width: 200px;
+  background: #AAAAAA;
+  padding: 5px;
 }
 
 input, label {
