@@ -76,18 +76,22 @@ session_start();
 
     $('#add_interest_button').click(function(){
       var interest = $('#interest_text').val();
-      $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
-      +interest+"'/></li>");
-      $('#interest_text').val('');
-      checkListLength();
+      if(interest.length > 0){
+        $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
+        +interest+"'/></li>");
+        $('#interest_text').val('');
+        checkListLength();
+      }
     });
 
     $('#add_stock_button').click(function(){
-      var stock = $('#stock_text').val();
-      $('#stocks_ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
-      +stock+"'/></li>");
-      $('#stock_text').val('');
-      checkListLength();
+      if(interest.length > 0){
+        var stock = $('#stock_text').val();
+        $('#stocks_ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
+        +stock+"'/></li>");
+        $('#stock_text').val('');
+        checkListLength();
+      }
     });
 
     function checkListLength(){
