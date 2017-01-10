@@ -23,8 +23,8 @@ session_start();
       for($i = 0; $i < sizeof($user_interests); $i++){
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i]);
-          header("Location: http://54.86.139.119");
       }
+      header("Location: http://54.86.139.119/Thanks.html");
     }
 
     $user_stocks = $_POST['stocks'];
@@ -32,6 +32,7 @@ session_start();
       for($i = 0; $i < sizeof($user_stocks); $i++){
         // echo $user_stocks[$i];
       }
+      header("Location: http://54.86.139.119/Thanks.html");
     }
 
     ?>
