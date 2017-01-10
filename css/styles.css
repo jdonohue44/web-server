@@ -70,8 +70,9 @@ body.interest_page{
 button{
   background-color: #4CAF50;
   border: none;
+  border-radius: 4px;
   color: white;
-  padding: 15px 32px;
+  padding: 9px 18px 9px 18px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
