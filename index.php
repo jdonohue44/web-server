@@ -77,7 +77,7 @@ session_start();
       document.getElementsByName('validate_button')[0].disabled = false;
       document.getElementsByName('validate_button')[0].style.backgroundColor = "#4CAF50";
     } else {
-      $("#validation_typing").text(email + " is not a valid email yet.");
+      $("#validation_typing").text(email + " is not valid yet.");
       $("#validation_typing").css("color", "red");
       document.getElementsByName('validate_button')[0].disabled = true;
     }
