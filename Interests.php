@@ -72,6 +72,8 @@ session_start();
 </div>
 
   <script>
+    document.getElementsByName('submit_button')[0].disabled = true;
+
     $('#add_interest_button').click(function(){
       var interest = $('#interest_text').val();
       $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
@@ -85,13 +87,15 @@ session_start();
       $('#stocks_ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
       +stock+"'/></li>");
       $('#stock_text').val('');
+      checkListLength();
     });
 
     function checkListLength(){
-      var lis = $("#interests_ul li");
-      if(lis.length > 0) {
-        console.log("here");
+      var interest_lis = $("#interests_ul li");
+      var stocks_lis =   $("#stocks_ul li");
+      if((stocks_lis.length + interest_lis.length) > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
+        document.getElementsByName('submit_button')[0].disabled = true;
       }
     }
   </script>
