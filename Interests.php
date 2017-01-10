@@ -36,7 +36,7 @@ session_start();
 
     ?>
 <div class="container">
-  <h2 class="banner">Interests</h2>
+  <h2 class="banner-md">Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
     <table border="0">
       <tr>
@@ -52,7 +52,7 @@ session_start();
   <ul id="interests_ul">
   </ul>
 
-  <h2 class="banner">Stocks</h2>
+  <h2 class="banner-md">Stocks</h2>
     <table border="0">
       <tr>
         <td>

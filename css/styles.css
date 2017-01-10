@@ -11,9 +11,15 @@
   width: 200px;
 }
 
-.banner{
+.banner-lg{
   color: white;
   font-size: 72px;
+  font-family: cursive;
+}
+
+.banner-md{
+  color: white;
+  font-size: 36px;
   font-family: cursive;
 }
 
