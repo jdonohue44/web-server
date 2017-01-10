@@ -75,7 +75,7 @@ session_start();
     document.getElementsByName('submit_button')[0].disabled = true;
 
     $('#add_interest_button').click(function(){
-      var interest = $('#interest_text').val();
+      var interest = $.trim($('#interest_text').val());
       if(interest.length > 0){
         $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
         +interest+"'/></li>");
@@ -85,8 +85,8 @@ session_start();
     });
 
     $('#add_stock_button').click(function(){
-      if(interest.length > 0){
-        var stock = $('#stock_text').val();
+      var stock = $.trim($('#stock_text').val());
+      if(stock.length > 0){
         $('#stocks_ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
         +stock+"'/></li>");
         $('#stock_text').val('');
