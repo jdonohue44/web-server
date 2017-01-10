@@ -54,9 +54,9 @@ input[type=submit] {
 }*/
 
 body.home{
-  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
+  background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
 }
 
 body.interest_page{
-  background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
+  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
 }
