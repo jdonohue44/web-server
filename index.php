@@ -7,7 +7,7 @@ session_start();
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
-<body background="http://mason.gmu.edu/~jdonohu2/background.jpg">
+<body>
 <h1 align="center" id="banner">Espress</h1>
 <?php
   /* Connect to MySQL and select the database. */
@@ -49,7 +49,7 @@ session_start();
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="55" size="40" />
       </td>
       <td>
-        <input type="submit" name="validate_button" value="Validate/Register" />
+        <input type="submit" name="validate_button" value="Lets Go!" />
       </td>
     </tr>
   </table>

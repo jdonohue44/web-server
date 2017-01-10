@@ -47,3 +47,8 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;
 }
+
+body{
+  background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
+  opacity: 0.6;
+}
