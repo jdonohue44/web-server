@@ -47,6 +47,7 @@ session_start();
       <!-- </td> -->
       <!-- <td> -->
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="55" size="40" />
+        <h5 id="validation_typing"></h5>
       <!-- </td>
       <td> -->
         <input type="submit" name="validate_button" value="Lets Go!" />
@@ -54,7 +55,6 @@ session_start();
     </tr>
   </table> -->
 </form>
-<h5 id="validation_typing"></h5>
 </div>
 
 <!-- Clean up. -->

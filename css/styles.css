@@ -1,6 +1,5 @@
 #validation_typing{
-  padding-left: 25%;
-  color: green;
+  float: right;
 }
 
 #interests_ul{
@@ -31,7 +30,7 @@
 }
 
 input[type=text] {
-    width: 50%;
+    width: 75%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -41,7 +40,7 @@ input[type=text] {
 }
 
 input[type=submit] {
-  width: 50%;
+  width: 75%;
   background-color: #737373;
   color: white;
   padding: 14px 20px;
