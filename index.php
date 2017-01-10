@@ -8,7 +8,6 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body class="home">
-<h1 align="center" class="banner-lg">.</h1>
 <?php
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
@@ -37,6 +36,7 @@ session_start();
   }
 ?>
 
+<div class="espress-banner" />
 <div class="container">
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">

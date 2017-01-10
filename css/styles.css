@@ -55,10 +55,18 @@ input[type=submit] {
 }*/
 
 body.home{
-  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
-  background-repeat: no-repeat;
 }
 
 body.interest_page{
   background-color: #A69B79;
+}
+
+.espress-banner{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin: auto;
+  width: 50%;
+  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
+  background-repeat: no-repeat;
 }
