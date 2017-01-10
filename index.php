@@ -42,9 +42,12 @@ session_start();
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <label for="name_text">Name</label>
         <input type="text" name="Name"  id="name_text" placeholder="Name" tabindex=1 maxlength="30" size="30" />
+
         <label for="email_text">Email</label>
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="35" size="40" />
+
         <h5 id="validation_typing"></h5>
+        
         <input type="submit" name="validate_button" value="Lets Go!" />
 </form>
 </div>
