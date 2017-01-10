@@ -68,9 +68,13 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/*input[type=submit]:hover {
-    background-color: #45a049;
-}*/
+.thank-you-banner{
+  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
+  width: 548px;
+  height: 200px;
+  margin: auto;
+  padding: 20px;
+}
 
 body.home{
   background-image: url('http://mason.gmu.edu/~jdonohu2/background.jpg');
