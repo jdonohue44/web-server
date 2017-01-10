@@ -1,5 +1,5 @@
 #validation_typing{
-  padding-left: 200px;
+  padding-left: 60%;
   color: green;
 }
 
@@ -21,7 +21,6 @@
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    opacity: 0.8;
 }
 
 input[type=text], select {
