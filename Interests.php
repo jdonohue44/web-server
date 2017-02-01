@@ -27,14 +27,6 @@ session_start();
       header("Location: http://54.86.139.119/Thanks.html");
     }
 
-    $user_stocks = $_POST['stocks'];
-    if(sizeof($user_stocks)>0){
-      for($i = 0; $i < sizeof($user_stocks); $i++){
-        // echo $user_stocks[$i];
-      }
-      header("Location: http://54.86.139.119/Thanks.html");
-    }
-
     ?>
 <div class="container">
   <h2 class="banner-md">Interests</h2>
@@ -43,13 +35,6 @@ session_start();
         <button type="button" id="add_interest_button">Add</button>
 
         <ul id="interests_ul">
-        </ul>
-
-        <h2 class="banner-md">Stocks</h2>
-        <input id="stock_text" type="text" name="Stock" placeholder="AMZN" maxlength="5" size="30" />
-        <button type="button" id="add_stock_button">Add</button>
-
-        <ul id="stocks_ul">
         </ul>
 
         <input type="submit" name="submit_button" value="Submit" />
@@ -69,20 +54,9 @@ session_start();
       }
     });
 
-    $('#add_stock_button').click(function(){
-      var stock = $.trim($('#stock_text').val());
-      if(stock.length > 0){
-        $('#stocks_ul').append("<li>"+stock+"<input type='hidden' name='stocks[]' value='"
-        +stock+"'/></li>");
-        $('#stock_text').val('');
-        checkListLength();
-      }
-    });
-
     function checkListLength(){
       var interest_lis = $("#interests_ul li");
-      var stocks_lis =   $("#stocks_ul li");
-      if((stocks_lis.length + interest_lis.length) > 0) {
+      if(interest_lis.length > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
         document.getElementsByName('submit_button')[0].disabled = false;
       }
