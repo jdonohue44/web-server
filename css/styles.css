@@ -45,6 +45,10 @@ input, label {
     flex-direction: column;
 }
 
+.espress-title{
+  margin: auto;
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;

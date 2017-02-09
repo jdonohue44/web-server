@@ -38,7 +38,7 @@ session_start();
 ?>
 
 <div class="container">
-  <h1 class="Espress-Title">Espress</h1>
+  <h1 class="espress-title">Espress</h1>
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <input type="text" name="Name"  id="name_text" placeholder="Name" tabindex=1 maxlength="30" size="30" />
