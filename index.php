@@ -6,6 +6,7 @@ session_start();
 <head>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://use.fontawesome.com/b3331c12b9.js"></script>
 </head>
 <body class="home">
 <?php
@@ -40,9 +41,10 @@ session_start();
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <input type="text" name="Name"  id="name_text" placeholder="Name" tabindex=1 maxlength="30" size="30" />
+        <i class="fa fa-times-circle-o" aria-hidden="true"></i>
 
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="35" size="40" />
-
+        <i class="fa fa-check-circle-o" aria-hidden="true"></i>
         <h5 id="validation_typing"></h5>
 
         <input type="submit" name="validate_button" value="Sign in" />
