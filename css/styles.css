@@ -50,6 +50,10 @@ input, label {
   padding-bottom: 10px;
 }
 
+.espress-title-message{
+  color: #d0d0d0;
+}
+
 .fa-times-circle-o{
   color: red;
 }
