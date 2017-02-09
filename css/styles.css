@@ -51,7 +51,11 @@ input, label {
 }
 
 .espress-title-message{
-  color: #d0d0d0;
+  color: #999;
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
 }
 
 .fa-times-circle-o{
