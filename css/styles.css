@@ -62,6 +62,10 @@ input, label {
   position: absolute;
 }
 
+#email_box{
+  display:flex;
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
