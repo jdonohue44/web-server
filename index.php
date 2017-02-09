@@ -66,18 +66,18 @@ session_start();
     var email = $('#email_text').val();
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
-      $("#validation_typing").css("color", "green");
+      $("#validation_typing").css("color", "#3897F0");
       document.getElementsByName('validate_button')[0].disabled = false;
-      document.getElementsByName('validate_button')[0].style.backgroundColor = "#4CAF50";
+      document.getElementsByName('validate_button')[0].style.backgroundColor = "#3897F0";
     } else {
       if(!email.length){
         document.getElementsByName('validate_button')[0].disabled = true;
-        document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
+        document.getElementsByName('validate_button')[0].style.backgroundColor = "#D8D8D8";
       }else{
         $("#validation_typing").text(email + " is not valid yet.");
         $("#validation_typing").css("color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
-        document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
+        document.getElementsByName('validate_button')[0].style.backgroundColor = "#D8D8D8";
       }
     }
   });
