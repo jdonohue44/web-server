@@ -57,6 +57,11 @@ input, label {
   color: #D8D8D8;
 }
 
+#check_box{
+  display: flex;
+  position: absolute;
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
