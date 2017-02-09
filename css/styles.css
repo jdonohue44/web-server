@@ -49,6 +49,14 @@ input, label {
   margin: auto;
 }
 
+.fa-times-circle-o{
+  color: red;
+}
+
+.fa-check-circle-o{
+  color: red;
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
