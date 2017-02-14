@@ -19,8 +19,10 @@ session_start();
 
   $user_email = htmlentities($_POST['Email']);
 
-  RemoveUser($connection, $user_email);
-  header("Location: http://54.86.139.119/Thanks.html");
+  if(strlen($user_email){
+    RemoveUser($connection, $user_email);
+    header("Location: http://54.86.139.119/Thanks.html");
+  }
 ?>
 
 <div class="container">
