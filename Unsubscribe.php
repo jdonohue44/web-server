@@ -8,7 +8,7 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-<h1 align="center">Enter the email address you want to unsubscribe.</h1>
+<h1 align="center" style="padding-top:5%;">Enter the email address you want to unsubscribe.</h1>
 <?php
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
@@ -18,16 +18,16 @@ session_start();
   $database = mysqli_select_db($connection, DB_DATABASE);
 
   $user_email = htmlentities($_POST['Email']);
+
+  RemoveUser($connection, $user_email);
+  header("Location: http://54.86.139.119/Thanks.html");
 ?>
 
 <div class="container">
 <!-- Input form -->
 <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
-        <label for="email_text">Email</label>
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="35" size="40" />
-
         <h5 id="validation_typing"></h5>
-
         <input type="submit" name="validate_button" value="Unsubscribe" />
 </form>
 </div>
