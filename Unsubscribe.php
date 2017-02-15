@@ -1,6 +1,5 @@
 <?php
 include "../inc/dbinfo.inc";
-session_start();
 ?>
 <html>
 <head>
@@ -80,7 +79,7 @@ session_start();
 /* Add an employee to the table. */
 function RemoveUser($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
-   $query = "DELETE FROM USERS WHERE Email = $e;";
+   $query = "DELETE FROM USERS WHERE Email = 'jared.donohue@gmail.com';";
    if(!mysqli_query($connection, $query)) echo("<p>Error removing user.</p>");
 }
 ?>
