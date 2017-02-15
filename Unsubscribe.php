@@ -19,8 +19,6 @@ session_start();
 
   $user_email = htmlentities($_POST['Email']);
 
-  echo $user_email;
-
   if(strlen($user_email)){
     RemoveUser($connection, $user_email);
     // header("Location: http://54.86.139.119/Thanks.html");
@@ -52,18 +50,18 @@ session_start();
     var email = $('#email_text').val();
     if (validateEmail(email)) {
       $("#validation_typing").text(email + " is valid!");
-      $("#validation_typing").css("color", "green");
+      $("#validation_typing").css("color", "#3897F0");
       document.getElementsByName('validate_button')[0].disabled = false;
-      document.getElementsByName('validate_button')[0].style.backgroundColor = "#4CAF50";
+      document.getElementsByName('validate_button')[0].style.backgroundColor = "#3897F0";
     } else {
       if(!email.length){
         document.getElementsByName('validate_button')[0].disabled = true;
-        document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
+        // document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
       }else{
         $("#validation_typing").text(email + " is not valid yet.");
         $("#validation_typing").css("color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
-        document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
+        // document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
       }
     }
   });
@@ -82,9 +80,7 @@ session_start();
 /* Add an employee to the table. */
 function RemoveUser($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
-  //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
-  //  mysqli_real_escape_string($e));
-     $query = "DELETE FROM USERS WHERE Email = $e;";
-     mysqli_query($connection, $query);
+   $query = "DELETE FROM USERS WHERE Email = $e;";
+   if(!mysqli_query($connection, $query)) echo("<p>Error removing user.</p>");
 }
 ?>
