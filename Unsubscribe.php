@@ -76,10 +76,10 @@ include "../inc/dbinfo.inc";
 
 <?php
 
-/* Add an employee to the table. */
+/* Remove User (email and interests) */
 function RemoveUser($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
    $query = "DELETE FROM USERS WHERE Email = '$e';";
-   if(!mysqli_query($connection, $query)) echo("<p>Error removing user.</p>");
+   if(!mysqli_query($connection, $query)) echo("<p>Error removing user email.</p>");
 }
 ?>

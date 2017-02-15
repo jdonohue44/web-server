@@ -37,6 +37,8 @@ session_start();
   }
 ?>
 
+<div class="screen_shot_img"></div>
+
 <div class="container">
   <h1 class="espress-title">Espress</h1>
   <h2 class="espress-title-message">Sign up and start costumizing
