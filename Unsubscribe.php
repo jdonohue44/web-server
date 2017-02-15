@@ -23,7 +23,7 @@ session_start();
 
   if(strlen($user_email)){
     RemoveUser($connection, $user_email);
-    header("Location: http://54.86.139.119/Thanks.html");
+    // header("Location: http://54.86.139.119/Thanks.html");
   }
 ?>
 
