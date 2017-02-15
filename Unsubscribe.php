@@ -19,6 +19,8 @@ session_start();
 
   $user_email = htmlentities($_POST['Email']);
 
+  <h1>$user_email</h1>
+
   if(strlen($user_email)){
     RemoveUser($connection, $user_email);
     header("Location: http://54.86.139.119/Thanks.html");
