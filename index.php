@@ -46,6 +46,11 @@ session_start();
 
         <div class="info">
           <h1 class="espress-title">Espress</h1>
+          <p id="info_paragraph">
+            Lorem ipsum dolor sit amet, in nihil homero eligendi eos,
+            ne duo appetere tractatos scripserit. Alii tantas referrentur nec no,
+            deserunt prodesset te qui, usu te civibus cotidieque.
+          </p>
         </div>
 
         <div class="sign_in_form">
