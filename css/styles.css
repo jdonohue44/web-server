@@ -73,7 +73,7 @@ input, label {
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .espress-title{
@@ -89,6 +89,7 @@ input, label {
   font-weight: 600;
   font-size: 17px;
   line-height: 20px;
+  margin-top: -20px;
 }
 
 .fa-times-circle-o{
