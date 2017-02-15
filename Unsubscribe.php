@@ -19,7 +19,7 @@ session_start();
 
   $user_email = htmlentities($_POST['Email']);
 
-  echo $user_email
+  echo $user_email;
 
   if(strlen($user_email)){
     RemoveUser($connection, $user_email);
