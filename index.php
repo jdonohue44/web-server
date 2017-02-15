@@ -37,30 +37,34 @@ session_start();
   }
 ?>
 
-<div class="screen_shot_img"></div>
+<div class="flex_box_holder">
 
-<div class="container">
-  <h1 class="espress-title">Espress</h1>
-  <h2 class="espress-title-message">Sign up and start costumizing
-    your newsletter.</h2>
-<!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
-        <div id="name_box">
-          <input type="text" name="Name"  id="name_text" placeholder="Name" autocorrect="off" autocapitalize="off" tabindex=1 maxlength="30" size="30" />
-          <!-- <i class="fa fa-times-circle-o" aria-hidden="true"></i> -->
-        </div>
+    <div class="screen_shot_img">
+    </div>
 
-        <div id="email_box">
-          <input type="text" name="Email" id="email_text" placeholder="Email" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
-          <!-- <div id="check_box">
-            <i class="fa fa-check-circle-o" aria-hidden="true"></i>
-          </div> -->
-        </div>
+    <div class="container">
+      <h1 class="espress-title">Espress</h1>
+      <h2 class="espress-title-message">Sign up and start costumizing
+        your newsletter.</h2>
+    <!-- Input form -->
+      <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+          <div id="name_box">
+              <input type="text" name="Name"  id="name_text" placeholder="Name" autocorrect="off" autocapitalize="off" tabindex=1 maxlength="30" size="30" />
+              <!-- <i class="fa fa-times-circle-o" aria-hidden="true"></i> -->
+          </div>
 
-        <h5 id="validation_typing"></h5>
+          <div id="email_box">
+              <input type="text" name="Email" id="email_text" placeholder="Email" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
+              <!-- <div id="check_box">
+                <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+              </div> -->
+          </div>
 
-        <input type="submit" name="validate_button" value="Get started" />
-</form>
+          <h5 id="validation_typing"></h5>
+
+          <input type="submit" name="validate_button" value="Get started" />
+        </form>
+    </div>
 </div>
 
 <!-- Clean up. -->

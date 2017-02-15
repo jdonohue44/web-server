@@ -1,5 +1,6 @@
 div{
   display: flex;
+  flex-direction: column;
 }
 
 #validation_typing{
@@ -46,12 +47,10 @@ input, label {
 .container {
     background-color: white;
     padding: 20px 60px 20px 60px;
-    margin: auto;
     width: 30%;
     border-width: 1px;
     border-style: solid;
     border-color: #d8d8d8;
-    flex-direction: column;
     margin-top: 10%;
 }
 
