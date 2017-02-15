@@ -71,8 +71,7 @@ session_start();
         <div class="info">
           <p id="info_paragraph">
             Lorem ipsum dolor sit amet, in nihil homero eligendi eos,
-            ne duo appetere tractatos scripserit. Alii tantas referrentur nec no,
-            deserunt prodesset te qui, usu te civibus cotidieque.
+            ne duo appetere tractatos scripserit. Alii tantas.
           </p>
         </div>
 
