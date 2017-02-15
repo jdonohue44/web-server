@@ -41,9 +41,11 @@ session_start();
 
     <div class="screen_shot_img">
     </div>
+      <div class="info">
+        <h1 class="espress-title">Espress</h1>
+      </div>
 
-    <div class="sign_in_container">
-      <h1 class="espress-title">Espress</h1>
+      <div class="sign_in_container">
       <h2 class="espress-title-message">Sign up and start costumizing
         your newsletter.</h2>
     <!-- Input form -->
@@ -64,8 +66,6 @@ session_start();
 
           <input type="submit" name="validate_button" value="Get started" />
         </form>
-    </div>
-    <div>
     </div>
 </div>
 
