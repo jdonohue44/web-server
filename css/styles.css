@@ -30,7 +30,6 @@ div{
 
 #info_paragraph{
   text-align: center;
-  font-weight: 600;
   font-size: 17px;
   line-height: 20px;
   max-width: 400px;
@@ -73,7 +72,7 @@ input, label {
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .espress-title{
