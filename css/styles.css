@@ -38,6 +38,12 @@ input, label {
   font-size: 36px;
 }
 
+.flex_box_holder{
+  flex-direction: row;
+  justify-content: center;
+  margin: 30px auto 0;
+}
+
 .screen_shot_img{
   background-image: url('http://mason.gmu.edu/~jdonohu2/screen_shot.png');
   width: 452px;
