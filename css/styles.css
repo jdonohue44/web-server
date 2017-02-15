@@ -28,6 +28,13 @@ div{
   list-style-type: none;
 }
 
+#info_paragraph{
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+}
+
 input, label {
   display: block;
 }
