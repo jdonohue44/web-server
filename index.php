@@ -44,16 +44,8 @@ session_start();
 
     <div class="sign_in_container">
 
-        <div class="info">
-          <h1 class="espress-title">Espress</h1>
-          <p id="info_paragraph">
-            Lorem ipsum dolor sit amet, in nihil homero eligendi eos,
-            ne duo appetere tractatos scripserit. Alii tantas referrentur nec no,
-            deserunt prodesset te qui, usu te civibus cotidieque.
-          </p>
-        </div>
-
         <div class="sign_in_form">
+          <h1 class="espress-title">Espress</h1>
           <h2 class="espress-title-message">Sign up and start costumizing
           your newsletter.</h2>
           <!-- Input form -->
@@ -74,6 +66,14 @@ session_start();
 
             <input type="submit" name="validate_button" value="Get started" />
           </form>
+        </div>
+
+        <div class="info">
+          <p id="info_paragraph">
+            Lorem ipsum dolor sit amet, in nihil homero eligendi eos,
+            ne duo appetere tractatos scripserit. Alii tantas referrentur nec no,
+            deserunt prodesset te qui, usu te civibus cotidieque.
+          </p>
         </div>
 
     </div>
