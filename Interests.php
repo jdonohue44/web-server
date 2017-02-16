@@ -42,7 +42,7 @@ session_start();
 
   <div>
     <div class="login-container">
-      <h4 class="interests-welcome"> logged in as <?php echo $email ?> </h1>
+      <h4 class="banner-sm"> logged in as <?php echo $email ?> </h1>
     </div>
 
     <div class="interest-list-container">

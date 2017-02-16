@@ -29,6 +29,10 @@ input, label {
   display: block;
 }
 
+.banner-sm{
+  text-align: center;
+  font-size: 16px;
+}
 
 .banner-md{
   text-align: center;
