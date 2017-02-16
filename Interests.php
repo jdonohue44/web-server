@@ -7,7 +7,7 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
-<body class="interest_page">
+<body>
   <?php
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
@@ -28,7 +28,7 @@ session_start();
     }
 
     ?>
-<div class="container">
+<div class="flex_box_holder">
   <h2 class="banner-md">Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <input id="interest_text" type="text" name="Interest" placeholder="Leonardo DiCaprio" maxlength="30" size="30" />
@@ -57,7 +57,7 @@ session_start();
     function checkListLength(){
       var interest_lis = $("#interests_ul li");
       if(interest_lis.length > 0) {
-        document.getElementsByName('submit_button')[0].style.backgroundColor = "#4CAF50";
+        document.getElementsByName('submit_button')[0].style.backgroundColor = "#3897F0";
         document.getElementsByName('submit_button')[0].disabled = false;
       }
     }

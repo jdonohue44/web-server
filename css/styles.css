@@ -12,9 +12,14 @@ div{
 
 #interests_ul li{
   width: 200px;
-  background: #CFCFCF;
+  background: rgb(255, 255, 255);
   padding: 5px;
   list-style-type: none;
+  border-style: solid;
+  border-color: #999;
+  border-width: 1px;
+  padding: 10px;
+  margin-bottom: 4px;
 }
 
 #stocks_ul{
@@ -137,16 +142,12 @@ input[type=submit] {
   margin: auto;
 }
 
-body.home{
-  background-color: #fafafa;
-}
-
-body.interest_page{
+body{
   background-color: #fafafa;
 }
 
 button{
-  background-color: #4CAF50;
+  background-color: #3897F0;
   border: none;
   border-radius: 4px;
   color: white;

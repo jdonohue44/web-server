@@ -7,7 +7,7 @@ include "../inc/dbinfo.inc";
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-<h1 align="center" style="padding-top:5%;">Enter the email address you want to unsubscribe.</h1>
+<h1 align="center" style="padding-top:5%;">Confirm your email address to unsubscribe.</h1>
 <?php
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
