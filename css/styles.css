@@ -47,7 +47,7 @@ input, label {
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
-  margin: 80px;
+  margin: 20px;
 }
 
 .interest-list-container{
@@ -56,7 +56,16 @@ input, label {
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
-  margin: 80px;
+  margin: 20px;
+}
+
+.login-container{
+  background-color: white;
+  padding: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  margin: 20px;
 }
 
 .screen_shot_img{

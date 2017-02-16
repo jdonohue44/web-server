@@ -40,8 +40,11 @@ session_start();
     </form>
   </div>
 
+  <div class="login-container">
+    <h4 class="interests-welcome"> logged in as <?php echo $email ?> </h1>
+  </div>
+
   <div class="interest-list-container">
-    <h1 class="interests-welcome"> Welcome <?php echo $email ?> </h1>
     <h2 class="banner-md">Interests</h2>
     <ul id="interests_ul"></ul>
   </div>
