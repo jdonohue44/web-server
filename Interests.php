@@ -45,12 +45,11 @@ session_start();
       <h4 class="banner-sm"> logged in as <span id="username"><?php echo $email ?></span></h1>
     </div>
   </div>
+</div>
 
-  <div class="interest-list-container">
-    <h2 class="banner-md">Interests</h2>
-    <ul id="interests_ul"></ul>
-  </div>
-  
+<div class="interest-list-container">
+  <h2 class="banner-md">Interests</h2>
+  <ul id="interests_ul"></ul>
 </div>
 
   <script>
