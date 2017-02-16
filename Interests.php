@@ -32,17 +32,17 @@ session_start();
 
     ?>
 <div class="interests-box-container">
+
   <h1 class="interests-welcome"> Welcome <?php echo $email ?> </h1>
   <h2 class="banner-md">Interests</h2>
+
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+        <ul id="interests_ul"></ul>
         <input id="interest_text" type="text" name="Interest" placeholder="Leonardo DiCaprio" maxlength="30" size="30" />
         <button type="button" id="add_interest_button">Add</button>
-
-        <ul id="interests_ul">
-        </ul>
-
         <input type="submit" name="submit_button" value="Submit" />
   </form>
+
 </div>
 
   <script>

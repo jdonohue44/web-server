@@ -3,34 +3,16 @@ div{
   flex-direction: column;
 }
 
-#validation_typing{
-}
-
 #interests_ul{
   width: 600px;
 }
 
 #interests_ul li{
   width: 200px;
-  background: rgb(255, 255, 255);
-  padding: 5px;
+  background: #3897F0;
   list-style-type: none;
-  border-style: solid;
-  border-color: #999;
-  border-width: 1px;
   padding: 10px;
-  margin-bottom: 4px;
-}
-
-#stocks_ul{
-  width: 400px;
-}
-
-#stocks_ul li{
-  width: 200px;
-  background: #CFCFCF;
-  padding: 5px;
-  list-style-type: none;
+  margin: 2px;
 }
 
 #info_paragraph{
