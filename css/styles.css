@@ -4,7 +4,7 @@ div{
 }
 
 #username{
-  font-weight: 700;
+  font-weight: 600;
 }
 
 #interests_ul li{
@@ -133,6 +133,15 @@ input, label {
 
 #email_box{
   display:flex;
+}
+
+#interest_text{
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 input[type=text] {
