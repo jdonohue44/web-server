@@ -53,7 +53,7 @@ input, label {
 
 .interest-form-container{
   background-color: white;
-  padding: 40px;
+  padding: 20px;
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
@@ -62,7 +62,6 @@ input, label {
 
 .interest-list-container{
   background-color: white;
-  padding: 40px;
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
@@ -133,15 +132,6 @@ input, label {
 
 #email_box{
   display:flex;
-}
-
-#interest_text{
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
 }
 
 input[type=text] {
