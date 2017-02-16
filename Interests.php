@@ -11,6 +11,9 @@ session_start();
   <?php
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
+    if(!strlen($email)){
+      header("Location: http://54.86.139.119/");
+    }
     /* Connect to MySQL and select the database. */
     $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -29,6 +32,7 @@ session_start();
 
     ?>
 <div class="flex_box_holder">
+  <h1 class="interests-welcome"> Welcome <?php echo $email ?> </h1>
   <h2 class="banner-md">Interests</h2>
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <input id="interest_text" type="text" name="Interest" placeholder="Leonardo DiCaprio" maxlength="30" size="30" />
