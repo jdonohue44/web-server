@@ -8,7 +8,6 @@ div{
 }
 
 #interests_ul li{
-  width: 200px;
   background: #999;
   list-style-type: none;
   padding: 10px;
@@ -18,7 +17,6 @@ div{
 }
 
 #interests_ul{
-  max-width: 400px;
 }
 
 #info_paragraph{
@@ -66,6 +64,8 @@ input, label {
   border-style: solid;
   border-color: #d8d8d8;
   margin: 20px;
+  padding-right: 20px;
+  max-width: 600px;
 }
 
 .login-container{
