@@ -3,6 +3,10 @@ div{
   flex-direction: column;
 }
 
+span #username{
+  font-weight: 700;
+}
+
 #interests_ul li{
   width: 200px;
   background: #999;
@@ -31,12 +35,14 @@ input, label {
 
 .banner-sm{
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .banner-md{
   text-align: center;
   font-size: 24px;
+  font-weight: 500;
 }
 
 .flex_box_holder{
@@ -65,7 +71,7 @@ input, label {
 
 .login-container{
   background-color: white;
-  padding: 40px;
+  padding: 0 15px 0 15px;
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
