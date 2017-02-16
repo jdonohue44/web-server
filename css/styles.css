@@ -31,8 +31,8 @@ input, label {
 
 
 .banner-md{
-  color: black;
-  font-size: 36px;
+  text-align: center;
+  font-size: 24px;
 }
 
 .flex_box_holder{
