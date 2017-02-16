@@ -33,8 +33,8 @@ session_start();
     ?>
 <div class="interests-box-container">
 
-  <h1 class="interests-welcome"> Welcome <?php echo $email ?> </h1>
-  <h2 class="banner-md">Interests</h2>
+  <!-- <h1 class="interests-welcome"> Welcome <?php echo $email ?> </h1>
+  <h2 class="banner-md">Interests</h2> -->
 
   <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <ul id="interests_ul"></ul>
