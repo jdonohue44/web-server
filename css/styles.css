@@ -3,7 +3,7 @@ div{
   flex-direction: column;
 }
 
-span #username{
+#username{
   font-weight: 700;
 }
 
