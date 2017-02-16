@@ -37,7 +37,16 @@ input, label {
   margin: 30px auto 0;
 }
 
-.interests-box-container{
+.interest-form-container{
+  background-color: white;
+  padding: 40px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  margin: 80px;
+}
+
+.interest-list-container{
   background-color: white;
   padding: 40px;
   border-width: 1px;
