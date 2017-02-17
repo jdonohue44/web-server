@@ -17,6 +17,7 @@ div{
 }
 
 #interests_ul{
+  margin-left: -40px;
 }
 
 #info_paragraph{
@@ -141,6 +142,7 @@ input[type=text] {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    max-width: 400px;
 }
 
 input[type=submit] {
