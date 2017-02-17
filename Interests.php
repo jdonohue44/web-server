@@ -59,11 +59,11 @@ session_start();
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
 
-    $('ul.interests_ul li').click(function(){
+    $('.interests_ul li').click(function(){
         $(this).remove();
     });
 
-    $('ul.interests_ul li').hover(function(){
+    $('.interests_ul li').hover(function(){
       $(this).css("background-color", "red");
       },function(){
       $(this).css("background-color", "#999");
