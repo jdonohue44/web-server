@@ -59,16 +59,6 @@ session_start();
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
 
-    $('ul#interests_ul li').click(function(){
-        $(this).remove();
-    });
-
-    $('ul#interests_ul li').hover(function(){
-      $(this).css("background-color", "red");
-      },function(){
-      $(this).css("background-color", "#999");
-    });
-
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
       if(interest.length > 0){
@@ -76,9 +66,21 @@ session_start();
         +interest+"'/></li>");
         $('#interest_text').val('');
         checkListLength();
+        initializeListItems();
       }
     });
 
+    function initializeListItems(){
+      $('ul#interests_ul li').click(function(){
+          $(this).remove();
+      });
+
+      $('ul#interests_ul li').hover(function(){
+        $(this).css("background-color", "red");
+        },function(){
+        $(this).css("background-color", "#999");
+      });
+    }
     function checkListLength(){
       var interest_lis = $("#interests_ul li");
       if(interest_lis.length > 0) {
