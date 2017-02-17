@@ -7,7 +7,7 @@ div{
   font-weight: 600;
 }
 
-.interests_ul li{
+#interests_ul li{
   background: #999;
   list-style-type: none;
   padding: 10px;
@@ -16,7 +16,7 @@ div{
   color: white;
 }
 
-.interests_ul{
+#interests_ul{
   margin-left: -40px;
 }
 
