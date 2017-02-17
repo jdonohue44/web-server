@@ -72,9 +72,9 @@ session_start();
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
       if(interest.length > 0){
-        $('.interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
+        $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
         +interest+"'/></li>");
-        $('.interest_text').val('');
+        $('#interest_text').val('');
         checkListLength();
       }
     });
