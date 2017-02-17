@@ -47,12 +47,12 @@ input, label {
 .flex_box_holder{
   flex-direction: row;
   justify-content: center;
-  margin: 30px auto 0;
+  margin: 100px auto 0;
 }
 
 .interest-form-container{
   background-color: white;
-  padding: 20px;
+  padding: 80px;
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
