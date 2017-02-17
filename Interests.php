@@ -11,9 +11,17 @@ session_start();
   <?php
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
+
     if(!strlen($email)){
       header("Location: http://54.86.139.119/");
     }
+
+    if(strlen($name)){
+      $username = $name;
+    }else{
+      $username = $email;
+    }
+
     /* Connect to MySQL and select the database. */
     $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     if (mysqli_connect_errno()) echo "Failed to connect to MySQL: " . mysqli_connect_error();
@@ -36,20 +44,16 @@ session_start();
     <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
           <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
           <button type="button" id="add_interest_button">Add</button>
+          <ul id="interests_ul"></ul>
           <input type="submit" name="submit_button" value="Submit" />
     </form>
   </div>
 
   <div>
     <div class="login-container">
-      <h4 class="banner-sm"> logged in as <span id="username"><?php echo $email ?></span></h1>
+      <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
     </div>
   </div>
-</div>
-
-<div class="interest-list-container">
-  <h2 class="banner-md">Interests</h2>
-  <ul id="interests_ul"></ul>
 </div>
 
   <script>
