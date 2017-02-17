@@ -44,7 +44,7 @@ session_start();
     <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
           <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
           <button type="button" id="add_interest_button">Add</button>
-          <ul id="interests_ul"></ul>
+          <ul class="interests_ul"></ul>
           <input type="submit" name="submit_button" value="Submit" />
     </form>
   </div>
@@ -59,12 +59,22 @@ session_start();
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
 
+    $('ul.interests_ul li').click(function(){
+        $(this).remove();
+    });
+
+    $('ul.interests_ul li').hover(function(){
+      $(this).css("background-color", "red");
+      },function(){
+      $(this).css("background-color", "#999");
+    });
+
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
       if(interest.length > 0){
-        $('#interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
+        $('.interests_ul').append("<li>"+interest+"<input type='hidden' name='interests[]' value='"
         +interest+"'/></li>");
-        $('#interest_text').val('');
+        $('.interest_text').val('');
         checkListLength();
       }
     });

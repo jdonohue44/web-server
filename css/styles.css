@@ -7,7 +7,7 @@ div{
   font-weight: 600;
 }
 
-#interests_ul li{
+.interests_ul li{
   background: #999;
   list-style-type: none;
   padding: 10px;
@@ -16,7 +16,7 @@ div{
   color: white;
 }
 
-#interests_ul{
+.interests_ul{
   margin-left: -40px;
 }
 
@@ -57,7 +57,7 @@ input, label {
   border-style: solid;
   border-color: #d8d8d8;
   margin: 20px;
-  max-width: 500px;
+  max-width: 350px;
 }
 
 .login-container{
