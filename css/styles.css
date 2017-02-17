@@ -57,16 +57,7 @@ input, label {
   border-style: solid;
   border-color: #d8d8d8;
   margin: 20px;
-}
-
-.interest-list-container{
-  background-color: white;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d8d8d8;
-  margin: 20px;
-  padding-right: 20px;
-  max-width: 600px;
+  max-width: 500px;
 }
 
 .login-container{
