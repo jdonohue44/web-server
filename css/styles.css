@@ -69,6 +69,15 @@ input, label {
   margin: 20px;
 }
 
+.unsubscribe-container{
+  background-color: white;
+  padding: 0 15px 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8d8d8;
+  margin: 20px;
+}
+
 .screen_shot_img{
   background-image: url('http://mason.gmu.edu/~jdonohu2/screen_shot.png');
   width: 375px;

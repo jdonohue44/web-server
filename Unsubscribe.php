@@ -24,13 +24,15 @@ include "../inc/dbinfo.inc";
   }
 ?>
 
-<div class="container">
+<div class="flex_box_holder">
+  <div class="unsubscribe-container">
 <!-- Input form -->
-<form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+    <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="35" size="40" />
         <h5 id="validation_typing"></h5>
         <input type="submit" name="validate_button" value="Unsubscribe" />
-</form>
+    </form>
+  </div>
 </div>
 
 <!-- Clean up. -->
