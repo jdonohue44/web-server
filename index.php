@@ -6,7 +6,7 @@ session_start();
 <head>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://use.fontawesome.com/b3331c12b9.js"></script>
+  <!-- <script src="https://use.fontawesome.com/b3331c12b9.js"></script> -->
 </head>
 <body>
 <?php
@@ -70,8 +70,8 @@ session_start();
 
         <div class="info">
           <p id="info_paragraph">
-            Lorem ipsum dolor sit amet, in nihil homero eligendi eos,
-            ne duo appetere tractatos scripserit. Alii tantas.
+            If you have already signed up, simply enter your email
+            address to add more interests.
           </p>
         </div>
 
