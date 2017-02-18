@@ -39,7 +39,9 @@ session_start();
 
 <div class="flex_box_holder">
 
-    <div class="screen_shot_img">
+    <div class="testimonials-container">
+      <div class="screen_shot_img">
+      </div>
     </div>
 
     <div class="sign_in_container">
