@@ -50,6 +50,7 @@ session_start();
           <div class="logo_img">
             <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
           </div>
+
           <h2 class="espress-title-message">Sign up and start costumizing
           your newsletter.</h2>
           <!-- Input form -->
@@ -80,6 +81,10 @@ session_start();
         </div>
 
     </div>
+</div>
+
+<div class="footer">
+  <p>Espress News, 2017</p>
 </div>
 
 <!-- Clean up. -->

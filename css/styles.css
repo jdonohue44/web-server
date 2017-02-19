@@ -51,6 +51,11 @@ input, label {
   margin: 50px auto 0;
 }
 
+.footer{
+  margin: auto;
+  text-align: center;
+}
+
 .interest-form-container{
   background-color: white;
   padding: 80px;
@@ -83,7 +88,7 @@ input, label {
   background-image: url('http://mason.gmu.edu/~jdonohu2/sample.png');
   width: 597px;
   height: 712px;
-  margin-right: 50px;
+  margin-right: 30px;
   border-style: solid;
   border-color: #d8d8d8;
   border-width: 1px;
