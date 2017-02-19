@@ -40,7 +40,7 @@ session_start();
 <div class="flex_box_holder">
 
     <div class="testimonials-container">
-      <div class="screen_shot_img">
+      <div class="sample_img">
       </div>
     </div>
 
