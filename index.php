@@ -37,6 +37,10 @@ session_start();
   }
 ?>
 
+<div class="logo_img">
+  <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
+</div>
+
 <div class="flex_box_holder">
 
     <div class="testimonials-container">
