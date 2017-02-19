@@ -134,6 +134,8 @@ input, label {
 .logo_img{
   margin: auto;
   margin-top: 50px;
+  width: 256px;
+  height: 50px;
 }
 
 #check_box{
