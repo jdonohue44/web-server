@@ -37,10 +37,6 @@ session_start();
   }
 ?>
 
-<div class="logo_img">
-  <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
-</div>
-
 <div class="flex_box_holder">
 
     <div class="testimonials-container">
@@ -51,7 +47,9 @@ session_start();
     <div class="sign_in_container">
 
         <div class="sign_in_form">
-          <h1 class="espress-title">Espress</h1>
+          <div class="logo_img">
+            <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
+          </div>
           <h2 class="espress-title-message">Sign up and start costumizing
           your newsletter.</h2>
           <!-- Input form -->
