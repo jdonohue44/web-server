@@ -96,7 +96,8 @@ session_start();
   document.getElementsByName('validate_button')[0].disabled = true;
 
   $(document).ready(function() {
-    $('input').val('');
+    $('#email_text').val('');
+    $('#name_text').val('');
   });
 
   // enable Validate button when Email is Valid
