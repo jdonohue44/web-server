@@ -79,6 +79,18 @@ input, label {
   border-style: solid;
   border-color: #d8d8d8;
   margin: 20px;
+  display: inline-flex;
+}
+
+.submit_button_container{
+  display: inline-flex;
+  margin: auto;
+  width: 400px;
+}
+
+.add_interest_container{
+  display: inline-flex;
+  margin: auto;
 }
 
 .unsubscribe-container{

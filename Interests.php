@@ -41,16 +41,19 @@ session_start();
 
     ?>
 
-    <div class="logo_img">
+    <div class="logo_img" style="margin: 50px 0 0 10px;">
       <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
     </div>
+
     <div class="login-container">
       <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
     </div>
 
+    <div class = "add_interest_container">
+      <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
+      <button type="button" id="add_interest_button">Add</button>
+    </div>
 
-    <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
-    <button type="button" id="add_interest_button">Add</button>
     <div class="interest-form-container">
       <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
           <ul id="interests_ul">
@@ -63,8 +66,11 @@ session_start();
           ?>
           </ul>
     </div>
-    <input type="submit" name="submit_button" value="Submit" />
-    </form>
+
+    <div class="submit_button_container">
+      <input type="submit" name="submit_button" value="Submit" />
+      </form>
+    </div>
 
 
   <script>
