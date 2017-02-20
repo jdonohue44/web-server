@@ -51,8 +51,8 @@ session_start();
             <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
           </div>
 
-          <h2 class="espress-title-message">Sign up and start costumizing
-          your newsletter.</h2>
+          <h2 class="espress-title-message">Sign up to start costumizing
+          your news.</h2>
           <!-- Input form -->
           <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
             <div id="name_box">
