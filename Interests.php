@@ -51,7 +51,6 @@ session_start();
               foreach ($array as $v) {
                 echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
               }
-              echo "<script> initializeListItems(); console.log('here');</script>";
             }
           ?>
           </ul>
@@ -98,6 +97,8 @@ session_start();
         document.getElementsByName('submit_button')[0].disabled = false;
       }
     }
+
+    initializeListItems();
   </script>
 
 </body>
