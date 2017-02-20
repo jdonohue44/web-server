@@ -100,9 +100,9 @@ input, label {
 .sign_in_form {
   background-color: white;
   padding: 0px 60px 20px 60px;
-  border-width: 1px;
+  border-width: 2px;
   border-style: solid;
-  border-color: #d8d8d8;
+  border-color: #9c9c9c;
 }
 
 .info{

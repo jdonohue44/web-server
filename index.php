@@ -71,14 +71,14 @@ session_start();
 
             <input type="submit" name="validate_button" value="Get started" />
           </form>
-        </div>
-
-        <div class="info">
           <p id="info_paragraph">
             If you have already signed up, simply enter your email
             address to add or remove your interests.
           </p>
         </div>
+
+        <!-- <div class="info">
+        </div> -->
 
     </div>
 </div>
