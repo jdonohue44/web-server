@@ -74,6 +74,8 @@ input, label {
 
 .nav-bar-flex-row{
   flex-direction: row;
+  -webkit-flex-direction: row;
+  display: -webkit-flex;
   display: flex;
   width: 100%;
   padding: 26px 40px;
