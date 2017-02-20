@@ -28,6 +28,7 @@ session_start();
     $database = mysqli_select_db($connection, DB_DATABASE);
 
     VerifyInterestTable($connection, DB_DATABASE);
+    $interests = GetInterests($connection, $email);
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
@@ -44,7 +45,11 @@ session_start();
     <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
           <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
           <button type="button" id="add_interest_button">Add</button>
-          <ul id="interests_ul"></ul>
+          <ul id="interests_ul">
+            <?php foreach ($arry as $v) {
+              echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
+            } ?>
+          </ul>
           <input type="submit" name="submit_button" value="Submit" />
     </form>
   </div>
@@ -95,7 +100,28 @@ session_start();
 </html>
 
 <?php
-/* Add an employee to the table. */
+/* Get user interests */
+function GetInterests($connection, $email) {
+   $e = mysqli_real_escape_string($connection, $email);
+   $array = array();
+  //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
+  //  mysqli_real_escape_string($e));
+   $check_query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
+	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
+	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
+	                 where USERS.Email = '$e'";
+
+   $present = mysqli_query($connection, $check_query);
+   $num_rows = mysqli_num_rows($present);
+   if ($num_rows > 0) {
+     while($row = mysqli_fetch_assoc($result)) {
+        array_push($array, $row["Interest"]);
+      }
+   }
+   return $array;
+}
+
+/* Add interests to INTEREST table. */
 function AddInterest($connection, $interest) {
    $i = mysqli_real_escape_string($connection, $interest);
   //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
@@ -109,6 +135,7 @@ function AddInterest($connection, $interest) {
     }
 }
 
+/*Link User with INTEREST in the join table USER_INTERESTS*/
 function AddUserInterest($connection, $email, $interest) {
    $e = mysqli_real_escape_string($connection, $email);
    $i = mysqli_real_escape_string($connection, $interest);
