@@ -71,14 +71,13 @@ session_start();
 
             <input type="submit" name="validate_button" value="Get started" />
           </form>
-          <p id="info_paragraph">
-            If you have already signed up, simply enter your email
-            address to add or remove your interests.
-          </p>
         </div>
 
-        <!-- <div class="info">
-        </div> -->
+        <div class="info">
+          <p id="info_paragraph">
+            Already signed up? <a class="login_link" href="javascript:void(0)" onclick="diaplyLoginLayout()">Log in</a>
+          </p>
+        </div>
 
     </div>
 </div>
@@ -118,6 +117,10 @@ session_start();
       }
     }
   });
+
+  function displayLoginLayout(){
+    console.log("change layout");
+  }
 
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
