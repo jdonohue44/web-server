@@ -122,6 +122,7 @@ session_start();
     $(".espress-title-message").css("display", "none");
     $("input[type=submit]").text("Log in");
     $("#name_text").css("display","none");
+    $("#email_text").css("margin-top","20px");
   }
 
   function validateEmail(email) {

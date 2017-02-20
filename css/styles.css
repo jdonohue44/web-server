@@ -157,7 +157,7 @@ input, label {
 
 input[type=text] {
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-top: 8px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
