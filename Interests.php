@@ -106,18 +106,16 @@ function GetInterests($connection, $email) {
    $array = array();
   //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
   //  mysqli_real_escape_string($e));
-   $check_query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
+   $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
 	                 where USERS.Email = '$e'";
 
-   $present = mysqli_query($connection, $check_query);
-   $num_rows = mysqli_num_rows($present);
+   $result = mysqli_query($connection, $query);
+   $num_rows = mysqli_num_rows($result);
    if ($num_rows > 0) {
-     echo "<h1>HI</h1>";
      while($row = mysqli_fetch_assoc($result)) {
         array_push($array, $row["Interest"]);
-        echo "<h1>" . $row["Interest"] . "</h1>";
       }
    }
    return $array;
