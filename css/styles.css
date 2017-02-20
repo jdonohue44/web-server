@@ -72,47 +72,31 @@ input, label {
   max-width: 350px;
 }
 
+.nav-bar-flex-row{
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+  padding: 26px 40px;
+  max-width: 1010px;
+}
+
+.logo_img{
+  width: 256px;
+  height: 50px;
+}
+
 .login-container{
-  -ms-flex-line-pack: center;
-    align-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 0 0%;
-    flex: 1 0 0%;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+  background-color: white;
+  padding: 0 15px 0 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d8d8d8;
 }
 
 .submit_button_container{
   display: inline-flex;
   margin: auto;
   width: 400px;
-}
-
-.nav-bar-flex-row{
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  max-width: 1010px;
-  padding: 26px 40px;
-  width: 100%;
 }
 
 .add_interest_container{
@@ -176,13 +160,6 @@ input, label {
 
 .fa-check-circle-o{
   color: #D8D8D8;
-}
-
-.logo_img{
-  margin: auto;
-  margin-top: 50px;
-  width: 256px;
-  height: 50px;
 }
 
 #check_box{
