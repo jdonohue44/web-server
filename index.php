@@ -69,7 +69,7 @@ session_start();
 
             <h5 id="validation_typing"></h5>
 
-            <input type="submit" name="validate_button" value="Get started" />
+            <input type="submit" name="validate_button" value="Sign up" />
           </form>
         </div>
 
