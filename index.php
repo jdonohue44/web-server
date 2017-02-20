@@ -123,6 +123,7 @@ session_start();
     $("input[type=submit]").text("Log in");
     $("#name_text").css("display","none");
     $("#email_text").css("margin-top","20px");
+    $("input[name=validate_button]").val("Log in");
     $(".info").html("<p id='info_paragraph'>Dont have an account? <a class='login_link' href='javascript:void(0)'' onclick='displaySignupLayout()'>Sign up</a></p>");
   }
 
