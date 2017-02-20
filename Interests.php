@@ -28,7 +28,7 @@ session_start();
     $database = mysqli_select_db($connection, DB_DATABASE);
 
     VerifyInterestTable($connection, DB_DATABASE);
-    $interests = GetInterests($connection, $email);
+    $array = GetInterests($connection, $email);
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
@@ -46,7 +46,7 @@ session_start();
           <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
           <button type="button" id="add_interest_button">Add</button>
           <ul id="interests_ul">
-            <?php foreach ($arry as $v) {
+            <?php foreach ($array as $v) {
               echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
             } ?>
           </ul>
