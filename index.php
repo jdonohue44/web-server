@@ -123,7 +123,15 @@ session_start();
     $("input[type=submit]").text("Log in");
     $("#name_text").css("display","none");
     $("#email_text").css("margin-top","20px");
-    // $("#validation_typing").css("margin","0");
+    $(".info").html("<p id='info_paragraph'>Dont have an account? <a class='login_link' href='javascript:void(0)'' onclick='displaySignupLayout()'>Sign up</a></p>");
+  }
+
+  function displaySignupLayout(){
+    // $(".espress-title-message").css("display", "none");
+    // $("input[type=submit]").text("Log in");
+    // $("#name_text").css("display","none");
+    // $("#email_text").css("margin-top","20px");
+    // $(".info").html("<p id='info_paragraph'>Dont have an account? <a class='login_link' href='javascript:void(0)'' onclick='displaySignupLayout()'>Sign up</a></p>");
   }
 
   function validateEmail(email) {
