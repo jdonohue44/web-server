@@ -95,6 +95,10 @@ session_start();
 <script>
   document.getElementsByName('validate_button')[0].disabled = true;
 
+  $(document).ready(function() {
+    $('input').val('');
+  });
+
   // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
     var text = $(this).val();
