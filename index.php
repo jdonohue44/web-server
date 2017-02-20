@@ -128,11 +128,11 @@ session_start();
   }
 
   function displaySignupLayout(){
-    $(".espress-title-message").css("display", "none");
-    $("input[type=submit]").text("Log in");
-    $("#name_text").css("display","none");
-    $("#email_text").css("margin-top","20px");
-    $("input[name=validate_button]").val("Log in");
+    $(".espress-title-message").css("display", "block");
+    $("input[type=submit]").text("Sign up");
+    $("#name_text").css("display","block");
+    $("#email_text").css("margin-top","8px");
+    $("input[name=validate_button]").val("Sign up");
     $(".info").html("<p id='info_paragraph'>Already signed up? <a class='login_link' href='javascript:void(0)'' onclick='displayLoginLayout()'>Log in</a></p>");
   }
 
