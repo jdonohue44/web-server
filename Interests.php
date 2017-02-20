@@ -75,6 +75,7 @@ session_start();
         +interest+"'/></li>");
         $('#interest_text').val('');
         checkListLength();
+        initializeListItems()
       }
     });
 
