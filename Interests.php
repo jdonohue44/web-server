@@ -44,7 +44,10 @@ session_start();
     <div class="logo_img">
       <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
     </div>
-<div class="flex_box_holder">
+    <div class="login-container">
+      <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
+    </div>
+
   <div class="interest-form-container">
     <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
           <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
@@ -62,12 +65,6 @@ session_start();
     </form>
   </div>
 
-  <div>
-    <div class="login-container">
-      <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
-    </div>
-  </div>
-</div>
 
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
