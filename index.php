@@ -76,7 +76,7 @@ session_start();
         <div class="info">
           <p id="info_paragraph">
             If you have already signed up, simply enter your email
-            address to add more interests.
+            address to add or remove your interests.
           </p>
         </div>
 
