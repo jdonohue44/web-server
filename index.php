@@ -75,7 +75,7 @@ session_start();
 
         <div class="info">
           <p id="info_paragraph">
-            Already signed up? <a class="login_link" href="javascript:void(0)" onclick="diaplyLoginLayout()">Log in</a>
+            Already signed up? <a class="login_link" href="javascript:void(0)" onclick="displayLoginLayout()">Log in</a>
           </p>
         </div>
 
@@ -119,7 +119,9 @@ session_start();
   });
 
   function displayLoginLayout(){
-    console.log("change layout");
+    $(".espress-title-message").css("display", "none");
+    $("input[type=submit]").text("Log in");
+    $("#name_text").css("display","none");
   }
 
   function validateEmail(email) {
