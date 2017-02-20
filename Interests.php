@@ -51,7 +51,6 @@ session_start();
               foreach ($array as $v) {
                 echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
               }
-              echo "<script> initializeListItems(); </script>";
             }
           ?>
           </ul>
@@ -68,6 +67,12 @@ session_start();
 
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
+    $( document ).ready(function() {
+      var interest_lis = $("#interests_ul li");
+      if(interest_lis.length > 0) {
+          initializeListItems();
+        }
+    });
 
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
@@ -76,7 +81,6 @@ session_start();
         +interest+"'/></li>");
         $('#interest_text').val('');
         checkListLength();
-        initializeListItems();
       }
     });
 
