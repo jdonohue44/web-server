@@ -51,7 +51,7 @@ session_start();
               foreach ($array as $v) {
                 echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
               }
-              echo "<script> initializeListItems(); </script>";
+              echo "<script> initializeListItems(); console.log('here');</script>";
             }
           ?>
           </ul>
