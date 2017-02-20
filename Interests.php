@@ -40,6 +40,9 @@ session_start();
     }
 
     ?>
+
+  <div class="sample_img">
+  </div>
 <div class="flex_box_holder">
   <div class="interest-form-container">
     <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
