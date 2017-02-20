@@ -46,9 +46,14 @@ session_start();
           <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
           <button type="button" id="add_interest_button">Add</button>
           <ul id="interests_ul">
-            <?php foreach ($array as $v) {
-              echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
-            } ?>
+            <?php
+            if(sizeof($array) > 0){
+              foreach ($array as $v) {
+                echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
+              }
+              echo "<script> initializeListItems(); </script>";
+            }
+          ?>
           </ul>
           <input type="submit" name="submit_button" value="Submit" />
     </form>
