@@ -114,6 +114,7 @@ function GetInterests($connection, $email) {
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
    if ($num_rows > 0) {
+     echo "<h1>HI</h1>";
      while($row = mysqli_fetch_assoc($result)) {
         array_push($array, $row["Interest"]);
         echo "<h1>" . $row["Interest"] . "</h1>";
