@@ -42,7 +42,7 @@ session_start();
     ?>
 
     <div class="nav-bar-flex-row">
-      <div class="logo_img" style="margin: 50px 0 0 10px;">
+      <div class="logo_img">
         <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
       </div>
       <div class="login-container">
