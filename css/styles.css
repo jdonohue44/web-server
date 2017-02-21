@@ -81,12 +81,7 @@ input, label {
 }
 
 .interest-form-container{
-  background-color: white;
-  padding: 20px 40px 0 40px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d8d8d8;
-  margin: 20px 200px 20px 200px;
+  margin-top: 40px;
   flex-direction: row;
   justify-content: center;
 }
