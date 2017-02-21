@@ -95,11 +95,7 @@ input, label {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
-  border-bottom: #adadad;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
   background-color: #e4e4e4;
-  border-radius: 10px 10px 0 0;
 }
 
 .logo_img{
