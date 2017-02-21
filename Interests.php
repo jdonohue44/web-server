@@ -50,7 +50,7 @@ session_start();
       <div class="login-container">
         <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
       </div>
-      
+
     </div>
 
     <div class = "add_interest_container">
@@ -79,6 +79,7 @@ session_start();
 
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
+    checkListLength();
 
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
