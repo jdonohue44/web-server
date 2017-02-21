@@ -95,9 +95,11 @@ input, label {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
-  border-bottom: #999;
+  border-bottom: #adadad;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  background-color: #e4e4e4;
+  border-radius: 10px 10px 0 0;
 }
 
 .logo_img{
@@ -113,6 +115,7 @@ input, label {
   border-style: solid;
   border-color: #d8d8d8;
   margin: 20px;
+  border-radius: 10px;
 }
 
 .submit_button_container{
