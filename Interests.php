@@ -50,7 +50,7 @@ session_start();
 
       <div class="login-container">
         <h4 class="banner-sm">
-           <i class="fa fa-user" aria-hidden="true"></i>
+           <i class="fa fa-user fa-lg" aria-hidden="true"></i>
            <span id="username"><?php echo $username ?></span>
          </h1>
       </div>
