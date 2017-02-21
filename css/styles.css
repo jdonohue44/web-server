@@ -6,6 +6,7 @@ div{
 #username{
   font-weight: 400;
   font-size: 12px;
+  padding-left: 10px;
 }
 
 #interests_ul li{
@@ -106,13 +107,8 @@ input, label {
 }
 
 .login-container{
-  background-color: white;
   padding: 0 15px 0 15px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d8d8d8;
   margin: 20px;
-  border-radius: 10px;
 }
 
 .submit_button_container{
