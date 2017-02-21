@@ -42,12 +42,15 @@ session_start();
     ?>
 
     <div class="nav-bar-flex-row">
+
       <div class="logo_img">
         <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
       </div>
+
       <div class="login-container">
         <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
       </div>
+      
     </div>
 
     <div class = "add_interest_container">

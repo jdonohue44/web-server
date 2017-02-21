@@ -77,19 +77,19 @@ input, label {
   -webkit-flex-direction: row;
   display: -webkit-flex;
   display: flex;
-  width: 100%;
-  padding: 26px 40px;
-  max-width: 1010px;
+  justify-content: space-between;
+  background-color: #999;
 }
 
 .logo_img{
   width: 256px;
   height: 50px;
+  padding: 0 0 0 20px;
 }
 
 .login-container{
   background-color: white;
-  padding: 0 15px 0 15px;
+  padding: 0 20px 0 0;
   border-width: 1px;
   border-style: solid;
   border-color: #d8d8d8;
