@@ -82,8 +82,7 @@ input, label {
   display: -webkit-flex;
   display: flex;
   justify-content: space-between;
-  background-color: #999;
-  border-bottom: #656565;
+  border-bottom: #999;
   border-bottom-style: solid;
   border-bottom-width: 1px;
 }
