@@ -36,6 +36,12 @@ div{
 
 #add_interest_button{
   max-width: 300px;
+  min-width: 100px;
+  margin: 8px 0 0 2px;
+}
+
+#interest_text{
+  min-width: 300px;
 }
 
 input, label {
@@ -110,6 +116,9 @@ input, label {
 
 .add_interest_container{
   margin-top: 50px;
+  flex-direction: row;
+  justify-content: center;
+
 }
 
 .unsubscribe-container{
