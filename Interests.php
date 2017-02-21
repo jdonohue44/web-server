@@ -63,16 +63,18 @@ session_start();
     </div>
 
     <div class="interest-form-container">
-      <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
-          <ul id="interests_ul">
-            <?php
-            if(sizeof($array) > 0){
-              foreach ($array as $v) {
-                echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
+      <div class="interest-form">
+        <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
+            <ul id="interests_ul">
+              <?php
+              if(sizeof($array) > 0){
+                foreach ($array as $v) {
+                  echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
+                }
               }
-            }
-          ?>
-          </ul>
+            ?>
+            </ul>
+      </div>
     </div>
 
     <div class="submit_button_container">

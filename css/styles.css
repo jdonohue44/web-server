@@ -91,6 +91,10 @@ input, label {
   justify-content: center;
 }
 
+.interest-form{
+  padding: 20px;
+}
+
 .nav-bar-flex-row{
   flex-direction: row;
   -webkit-flex-direction: row;
