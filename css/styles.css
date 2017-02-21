@@ -4,7 +4,8 @@ div{
 }
 
 #username{
-  font-weight: 600;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 #interests_ul li{
