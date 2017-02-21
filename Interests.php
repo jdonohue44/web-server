@@ -45,7 +45,9 @@ session_start();
     <div class="nav-bar-flex-row">
 
       <div class="logo_img">
-        <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
+        <a href="http://54.86.139.119/">
+          <img src="http://mason.gmu.edu/~jdonohu2/logo1.png" alt="espress news home"></img>
+        </a>
       </div>
 
       <div class="login-container">
@@ -57,6 +59,7 @@ session_start();
 
     </div>
 
+    <h1 id="interest-page-title">Interests</h1>
     <div class = "add_interest_container">
       <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
       <button type="button" id="add_interest_button">Add</button>

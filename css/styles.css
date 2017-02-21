@@ -3,6 +3,13 @@ div{
   flex-direction: column;
 }
 
+#interest-page-title{
+  margin:auto;
+  font-family: sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+}
+
 #username{
   font-weight: 400;
   font-size: 12px;
