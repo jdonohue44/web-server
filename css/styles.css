@@ -12,10 +12,11 @@ div{
 #interests_ul li{
   background: #999;
   list-style-type: none;
-  padding: 10px;
-  margin: 1px;
+  padding: 16px;
+  margin: 4px;
   display: inline-flex;
   color: white;
+  border-radius: 100px;
 }
 
 #interests_ul{
@@ -81,7 +82,7 @@ input, label {
 }
 
 .interest-form-container{
-  margin-top: 20px;
+  margin-bottom: 20px;
   flex-direction: row;
   justify-content: center;
 }
@@ -104,12 +105,12 @@ input, label {
 .logo_img{
   width: 256px;
   height: 50px;
-  margin: 20px;
+  margin: 20px 0 20px 100px;
 }
 
 .login-container{
   padding: 0 15px 0 15px;
-  margin: 20px;
+  margin: 20px 100px 20px 0;
 }
 
 .submit_button_container{
