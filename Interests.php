@@ -6,6 +6,7 @@ session_start();
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <script src="https://use.fontawesome.com/b3331c12b9.js"></script>
 </head>
 <body>
   <?php
@@ -48,7 +49,10 @@ session_start();
       </div>
 
       <div class="login-container">
-        <h4 class="banner-sm"> logged in as <span id="username"><?php echo $username ?></span></h1>
+        <h4 class="banner-sm">
+           <i class="fa fa-user" aria-hidden="true"></i>
+           <span id="username"><?php echo $username ?></span>
+         </h1>
       </div>
 
     </div>

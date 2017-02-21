@@ -6,7 +6,6 @@ session_start();
 <head>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!-- <script src="https://use.fontawesome.com/b3331c12b9.js"></script> -->
 </head>
 <body>
 <?php
