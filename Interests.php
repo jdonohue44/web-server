@@ -121,8 +121,11 @@ session_start();
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#3897F0";
         document.getElementsByName('submit_button')[0].disabled = false;
         $(".interest-form").css("background-color","#fafafa");
+        $("#helper-text").remove();
+        $(".fa fa-share").remove();
       }else{
         $(".interest-form").css("background-color","#e6e6e6");
+        $(".interest-form").append("<i class='fa fa-share' aria-hidden='true'></i>");
         $(".interest-form").append("<h3 id='helper-text'>added interests go here.</h3>");
       }
     }
