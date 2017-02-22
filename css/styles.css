@@ -223,7 +223,7 @@ select:focus,
 textarea:focus,
 button:focus {
   outline: none;
-  border: 1px solid #e4e4e4;
+  border: 1px solid #505050;
 }
 
 input[type=submit] {
