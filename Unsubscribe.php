@@ -57,12 +57,10 @@ include "../inc/dbinfo.inc";
     } else {
       if(!email.length){
         document.getElementsByName('validate_button')[0].disabled = true;
-        // document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
       }else{
         $("#validation_typing").text(email + " is not valid yet.");
         $("#validation_typing").css("color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
-        // document.getElementsByName('validate_button')[0].style.backgroundColor = "#737373";
       }
     }
   });

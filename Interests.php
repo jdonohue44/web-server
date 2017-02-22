@@ -120,6 +120,10 @@ session_start();
       if(interest_lis.length > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#3897F0";
         document.getElementsByName('submit_button')[0].disabled = false;
+        $(".interest-form").css("background-color","#fafafa");
+      }else{
+        $(".interest-form").css("background-color","#cccccc");
+        $(".interest-form").append("<h3>added interests go here.</h3>");
       }
     }
 
