@@ -122,8 +122,8 @@ session_start();
         document.getElementsByName('submit_button')[0].disabled = false;
         $(".interest-form").css("background-color","#fafafa");
       }else{
-        $(".interest-form").css("background-color","#cccccc");
-        $(".interest-form").append("<h3>added interests go here.</h3>");
+        $(".interest-form").css("background-color","#e6e6e6");
+        $(".interest-form").append("<h3 id='helper-text'>added interests go here.</h3>");
       }
     }
 
