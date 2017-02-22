@@ -218,7 +218,10 @@ input[type=text] {
     max-width: 400px;
 }
 
-input:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
   outline: none;
 }
 
