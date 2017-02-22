@@ -103,18 +103,18 @@ session_start();
       }
     });
 
-    $('ul#interests_ul li').hover(function(){
-      $(this).css("background-color", "#ff4444");
-      },function(){
-      $(this).css("background-color", "#999");
-    });
-  }
-
     function initializeListItems(){
       $('ul#interests_ul li').click(function(){
           $(this).remove();
           checkListLength();
       });
+
+      $('ul#interests_ul li').hover(function(){
+        $(this).css("background-color", "#ff4444");
+        },function(){
+        $(this).css("background-color", "#999");
+      });
+    }
 
     function checkListLength(){
       var interest_lis = $("#interests_ul li");
