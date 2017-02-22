@@ -218,6 +218,10 @@ input[type=text] {
     max-width: 400px;
 }
 
+input:focus {
+  outline: none;
+}
+
 input[type=submit] {
   width: 100%;
   background-color: #3897F0;
