@@ -76,10 +76,6 @@ session_start();
                 foreach ($array as $v) {
                   echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
                 }
-              }else{
-                echo "<li id='sample-interests'>Leonardo Dicaprio</li>";
-                echo "<li id='sample-interests'>New York City</li>";
-                echo "<li id='sample-interests'>NBA</li>";
               }
             ?>
             </ul>
