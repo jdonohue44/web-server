@@ -77,9 +77,9 @@ session_start();
                   echo "<li>" . $v . "<input type='hidden' name='interests[]' value='" . $v . "'/></li>";
                 }
               }else{
-                echo "<li class='sample-interests'>Leonardo Dicaprio</li>";
-                echo "<li class='sample-interests'>New York City</li>";
-                echo "<li class='sample-interests'>NBA</li>";
+                echo "<li id='sample-interests'>Leonardo Dicaprio</li>";
+                echo "<li id='sample-interests'>New York City</li>";
+                echo "<li id='sample-interests'>NBA</li>";
               }
             ?>
             </ul>
