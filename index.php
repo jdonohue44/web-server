@@ -78,11 +78,11 @@ session_start();
           </p>
         </div>
 
-    </div>
-</div>
+        <div class="footer">
+          <p style="color: #999"> &copy; Espress News, 2017</p>
+        </div>
 
-<div class="footer">
-  <p style="color: #999"> &copy; Espress News, 2017</p>
+    </div>
 </div>
 
 <!-- Clean up. -->
