@@ -82,7 +82,7 @@ session_start();
 </div>
 
 <div class="footer">
-  <p>Espress News, 2017</p>
+  <p style="color: #999"> &copy; Espress News, 2017</p>
 </div>
 
 <!-- Clean up. -->
