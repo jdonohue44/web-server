@@ -7,6 +7,7 @@ session_start();
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
 <?php
   /* Connect to MySQL and select the database. */

@@ -37,6 +37,7 @@ session_start();
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i]);
       }
+      RemoveDeleted($connection, $email, $user_interests);
       header("Location: http://54.86.139.119/Thanks.html");
     }
 
@@ -183,6 +184,9 @@ function AddUserInterest($connection, $email, $interest) {
 
    $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
    if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
+}
+
+function RemoveDeleted($connection, $email, $user_interests) {
 }
 
 function VerifyInterestTable($connection, $dbName){
