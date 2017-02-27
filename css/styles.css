@@ -279,14 +279,11 @@ button{
   .testimonials-container{
     display: none;
   }
-
   .info{
-    padding: 10px 30px 10px 30px;
-    margin-top: 20px;
+    border: 0;
   }
-
   .sign_in_form{
-    padding: 0px 30px 20px 30px;
+    border: 0;
   }
 
   body{
