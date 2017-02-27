@@ -84,7 +84,7 @@ session_start();
     </div>
 
     <div class="submit_button_container">
-      <input id="subit-interests-button" type="submit" name="submit_button" value="Submit" />
+      <input id="submit-interests-button" type="submit" name="submit_button" value="Submit" />
       </form>
     </div>
 
