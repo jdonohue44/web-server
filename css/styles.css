@@ -290,7 +290,7 @@ button{
   }
 
   /*interests page*/
-  input #submit-interests-button{
+  input#submit-interests-button{
     border: 0;
     border-radius: 0px;
     position: fixed;
