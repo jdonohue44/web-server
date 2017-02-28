@@ -291,6 +291,13 @@ button{
   .sign_in_form{
     border: 0;
   }
+  .signup-button-container{
+    margin: auto;
+    width: 400px;
+    height: 80px;
+    position: fixed;
+    bottom: 0px;
+  }
   body{
     background-color: white;
   }
@@ -298,7 +305,7 @@ button{
   /*interests page*/
   .submit_button_container{
     margin: auto;
-    width: 100%;
+    width: 400px;
     height: 200px;
     position: fixed;
     bottom: 0px;
