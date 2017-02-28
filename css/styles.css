@@ -349,9 +349,13 @@ button{
     border-width: 1px;
     border-color: #ccc;
   }
-
   #interest_text{
     min-width: 0;
     border-radius: 4px 0 0 4px;
+  }
+  .add_interest_container{
+    margin: 30px 20px 0 20px;
+    flex-direction: row;
+    justify-content: center;
   }
 }
