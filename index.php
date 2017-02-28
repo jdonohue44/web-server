@@ -47,7 +47,7 @@ session_start();
     <div class="sign_in_container">
 
         <div class="sign_in_form">
-          <div class="logo_img">
+          <div class="logo_img_home">
             <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
           </div>
 
