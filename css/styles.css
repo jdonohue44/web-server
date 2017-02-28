@@ -202,19 +202,6 @@ input, label {
   font-family: sans-serif;
 }
 
-.fa-times-circle-o{
-  color: red;
-}
-
-.fa-check-circle-o{
-  color: #D8D8D8;
-}
-
-#check_box{
-  display: flex;
-  position: absolute;
-}
-
 #email_box{
   display:flex;
 }
@@ -306,7 +293,6 @@ button{
     height: 75px;
   }
   .logo_img{
-    width: 200px;
     height: 40px;
     margin: 20px 0 10px 10px;
     justify-content: center;
@@ -335,5 +321,8 @@ button{
   .login-container{
     padding: 0;
     margin: 0;
+  }
+  .fa fa-user fa-2x{
+    display: none;
   }
 }
