@@ -132,6 +132,7 @@ input, label {
   width: 256px;
   height: 50px;
   margin: 20px 0 20px 20px;
+  align-self: center;
 }
 
 .login-container{

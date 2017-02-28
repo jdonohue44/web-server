@@ -130,6 +130,7 @@ session_start();
     $("input[type=submit]").text("Log in");
     $("#name_text").css("display","none");
     $("#email_text").css("margin-top","20px");
+    $(".logo_img").css("margin-bottom","0");
     $("input[name=validate_button]").val("Log in");
     $(".info").html("<p id='info_paragraph'>Dont have an account? <a class='login_link' href='javascript:void(0)'' onclick='displaySignupLayout()'>Sign up</a></p>");
   }
@@ -139,6 +140,7 @@ session_start();
     $("input[type=submit]").text("Sign up");
     $("#name_text").css("display","block");
     $("#email_text").css("margin-top","8px");
+    $(".logo_img").css("margin-bottom","0");
     $("input[name=validate_button]").val("Sign up");
     $(".info").html("<p id='info_paragraph'>Already signed up? <a class='login_link' href='javascript:void(0)'' onclick='displayLoginLayout()'>Log in</a></p>");
   }
