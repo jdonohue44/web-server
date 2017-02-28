@@ -75,6 +75,7 @@ div{
 #interest_text{
   min-width: 300px;
   border-radius: 4px 0 0 4px;
+  border: solid none solid solid;
 }
 
 input, label {
@@ -352,9 +353,10 @@ button{
   #interest_text{
     min-width: 0;
     border-radius: 4px 0 0 4px;
+    border: solid none solid solid;
   }
   .add_interest_container{
-    margin: 30px 20px 0 20px;
+    margin: 10px 20px 0 20px;
     flex-direction: row;
     justify-content: center;
   }
