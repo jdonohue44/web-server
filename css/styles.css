@@ -142,11 +142,13 @@ input, label {
 .submit_button_container{
   margin: auto;
   width: 400px;
+  height: 80px;
 }
 
 .signup-button-container{
   margin: auto;
   width: 400px;
+  height: 80px;
 }
 
 .add_interest_container{
