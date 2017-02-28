@@ -292,10 +292,9 @@ button{
   }
   .sign_in_form{
     border: 0;
-    padding: 0px 30px 20px 30px;
   }
   .sign_in_container {
-    width: 200px;
+    width: 75%;
   }
   .signup-button-container{
     margin: auto;
