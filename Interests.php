@@ -8,6 +8,7 @@ session_start();
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://use.fontawesome.com/b3331c12b9.js"></script>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <?php
     $name  = $_SESSION["name"];
