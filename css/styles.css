@@ -294,7 +294,7 @@ button{
     border: 0;
   }
   .sign_in_container {
-    width: 75%;
+    width: 100%;
   }
   .signup-button-container{
     margin: auto;
@@ -305,6 +305,8 @@ button{
     width: 200px;
     height: 40px;
     margin: 20px 0 10px 10px;
+    justify-content: center;
+    align-self: center;
   }
   body{
     background-color: white;
