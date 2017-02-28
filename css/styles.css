@@ -325,4 +325,10 @@ button{
   .fa fa-user fa-2x{
     display: none;
   }
+  #interests_ul{
+    margin-left: 0;
+  }
+  #interests_ul li{
+    padding: 8px;
+  }
 }
