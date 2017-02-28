@@ -295,8 +295,6 @@ button{
     margin: auto;
     width: 400px;
     height: 80px;
-    position: fixed;
-    bottom: 0px;
   }
   body{
     background-color: white;
