@@ -307,8 +307,6 @@ button{
     margin: auto;
     width: 100%;
     height: 100px;
-    position: fixed;
-    bottom: 0px;
   }
   .nav-bar-flex-row{
     flex-direction: column;;
@@ -327,5 +325,17 @@ button{
   }
   #interests_ul li{
     padding: 8px;
+  }
+  input[name="submit_button"] {
+    height: 100%;
+    width: 100%;
+    background-color: #3897F0;
+    color: white;
+    padding: 14px 20px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
   }
 }
