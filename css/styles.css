@@ -339,4 +339,19 @@ button{
     font-size: 18px;
     font-weight: 500;
   }
+  #add_interest_button{
+    max-width: none;
+    min-width: none;
+    margin: 8px 0 0 0;
+    border-radius: 0 4px 4px 0;
+    border-style: solid solid solid none;
+    border-radius: 0 4px 4px 0;
+    border-width: 1px;
+    border-color: #ccc;
+  }
+
+  #interest_text{
+    min-width: 0;
+    border-radius: 4px 0 0 4px;
+  }
 }
