@@ -30,6 +30,11 @@ session_start();
 
     VerifyInterestTable($connection, DB_DATABASE);
     $array = GetInterests($connection, $email);
+    if(sizeof($array)>0){
+      for($i = 0; $i < sizeof($array); $i++){
+          DeleteUserInterest($connection, $email, $array[$i]);
+      }
+    }
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
@@ -37,7 +42,6 @@ session_start();
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i]);
       }
-      RemoveDeleted($connection, $email, $user_interests);
       header("Location: http://54.86.139.119/Thanks.html");
     }
 
@@ -185,7 +189,15 @@ function AddUserInterest($connection, $email, $interest) {
    if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
 }
 
-function RemoveDeleted($connection, $email, $user_interests) {
+function DeleteUserInterest($connection, $email, $interest) {
+  $e = mysqli_real_escape_string($connection, $email);
+  $i = mysqli_real_escape_string($connection, $interest);
+
+  $user_result = mysqli_query($connection, "SELECT USERS.ID FROM USERS WHERE USERS.Email = '$e'");
+  $user_id = mysqli_fetch_object($user_result)->ID;
+
+  $query = "DELETE FROM USER_INTERESTS WHERE User_ID = $user_id;";
+  if(!mysqli_query($connection, $query)) echo("<p>Error deleting user interest data.</p>");
 }
 
 function VerifyInterestTable($connection, $dbName){

@@ -270,7 +270,8 @@ button{
   cursor: pointer;
 }
 
-@media only screen and (min-width: 451px) {
+/*large laptop*/
+@media only screen and (min-width: 1201px){
   .submit_button_container{
     margin: auto;
     width: 400px;
@@ -278,6 +279,16 @@ button{
   }
 }
 
+/*tablet -> small laptop*/
+@media only screen and (min-width: 451px) and (max-width: 1200px) {
+  .submit_button_container{
+    margin: auto;
+    width: 400px;
+    height: 75px;
+  }
+}
+
+/*mobile*/
 @media only screen and (max-width: 450px) {
   /*home page (index.php)*/
   .testimonials-container{
