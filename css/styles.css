@@ -1,6 +1,9 @@
 div{
   display: flex;
   flex-direction: column;
+}
+
+div.centered-div{
   align-items: center;
 }
 
