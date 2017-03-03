@@ -145,6 +145,8 @@ session_start();
 /* Get user interests */
 function GetInterests($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
+   echo "<p>" . $email . "</p>";
+   echo "<p>" . $e . "</p>";
    $array = array();
    $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
