@@ -153,11 +153,11 @@ function GetInterests($connection, $email) {
    $result = mysqli_query($connection, $query);
    $num_rows = mysqli_num_rows($result);
    if ($num_rows > 0) {
+     echo "<p>" + "NUM ROWS == 0" + "</p>";
      while($row = mysqli_fetch_assoc($result)) {
         array_push($array, $row["Interest"]);
       }
    }
-   echo "<p>" + sizeof($array) + "</p>";
    return $array;
 }
 
