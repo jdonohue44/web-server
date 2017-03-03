@@ -13,6 +13,8 @@ session_start();
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
 
+    echo "<p>" + $email + "</p>";
+
     if(!strlen($email)){
       header("Location: http://54.86.139.119/");
     }
