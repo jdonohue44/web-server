@@ -145,17 +145,16 @@ session_start();
 /* Get user interests */
 function GetInterests($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
-   echo "<p>" . $email . "</p>";
-   echo "<p>" . $e . "</p>";
    $array = array();
    $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
-	                 where USERS.Email = '$e'";
+	                 where USERS.Email = '$email';";
 
    $result = mysqli_query($connection, $query);
    $num_rows = mysqli_num_rows($result);
    if ($num_rows > 0) {
+     echo "<p> hey </p>";
      while($row = mysqli_fetch_assoc($result)) {
         array_push($array, $row["Interest"]);
       }
