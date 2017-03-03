@@ -151,7 +151,7 @@ function GetInterests($connection, $email) {
   //            INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
   //            where USERS.Email = '$e'";
 
-  $query = "SELECT * FROM USERS WHERE USERS.Email = '$e';";
+  $query = "SELECT * FROM USERS WHERE USERS.Email = 'jared.donohue@gmail.com';";
 
   //  $result = mysqli_query($connection, $query);
    if(!mysqli_query($connection, $query)) echo("<p>Error getting user interest data.</p>");
