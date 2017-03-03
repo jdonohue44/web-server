@@ -23,13 +23,13 @@ session_start();
   /* If input fields are populated, add a row to the Employees table. */
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
+  echo "<p>" + $user_email + "</p>";
 
   if (strlen($user_email)) {
     if(!strlen($user_name)){
       $user_name = $user_email;
     }
     AddUser($connection, $user_name, $user_email);
-    echo "<p>" + $user_email + "</p>";
     $_SESSION["name"] =  $user_name;
     $_SESSION["email"] = $user_email;
     $user_name  = '';
