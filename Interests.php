@@ -34,7 +34,6 @@ session_start();
     $array = GetInterests($connection, $email);
     if(sizeof($array)>0){
       for($i = 0; $i < sizeof($array); $i++){
-          echo "<p>" . $array[$i] . "</p>";
           DeleteUserInterest($connection, $email, $array[$i]);
       }
     }
@@ -152,22 +151,20 @@ function GetInterests($connection, $email) {
              INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
              where USERS.Email = '$e'";
 
-  //  $result = mysqli_query($connection, $query);
-   if(!mysqli_query($connection, $query)) echo("<p>" . mysqli_error($connection) . "</p>");
-  //  $num_rows = mysqli_num_rows($result);
-  //  if ($num_rows > 0) {
-  //    while($row = mysqli_fetch_assoc($result)) {
-  //       array_push($array, $row["Interest"]);
-  //     }
-  //  }
+   $result = mysqli_query($connection, $query);
+   if(!$result) echo("<p>" . mysqli_error($connection) . "</p>");
+   $num_rows = mysqli_num_rows($result);
+   if ($num_rows > 0) {
+     while($row = mysqli_fetch_assoc($result)) {
+        array_push($array, $row["Interest"]);
+      }
+   }
    return $array;
 }
 
 /* Add interests to INTEREST table. */
 function AddInterest($connection, $interest) {
    $i = mysqli_real_escape_string($connection, $interest);
-  //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
-  //  mysqli_real_escape_string($e));
    $check_query = "SELECT * FROM INTERESTS WHERE Interest = '$i'";
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
