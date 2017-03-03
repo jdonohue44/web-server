@@ -28,9 +28,7 @@ session_start();
     if (mysqli_connect_errno()) echo "Failed to connect to database: " . mysqli_connect_error();
 
     VerifyInterestTable($connection, DB_DATABASE);
-    echo "$email";
     $array = GetInterests($connection, $email);
-    echo "$array";
 
 
     // if(sizeof($array)>0){
@@ -147,8 +145,6 @@ session_start();
 function GetInterests($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
    $array = array();
-  //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
-  //  mysqli_real_escape_string($e));
    $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
@@ -156,12 +152,12 @@ function GetInterests($connection, $email) {
 
    $result = mysqli_query($connection, $query);
    $num_rows = mysqli_num_rows($result);
-   echo "$num_rows";
    if ($num_rows > 0) {
      while($row = mysqli_fetch_assoc($result)) {
         array_push($array, $row["Interest"]);
       }
    }
+   echo "<p>"sizeof($array)"</p>";
    return $array;
 }
 
