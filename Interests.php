@@ -10,11 +10,9 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <?php
-    print_r($_SESSION);
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
 
-    echo "<p>" + $email + "</p>";
 
     if(!strlen($email)){
       header("Location: http://54.86.139.119/");
@@ -148,8 +146,6 @@ session_start();
 function GetInterests($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
    $array = array();
-   echo "<p>" + $e + "</p>";
-   echo "<p>" + $email + "</p>";
    $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
