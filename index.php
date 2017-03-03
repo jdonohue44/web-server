@@ -25,6 +25,7 @@ session_start();
   $user_email = htmlentities($_POST['Email']);
 
   if (strlen($user_email)) {
+    echo "<p>" . $user_email . "</p>";
     if(!strlen($user_name)){
       $user_name = $user_email;
     }
@@ -34,8 +35,6 @@ session_start();
     $user_name  = '';
     $user_email = '';
     // header("Location: http://54.86.139.119/Interests.php");
-  }else{
-    echo "<p> Not set yet " + $user_email + "</p>";
   }
 ?>
 
