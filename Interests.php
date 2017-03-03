@@ -157,7 +157,7 @@ function GetInterests($connection, $email) {
         array_push($array, $row["Interest"]);
       }
    }
-   echo "<p>"sizeof($array)"</p>";
+   echo "<p>" + sizeof($array) + "</p>";
    return $array;
 }
 
