@@ -149,12 +149,11 @@ function GetInterests($connection, $email) {
    $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
-	                 where USERS.Email = '$email';";
+	                 where USERS.Email = '$e';";
 
    $result = mysqli_query($connection, $query);
    $num_rows = mysqli_num_rows($result);
    if ($num_rows > 0) {
-     echo "<p> hey </p>";
      while($row = mysqli_fetch_assoc($result)) {
         array_push($array, $row["Interest"]);
       }
