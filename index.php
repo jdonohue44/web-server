@@ -29,11 +29,12 @@ session_start();
       $user_name = $user_email;
     }
     AddUser($connection, $user_name, $user_email);
+    echo "<p>" + $user_email + "</p>";
     $_SESSION["name"] =  $user_name;
     $_SESSION["email"] = $user_email;
     $user_name  = '';
     $user_email = '';
-    header("Location: http://54.86.139.119/Interests.php");
+    // header("Location: http://54.86.139.119/Interests.php");
   }
 ?>
 

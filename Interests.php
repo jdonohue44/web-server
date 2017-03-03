@@ -4,12 +4,13 @@ session_start();
 ?>
 <html>
 <head>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <?php
+    print_r($_SESSION);
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
 
