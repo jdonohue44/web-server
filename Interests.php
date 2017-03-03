@@ -27,16 +27,16 @@ session_start();
     /* Connect to MySQL and select the database. */
     $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
     if (mysqli_connect_errno()) echo "Failed to connect to database: " . mysqli_connect_error();
+    $database   = mysqli_select_db($connection, DB_DATABASE);
 
     VerifyInterestTable($connection, DB_DATABASE);
+
     $array = GetInterests($connection, $email);
-
-
-    // if(sizeof($array)>0){
-    //   for($i = 0; $i < sizeof($array); $i++){
-    //       DeleteUserInterest($connection, $email, $array[$i]);
-    //   }
-    // }
+    if(sizeof($array)>0){
+      for($i = 0; $i < sizeof($array); $i++){
+          DeleteUserInterest($connection, $email, $array[$i]);
+      }
+    }
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
