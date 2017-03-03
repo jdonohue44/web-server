@@ -23,7 +23,6 @@ session_start();
   /* If input fields are populated, add a row to the Employees table. */
   $user_name  = htmlentities($_POST['Name']);
   $user_email = htmlentities($_POST['Email']);
-  echo "<p>" + $user_email + "</p>";
 
   if (strlen($user_email)) {
     if(!strlen($user_name)){
@@ -35,6 +34,8 @@ session_start();
     $user_name  = '';
     $user_email = '';
     // header("Location: http://54.86.139.119/Interests.php");
+  }else{
+    echo "<p> Not set yet " + $user_email + "</p>";
   }
 ?>
 
@@ -155,8 +156,6 @@ session_start();
 function AddUser($connection, $name, $email) {
    $n = mysqli_real_escape_string($connection, $name);
    $e = mysqli_real_escape_string($connection, $email);
-  //  $check_query = sprintf("SELECT * FROM `USERS` (`Name`,`Email`) WHERE `Email` = '%s';",
-  //  mysqli_real_escape_string($e));
    $check_query = "SELECT * FROM USERS WHERE Email = '$e'";
    $present = mysqli_query($connection, $check_query);
    $num_rows = mysqli_num_rows($present);
