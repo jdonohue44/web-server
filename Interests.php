@@ -34,6 +34,7 @@ session_start();
     $array = GetInterests($connection, $email);
     if(sizeof($array)>0){
       for($i = 0; $i < sizeof($array); $i++){
+          echo "<p>" . $array[$i] . "</p>";
           DeleteUserInterest($connection, $email, $array[$i]);
       }
     }
