@@ -151,13 +151,14 @@ function GetInterests($connection, $email) {
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
 	                 where USERS.Email = '$e';";
 
-   $result = mysqli_query($connection, $query);
-   $num_rows = mysqli_num_rows($result);
-   if ($num_rows > 0) {
-     while($row = mysqli_fetch_assoc($result)) {
-        array_push($array, $row["Interest"]);
-      }
-   }
+  //  $result = mysqli_query($connection, $query);
+   if(!mysqli_query($connection, $query)) echo("<p>Error getting user interest data.</p>");
+  //  $num_rows = mysqli_num_rows($result);
+  //  if ($num_rows > 0) {
+  //    while($row = mysqli_fetch_assoc($result)) {
+  //       array_push($array, $row["Interest"]);
+  //     }
+  //  }
    return $array;
 }
 
