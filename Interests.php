@@ -145,10 +145,12 @@ session_start();
 function GetInterests($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
    $array = array();
+   echo "<p>" + $e + "</p>";
+   echo "<p>" + $email + "</p>";
    $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
 	                 INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
 	                 INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
-	                 where USERS.Email = $e;";
+	                 where USERS.Email = '$e'";
 
    $result = mysqli_query($connection, $query);
    $num_rows = mysqli_num_rows($result);
