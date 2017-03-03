@@ -146,10 +146,12 @@ session_start();
 function GetInterests($connection, $email) {
    $e = mysqli_real_escape_string($connection, $email);
    $array = array();
-   $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
-             INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
-             INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
-             where USERS.Email = '$e'";
+  //  $query = "SELECT INTERESTS.Interest FROM USER_INTERESTS
+  //            INNER JOIN USERS ON USERS.ID = USER_INTERESTS.User_ID
+  //            INNER JOIN INTERESTS ON INTERESTS.ID = USER_INTERESTS.Interest_ID
+  //            where USERS.Email = '$e'";
+
+  $query = "SELECT * FROM USERS WHERE USERS.Email = '$e';";
 
   //  $result = mysqli_query($connection, $query);
    if(!mysqli_query($connection, $query)) echo("<p>Error getting user interest data.</p>");
