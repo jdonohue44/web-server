@@ -29,11 +29,13 @@ session_start();
 
     VerifyInterestTable($connection, DB_DATABASE);
     $array = GetInterests($connection, $email);
-    if(sizeof($array)>0){
-      for($i = 0; $i < sizeof($array); $i++){
-          DeleteUserInterest($connection, $email, $array[$i]);
-      }
-    }
+
+    
+    // if(sizeof($array)>0){
+    //   for($i = 0; $i < sizeof($array); $i++){
+    //       DeleteUserInterest($connection, $email, $array[$i]);
+    //   }
+    // }
 
     $user_interests = $_POST['interests'];
     if(sizeof($user_interests)>0){
