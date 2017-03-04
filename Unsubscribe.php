@@ -6,6 +6,7 @@ include "../inc/dbinfo.inc";
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
 <h1 align="center" style="padding-top:5%;">Confirm your email address to unsubscribe.</h1>
 <?php
