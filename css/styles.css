@@ -410,7 +410,7 @@ button{
     height: 200px;
     margin: 50px 0 0 0;
   }
-  .thanks_mobile_img_src{
+  #thanks_mobile_img_src{
     height: 150px;
     width: 100%;
     align-self: center;
