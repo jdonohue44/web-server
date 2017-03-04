@@ -318,9 +318,9 @@ button{
   .sign_in_form{
     border: 0;
   }
-  .sign_in_container {
+  /*.sign_in_container {
     width: 100%;
-  }
+  }*/
   .signup-button-container{
     margin: auto;
     width: 100%;
