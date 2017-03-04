@@ -31,15 +31,6 @@ div.centered-div{
   margin: 2px 0 0 0;
 }
 
-#thanks-page-title{
-  font-family: sans-serif;
-  font-size: 28px;
-  font-weight: 100;
-  text-align: center;
-  margin: 30px 0 10px 0;
-  color: #505050;
-}
-
 #username{
   font-weight: 400;
   font-size: 12px;
@@ -153,12 +144,6 @@ input, label {
   height: 50px;
   align-self: center;
   margin: 20px 0 0 20px;
-}
-
-.thanks_logo_img{
-  width: 256px;
-  height: 50px;
-  margin: 50px 0 0 0;
 }
 
 .login-container{
@@ -290,7 +275,7 @@ button{
 }
 
 /*large laptop*/
-@media only screen and (min-width: 1201px){
+@media only screen and (min-width: 1401px){
   .submit_button_container{
     margin: auto;
     width: 400px;
@@ -299,16 +284,29 @@ button{
 }
 
 /*tablet -> small laptop*/
-@media only screen and (min-width: 451px) and (max-width: 1200px) {
+@media only screen and (min-width: 801px) and (max-width: 1400px) {
   .submit_button_container{
     margin: auto;
     width: 400px;
     height: 75px;
   }
+  #thanks-page-title{
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    text-align: center;
+    margin: 30px 0 10px 0;
+    color: #505050;
+  }
+  .thanks_logo_img{
+    width: 256px;
+    height: 50px;
+    margin: 50px 0 0 0;
+  }
 }
 
 /*mobile*/
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 800px) {
   /*home page (index.php)*/
   .testimonials-container{
     display: none;
@@ -413,8 +411,6 @@ button{
   #thanks_mobile_img_src{
     height: 150px;
     width: 100%;
-    align-self: center;
-    justify-content: center;
     margin: 4%;
   }
 }
