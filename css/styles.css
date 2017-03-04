@@ -275,7 +275,7 @@ button{
 }
 
 /*large laptop*/
-@media only screen and (min-width: 1401px){
+@media only screen and (min-width: 1451px){
   .submit_button_container{
     margin: auto;
     width: 400px;
@@ -284,7 +284,7 @@ button{
 }
 
 /*tablet -> small laptop*/
-@media only screen and (min-width: 801px) and (max-width: 1400px) {
+@media only screen and (min-width: 1025px) and (max-width: 1450px) {
   .submit_button_container{
     margin: auto;
     width: 400px;
@@ -306,7 +306,7 @@ button{
 }
 
 /*mobile*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   /*home page (index.php)*/
   .testimonials-container{
     display: none;
