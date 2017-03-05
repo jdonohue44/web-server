@@ -327,9 +327,6 @@ button{
   }
 
   /*interests page*/
-  .interest-form{
-    background-color: white;
-  }
   .nav-bar-flex-row{
     flex-direction: column;;
     -webkit-flex-direction: column;
