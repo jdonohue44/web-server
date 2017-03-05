@@ -8,7 +8,7 @@ include "../inc/dbinfo.inc";
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-<h1 align="center" style="padding-top:5%;">Confirm your email address to unsubscribe.</h1>
+<h1 align="center" style="padding:5% 5% 0 5%; font-weight:100; color: #505050;">Confirm your email address to unsubscribe.</h1>
 <?php
   /* Connect to MySQL and select the database. */
   $connection = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD);
