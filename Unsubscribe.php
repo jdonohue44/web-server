@@ -31,7 +31,9 @@ include "../inc/dbinfo.inc";
     <form action="<?PHP echo $_SERVER['SCRIPT_NAME'] ?>" method="POST">
         <input type="text" name="Email" id="email_text" placeholder="Email" tabindex=2 maxlength="35" size="40" />
         <h5 id="validation_typing"></h5>
-        <input type="submit" name="validate_button" value="Unsubscribe" />
+        <div class="signup-button-container">
+          <input type="submit" name="validate_button" value="Unsubscribe" />
+        </div
     </form>
   </div>
 </div>
