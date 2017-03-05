@@ -8,7 +8,7 @@ session_start();
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+<body class="interests-page-body">
   <?php
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
@@ -51,7 +51,7 @@ session_start();
 
     <div class="nav-bar-flex-row">
 
-      <div class="logo_img">
+      <div class="logo_img_interests">
         <a href="http://54.86.139.119/">
           <img src="http://mason.gmu.edu/~jdonohu2/logo1.png" alt="espress news home"></img>
         </a>
