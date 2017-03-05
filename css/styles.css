@@ -114,6 +114,7 @@ input, label {
   margin-bottom: 20px;
   flex-direction: row;
   justify-content: center;
+  background-color: white;
 }
 
 .interest-form{
@@ -326,6 +327,9 @@ button{
   }
 
   /*interests page*/
+  .interest-form-container{
+    background-color: white;
+  }
   .nav-bar-flex-row{
     flex-direction: column;;
     -webkit-flex-direction: column;
