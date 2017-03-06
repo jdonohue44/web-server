@@ -113,7 +113,7 @@ session_start();
         // document.getElementsByName('validate_button')[0].style.backgroundColor = "#D8D8D8";
       }else{
         // $("#validation_typing").text(email + " is not valid yet.");
-        $("#email_text").css("color", "red");
+        $("#email_text").css("border-color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
         // document.getElementsByName('validate_button')[0].style.backgroundColor = "#D8D8D8";
       }
