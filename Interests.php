@@ -99,8 +99,10 @@ session_start();
     checkListLength();
     if($(window).width() < 650){
       $( "#interest_text" ).focus(function() {
-        console.log("remove input");
-        $(".submit_button_container").remove();
+        $(".submit_button_container").hide();
+      });
+      $("#interest_text").focusout(function(){
+        $(".submit_button_container").show();
       });
     }
 
