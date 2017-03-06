@@ -97,6 +97,12 @@ session_start();
   <script>
     document.getElementsByName('submit_button')[0].disabled = true;
     checkListLength();
+    if($(window).width() < 650){
+      $( "#interest_text" ).focus(function() {
+        $("#submit_button_container").remove();
+      });
+    }
+
 
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
