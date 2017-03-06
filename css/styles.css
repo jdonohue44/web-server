@@ -392,6 +392,7 @@ button{
   }
   .logo_img_interests{
     margin: 0;
+    align-self: center;
   }
 
   /*Thanks page*/
