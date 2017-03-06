@@ -81,6 +81,7 @@ include "../inc/dbinfo.inc";
 
 /* Remove User (email and interests) */
 function RemoveUser($connection, $email) {
+    $e = mysqli_real_escape_string($connection, $email);
     $query = "SELECT ID FROM USERS WHERE Email = '$e';";
     $result = mysqli_query($connection, $query);
     if(!$result) echo("<p>" . mysqli_error($connection) . "</p>");
@@ -90,7 +91,6 @@ function RemoveUser($connection, $email) {
     $query = "DELETE FROM USER_INTERESTS WHERE User_ID = '$id';";
     if(!mysqli_query($connection, $query)) echo("<p>Error removing user interests.</p>");
 
-   $e = mysqli_real_escape_string($connection, $email);
    $query = "DELETE FROM USERS WHERE Email = '$e';";
    if(!mysqli_query($connection, $query)) echo("<p>Error removing user email.</p>");
 }
