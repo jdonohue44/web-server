@@ -390,6 +390,9 @@ button{
     flex-direction: row;
     justify-content: center;
   }
+  .logo_img_interests{
+    margin: 0;
+  }
 
   /*Thanks page*/
   #thanks-page-title{
