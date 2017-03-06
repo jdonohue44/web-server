@@ -322,7 +322,7 @@ button{
   }
   .sign_in_container{
     width: 90%;
-    margin-top: 20px;
+    margin-top: 0;
   }
   .info{
     border: 0;
@@ -332,7 +332,7 @@ button{
     border: 0;
   }
   .logo_img_home{
-    margin-top: 20px;
+    margin: 0;
   }
   body{
     background-color: white;
