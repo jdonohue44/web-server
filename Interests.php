@@ -127,8 +127,9 @@ session_start();
       if(interest_lis.length > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#3897F0";
         document.getElementsByName('submit_button')[0].disabled = false;
-        $(".interest-form").css("background-color","#f7f7f7");
-        $("#helper-text").remove();
+        if($(window).width() > 650){
+          $(".interest-form").css("background-color","#f7f7f7");
+        }
       }else{
         if($(window).width() > 650){
           $(".interest-form").css("background-color","#e6e6e6");
