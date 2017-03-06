@@ -130,8 +130,10 @@ session_start();
         $(".interest-form").css("background-color","#f7f7f7");
         $("#helper-text").remove();
       }else{
-        $(".interest-form").css("background-color","#e6e6e6");
-        $(".interest-form").append("<h3 id='helper-text'>added interests go here.</h3>");
+        if($(window).width() > 650){
+          $(".interest-form").css("background-color","#e6e6e6");
+          $(".interest-form").append("<h3 id='helper-text'>added interests go here.</h3>");
+        }
       }
     }
 
