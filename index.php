@@ -103,8 +103,8 @@ session_start();
     $("#validation_typing").text("");
     var email = $('#email_text').val();
     if (validateEmail(email)) {
-      $("#validation_typing").text(email + " is valid!");
-      $("#validation_typing").css("color", "#3897F0");
+      // $("#validation_typing").text(email + " is valid!");
+      $("#email_text").css("border-color", "green");
       document.getElementsByName('validate_button')[0].disabled = false;
       document.getElementsByName('validate_button')[0].style.backgroundColor = "#3897F0";
     } else {
@@ -112,8 +112,8 @@ session_start();
         document.getElementsByName('validate_button')[0].disabled = true;
         // document.getElementsByName('validate_button')[0].style.backgroundColor = "#D8D8D8";
       }else{
-        $("#validation_typing").text(email + " is not valid yet.");
-        $("#validation_typing").css("color", "red");
+        // $("#validation_typing").text(email + " is not valid yet.");
+        $("#email_text").css("color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
         // document.getElementsByName('validate_button')[0].style.backgroundColor = "#D8D8D8";
       }
