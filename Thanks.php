@@ -15,12 +15,11 @@ session_start();
     </div>
     <?php
     if($_SESSION["unsubscribe"]){
-        echo "<h1 id='thanks-page-title'>Successfully unsubscribed " . $email . ".</h1>";
+        echo "<h1 id='thanks-page-title'>Successfully unsubscribed " . $_SESSION["email"] . ".</h1>";
     }else{
       echo "<h1 id='thanks-page-title'> All set! Your newsletter will arrive soon.</h1>";
     }
     ?>
-    <h1 id="thanks-page-title"> All set! Your newsletter will arrive soon.</h1>
   </div>
 </body>
 </html>
