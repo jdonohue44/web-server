@@ -434,6 +434,7 @@ button{
   /*Unsubscribe page*/
   .unsubscribe-container{
     width: 94%;
-    margin-top: 0;
+    margin: 0;
+    border: 0;
   }
 }
