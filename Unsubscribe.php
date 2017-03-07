@@ -53,16 +53,14 @@ include "../inc/dbinfo.inc";
     $("#validation_typing").text("");
     var email = $('#email_text').val();
     if (validateEmail(email)) {
-      $("#validation_typing").text(email + " is valid!");
-      $("#validation_typing").css("color", "#3897F0");
+      $("#email_text").css("border-color", "green");
       document.getElementsByName('validate_button')[0].disabled = false;
       document.getElementsByName('validate_button')[0].style.backgroundColor = "#3897F0";
     } else {
       if(!email.length){
         document.getElementsByName('validate_button')[0].disabled = true;
       }else{
-        $("#validation_typing").text(email + " is not valid yet.");
-        $("#validation_typing").css("color", "red");
+        $("#email_text").css("border-color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
       }
     }
