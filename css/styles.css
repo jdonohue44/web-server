@@ -294,7 +294,19 @@ button{
 
 /*large laptop*/
 @media only screen and (min-width: 1401px){
-
+  #thanks-page-title{
+    font-family: sans-serif;
+    font-size: 28px;
+    font-weight: 100;
+    text-align: center;
+    margin: 30px 0 10px 0;
+    color: #505050;
+  }
+  .thanks_logo_img{
+    width: 256px;
+    height: 50px;
+    margin: 50px 0 0 0;
+  }
 }
 
 /*tablet -> small laptop*/
