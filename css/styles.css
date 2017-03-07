@@ -430,4 +430,10 @@ button{
     width: 90%;
     margin: 4%;
   }
+
+  /*Unsubscribe page*/
+  .unsubscribe-container{
+    width: 94%;
+    margin-top: 0;
+  }
 }
