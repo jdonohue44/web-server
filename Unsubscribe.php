@@ -1,5 +1,6 @@
 <?php
 include "../inc/dbinfo.inc";
+session_start();
 ?>
 <html>
 <head>
@@ -20,8 +21,10 @@ include "../inc/dbinfo.inc";
   $user_email = htmlentities($_POST['Email']);
 
   if(strlen($user_email)){
+    $_SESSION["unsubscribe"] = true;
+    $_SESSION["email"] = $user_email;
     RemoveUser($connection, $user_email);
-    header("Location: http://54.86.139.119/Thanks.html");
+    header("Location: http://54.86.139.119/Thanks.php");
   }
 ?>
 
