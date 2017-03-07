@@ -412,6 +412,12 @@ button{
     bottom: 0px;
     height: 80px;
   }
+  #interest-page-title{
+    display: none;
+  }
+  #interest-page-subtitle{
+    display: none;
+  }
 
   /*Thanks page*/
   #thanks-page-title{
