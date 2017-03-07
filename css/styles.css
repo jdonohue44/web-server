@@ -169,15 +169,6 @@ input, label {
   justify-content: center;
 }
 
-.unsubscribe-container{
-  background-color: white;
-  padding: 15px 15px 0 15px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #d8d8d8;
-  margin: 20px;
-}
-
 .sample_img{
   background-image: url('http://mason.gmu.edu/~jdonohu2/sample.jpeg');
   width: 540px;
@@ -186,6 +177,14 @@ input, label {
 }
 
 .sign_in_form {
+  background-color: white;
+  padding: 0px 30px 20px 30px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d0d0d0;
+}
+
+.unsubscribe-form {
   background-color: white;
   padding: 0px 30px 20px 30px;
   border-width: 1px;
@@ -434,7 +433,6 @@ button{
   /*Unsubscribe page*/
   .unsubscribe-container{
     width: 94%;
-    margin: 0;
-    border: 0;
+    margin-top: 0;
   }
 }

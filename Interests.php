@@ -136,6 +136,7 @@ session_start();
       if(interest_lis.length > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#3897F0";
         document.getElementsByName('submit_button')[0].disabled = false;
+        $("#helper-text").remove();
         if($(window).width() > 650){
           $(".interest-form").css("background-color","#f7f7f7");
         }

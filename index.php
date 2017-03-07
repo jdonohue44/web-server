@@ -62,8 +62,6 @@ session_start();
               <input type="text" name="Email" id="email_text" placeholder="Email" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
             </div>
 
-            <h5 id="validation_typing"></h5>
-
             <div class="signup-button-container">
               <input type="submit" name="validate_button" value="Sign up" />
             </div>
@@ -99,8 +97,6 @@ session_start();
 
   // enable Validate button when Email is Valid
   $('#email_text').bind('input propertychange', function() {
-    var text = $(this).val();
-    $("#validation_typing").text("");
     var email = $('#email_text').val();
     if (validateEmail(email)) {
       $("#email_text").css("border-color", "green");
@@ -108,6 +104,7 @@ session_start();
       document.getElementsByName('validate_button')[0].style.backgroundColor = "#3897F0";
     } else {
       if(!email.length){
+        $("#email_text").css("border-color", "red");
         document.getElementsByName('validate_button')[0].disabled = true;
       }else{
         $("#email_text").css("border-color", "red");
