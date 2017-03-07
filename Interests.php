@@ -44,7 +44,7 @@ session_start();
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i]);
       }
-      header("Location: http://54.86.139.119/Thanks.php");
+      header("Location: http://54.86.139.119/Thanks.html");
     }
 
     ?>

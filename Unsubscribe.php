@@ -21,10 +21,9 @@ session_start();
   $user_email = htmlentities($_POST['Email']);
 
   if(strlen($user_email)){
-    $_SESSION["unsubscribe"] = true;
     $_SESSION["email"] = $user_email;
     RemoveUser($connection, $user_email);
-    header("Location: http://54.86.139.119/Thanks.php");
+    header("Location: http://54.86.139.119/Goodbye.php");
   }
 ?>
 
