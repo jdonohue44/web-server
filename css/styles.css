@@ -78,7 +78,7 @@ div.centered-div{
 }
 
 #interest_text{
-  min-width: 300px;
+  width: 310px;
   border-radius: 4px 0 0 4px;
   outline: none;
 }
