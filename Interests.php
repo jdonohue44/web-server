@@ -58,10 +58,20 @@ session_start();
       </div>
 
       <div style="margin-left: 600px;">
-        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        <a href="http://54.86.139.119/">
+          <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        </a>
       </div>
-      <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-      <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+      <div>
+        <a href="http://54.86.139.119/">
+          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div>
+        <a href="http://54.86.139.119/">
+          <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+        </a>
+      </div>
     </div>
 
     <h1 id="interest-page-title">Interests</h1>
