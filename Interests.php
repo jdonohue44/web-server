@@ -60,12 +60,6 @@ session_start();
       <i class="fa fa-user fa-2x" aria-hidden="true"></i>
       <i class="fa fa-home fa-2x" aria-hidden="true"></i>
       <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
-
-      <div class="login-container">
-         <h1 class="banner-sm">
-           <span id="username"><?php echo $username ?></span>
-         </h1>
-      </div>
     </div>
 
     <h1 id="interest-page-title">Interests</h1>
