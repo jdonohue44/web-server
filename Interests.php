@@ -58,9 +58,12 @@ session_start();
       </div>
 
       <div class="login-container">
-        <h4 class="banner-sm">
+         <h1 class="banner-sm">
            <span id="username"><?php echo $username ?></span>
          </h1>
+         <div class="user-sprite"></div>
+         <div class="home-sprite"></div>
+         <div class="info-sprite"></div>
       </div>
 
     </div>

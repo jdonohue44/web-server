@@ -7,6 +7,28 @@ div.centered-div{
   align-items: center;
 }
 
+.user-sprite, .home-sprite, .info-sprite{
+	background: url(sprites.png) no-repeat;
+}
+
+.user-sprite{
+	background-position: 0 0;
+	width: 40px;
+	height: 48px;
+}
+
+.home-sprite{
+	background-position: -111px -6px ;
+	width: 51px;
+	height: 40px;
+}
+
+.info-sprite{
+	background-position: -50px 0;
+	width: 49px;
+	height: 48px;
+}
+
 #helper-text{
   color: #808080;
   font-family: sans-serif;
