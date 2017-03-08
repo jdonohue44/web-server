@@ -57,7 +57,9 @@ session_start();
         </a>
       </div>
 
-      <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+      <div style="margin-left: 600px;">
+        <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+      </div>
       <i class="fa fa-home fa-2x" aria-hidden="true"></i>
       <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
     </div>
