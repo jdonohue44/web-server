@@ -5,6 +5,7 @@ session_start();
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,22 +51,21 @@ session_start();
     ?>
 
     <div class="nav-bar-flex-row">
-
       <div class="logo_img_interests">
         <a href="http://54.86.139.119/">
           <img src="http://mason.gmu.edu/~jdonohu2/logo1.png" alt="espress news home"></img>
         </a>
       </div>
 
+      <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+      <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+
       <div class="login-container">
          <h1 class="banner-sm">
            <span id="username"><?php echo $username ?></span>
          </h1>
-         <div class="user-sprite"></div>
-         <div class="home-sprite"></div>
-         <div class="info-sprite"></div>
       </div>
-
     </div>
 
     <h1 id="interest-page-title">Interests</h1>
