@@ -133,6 +133,12 @@ input, label {
   justify-content: space-between;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
   background-color: #fff;
+  align-items: flex-end;
+  padding: 20px 100px 20px 100px;
+}
+
+.fa fa-user fa-2x{
+  margin-left: 500px;
 }
 
 .logo_img{
