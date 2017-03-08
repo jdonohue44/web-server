@@ -8,7 +8,7 @@ div.centered-div{
 }
 
 .user-sprite, .home-sprite, .info-sprite{
-	background: url(./res/sprites.png) no-repeat;
+	background: url('http://mason.gmu.edu/~jdonohu2/sprites.png') no-repeat;
 }
 
 .user-sprite{
