@@ -102,7 +102,7 @@ input, label {
 .flex_box_holder{
   flex-direction: row;
   justify-content: center;
-  margin: 50px auto 0;
+  margin: 5% auto 0;
 }
 
 .footer{
@@ -408,8 +408,8 @@ button{
     justify-content: center;
   }
   .logo_img_interests{
-    margin: 0;
-    align-self: center;
+    width: 20px;
+    height: 20px;
   }
   .submit_button_container{
     width: 100%;
