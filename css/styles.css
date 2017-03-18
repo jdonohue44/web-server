@@ -359,8 +359,8 @@ button{
 
   /*interests page*/
   .nav-bar-flex-row{
-    flex-direction: column;;
-    -webkit-flex-direction: column;
+    flex-direction: row;
+    -webkit-flex-direction: row;
     display: -webkit-flex;
     display: flex;
     justify-content: space-between;
