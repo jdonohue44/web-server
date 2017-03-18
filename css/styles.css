@@ -366,6 +366,7 @@ button{
     justify-content: space-between;
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    padding: 20px 10px 40px 10px;
   }
   .login-container{
     padding: 0;
@@ -412,13 +413,15 @@ button{
   }
   .logo_img_interests{
     width: 20px;
-    height: 20px;
+    height: 20px
+    padding: 20px 10px 25px 10px;
   }
   .submit_button_container{
     width: 100%;
     position: absolute;
     bottom: 0px;
     height: 80px;
+    max-width: 650px;
   }
   #interest-page-title{
     display: none;
