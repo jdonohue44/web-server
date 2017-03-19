@@ -393,7 +393,6 @@ button{
     display: flex;
     justify-content: center;
     background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
     padding: 0;
   }
   .hidden-icon-group{
@@ -412,6 +411,9 @@ button{
   .login-container{
     padding: 0;
     margin: 0;
+  }
+  .logo_img_interests{
+    padding-top: 12px;
   }
   #interests_ul{
     margin-left: 0;
