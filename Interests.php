@@ -78,17 +78,17 @@ session_start();
 
     <div class="hidden-nav-bar-flex-row">
       <div class="hidden-icon-group">
-        <div style="padding: 0 10px 0 10px;">
+        <div>
           <a href="http://54.86.139.119/" style="color:black;">
             <i class="fa fa-user fa-2x" aria-hidden="true"></i>
           </a>
         </div>
-        <div style="padding: 0 10px 0 10px;">
+        <div>
           <a href="http://54.86.139.119/" style="color:black;">
             <i class="fa fa-home fa-2x" aria-hidden="true"></i>
           </a>
         </div>
-        <div style="padding: 0 10px 0 10px;">
+        <div>
           <a href="http://54.86.139.119/" style="color:black;">
             <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
           </a>
