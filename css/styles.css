@@ -123,6 +123,7 @@ input, label {
 .interest-form{
   padding: 10px;
   max-width: 80%;
+  min-width: 380px;
   min-height: 120px;
   margin: 20px 0 -16px 0;
 }
