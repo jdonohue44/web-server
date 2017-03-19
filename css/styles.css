@@ -66,20 +66,20 @@ div.centered-div{
 }
 
 #add_interest_button{
-  max-width: 300px;
   min-width: 100px;
   margin: 8px 0 0 0;
   border-radius: 0 4px 4px 0;
   border-style: solid solid solid none;
   border-radius: 0 4px 4px 0;
+  border-color: #6d6d6d;
   border-width: 1px;
-  border-color: #ccc;
 }
 
 #interest_text{
   width: 310px;
   border-radius: 4px 0 0 4px;
-  outline: none;
+  border-right: none;
+  border-color: #6d6d6d;
 }
 
 input, label {
@@ -433,21 +433,6 @@ button{
     cursor: pointer;
     font-size: 18px;
     font-weight: 500;
-  }
-  #add_interest_button{
-    max-width: none;
-    min-width: none;
-    margin: 8px 0 0 0;
-    border-radius: 0 4px 4px 0;
-    border-style: solid solid solid none;
-    border-radius: 0 4px 4px 0;
-    border-width: 1px;
-    border-color: #ccc;
-  }
-  #interest_text{
-    min-width: 0;
-    border-radius: 4px 0 0 4px;
-    outline: none
   }
   .add_interest_container{
     margin: 10px 20px 0 20px;
