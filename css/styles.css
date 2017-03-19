@@ -302,6 +302,16 @@ button{
   display: none;
 }
 
+.icon-group{
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  align-items: flex-end;
+  padding: 10px;
+}
 .icon-group div{
   padding: 10px;
 }
