@@ -38,13 +38,11 @@ div.centered-div{
 }
 
 #interests_ul li{
-  background: #999;
   list-style-type: none;
   padding: 16px;
   margin: 4px;
+  border: solid 1px;
   display: inline-flex;
-  color: white;
-  border-radius: 100px;
 }
 
 #interests_ul{
@@ -123,9 +121,8 @@ input, label {
 
 .interest-form{
   padding: 10px;
-  max-width: 400px;
+  max-width: 80%;
   min-height: 120px;
-  width:400px;
   margin: 20px 0 -16px 0;
 }
 

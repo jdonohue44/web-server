@@ -136,7 +136,7 @@ session_start();
       $('ul#interests_ul li').hover(function(){
         $(this).css("background-color", "#ff4444");
         },function(){
-        $(this).css("background-color", "#999");
+        $(this).css("background-color", "white");
       });
     }
 
@@ -145,7 +145,6 @@ session_start();
       if(interest_lis.length > 0) {
         document.getElementsByName('submit_button')[0].style.backgroundColor = "#3897F0";
         document.getElementsByName('submit_button')[0].disabled = false;
-        $("#helper-text").remove();
         if($(window).width() > 650){
           $(".interest-form").css("background-color","#f7f7f7");
         }
