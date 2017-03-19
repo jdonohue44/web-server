@@ -298,6 +298,14 @@ button{
   height: 75px;
 }
 
+.hidden-icon-group{
+  display: none;
+}
+
+.icon-group div{
+  padding: 10px;
+}
+
 /*large laptop*/
 @media only screen and (min-width: 1401px){
   #thanks-page-title{
@@ -367,6 +375,26 @@ button{
     border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
     padding: 20px 10px 40px 10px;
   }
+  .hidden-nav-bar-flex-row{
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
+    padding: 20px 10px 40px 10px;
+  }
+  .hidden-icon-group{
+    display: flex;
+    justify-content: center;
+  }
+  .hidden-icon-group div{
+    padding: 10px;
+  }
+  .icon-group{
+    display: none;
+  }
   .login-container{
     padding: 0;
     margin: 0;
@@ -411,9 +439,9 @@ button{
     justify-content: center;
   }
   .logo_img_interests{
-    width: 20px;
-    height: 20px
-    padding: 20px 10px 27px 10px;
+  }
+  .espress_news_img{
+
   }
   .submit_button_container{
     width: 100%;

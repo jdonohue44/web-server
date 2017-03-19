@@ -53,24 +53,46 @@ session_start();
     <div class="nav-bar-flex-row">
       <div class="logo_img_interests">
         <a href="http://54.86.139.119/">
-          <img src="http://mason.gmu.edu/~jdonohu2/logo1.png" alt="espress news home"></img>
+          <img class="espress_news_img" src="http://mason.gmu.edu/~jdonohu2/logo1.png" alt="espress news home"></img>
         </a>
       </div>
 
-      <div style="margin-left: 55%; padding: 0 10px 0 10px;">
-        <a href="http://54.86.139.119/" style="color:black;">
-          <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-        </a>
+      <div class="icon-group">
+        <div style="padding: 0 10px 0 10px;">
+          <a href="http://54.86.139.119/" style="color:black;">
+            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div style="padding: 0 10px 0 10px;">
+          <a href="http://54.86.139.119/" style="color:black;">
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div style="padding: 0 10px 0 10px;">
+          <a href="http://54.86.139.119/" style="color:black;">
+            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
-      <div style="padding: 0 10px 0 10px;">
-        <a href="http://54.86.139.119/" style="color:black;">
-          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
-        </a>
-      </div>
-      <div style="padding: 0 10px 0 10px;">
-        <a href="http://54.86.139.119/" style="color:black;">
-          <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
-        </a>
+    </div>
+
+    <div class="hidden-nav-bar-flex-row">
+      <div class="hidden-icon-group">
+        <div style="padding: 0 10px 0 10px;">
+          <a href="http://54.86.139.119/" style="color:black;">
+            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div style="padding: 0 10px 0 10px;">
+          <a href="http://54.86.139.119/" style="color:black;">
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div style="padding: 0 10px 0 10px;">
+          <a href="http://54.86.139.119/" style="color:black;">
+            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+          </a>
+        </div>
       </div>
     </div>
 
