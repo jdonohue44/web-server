@@ -382,8 +382,8 @@ button{
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
-    padding: 20px 10px 40px 10px;
+    border: none;
+    padding: 0;
   }
   .hidden-nav-bar-flex-row{
     flex-direction: row;
@@ -396,8 +396,14 @@ button{
     padding: 20px 10px 40px 10px;
   }
   .hidden-icon-group{
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    display: -webkit-flex;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: #fff;
+    align-items: center;
+    padding: 10px;
   }
   .hidden-icon-group div{
     padding: 10px;
