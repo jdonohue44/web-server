@@ -4,6 +4,10 @@ session_start();
 ?>
 <html>
 <head>
+  <meta charset=UTF-8>
+  <meta name="description" content="Espress News">
+  <meta name="keywords" content="Espress, espress, express news, Espress News,">
+  <meta name="author" content="Espress">
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
