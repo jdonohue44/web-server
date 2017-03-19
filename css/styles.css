@@ -43,6 +43,7 @@ div.centered-div{
   margin: 4px;
   border: solid 1px;
   display: inline-flex;
+  background: #fff;
 }
 
 #interests_ul{

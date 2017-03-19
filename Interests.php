@@ -136,7 +136,7 @@ session_start();
       $('ul#interests_ul li').hover(function(){
         $(this).css("background-color", "#ff4444");
         },function(){
-        $(this).css("background-color", "#ffffff");
+        $(this).css("background-color", "#fff");
       });
     }
 
