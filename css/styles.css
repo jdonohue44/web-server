@@ -313,6 +313,9 @@ button{
 .icon-group div{
   padding: 0 16px 0 16px;
 }
+.hidden-icon-group div{
+  padding: 0 16px 0 16px;
+}
 
 /*large laptop*/
 @media only screen and (min-width: 1401px){
@@ -433,11 +436,6 @@ button{
     margin: 10px 20px 0 20px;
     flex-direction: row;
     justify-content: center;
-  }
-  .logo_img_interests{
-  }
-  .espress_news_img{
-
   }
   .submit_button_container{
     width: 100%;
