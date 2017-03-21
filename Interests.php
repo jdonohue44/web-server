@@ -62,20 +62,16 @@ session_start();
       </div>
 
       <div class="icon-group">
-        <div style="padding: 0 10px 0 10px;">
-          <a href="http://54.86.139.119/" style="color:black;">
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-          </a>
-        </div>
-        <div style="padding: 0 10px 0 10px;">
+        <div style="padding: 0 12px 0 12px;">
           <a href="http://54.86.139.119/" style="color:black;">
             <i class="fa fa-home fa-2x" aria-hidden="true"></i>
           </a>
         </div>
-        <div style="padding: 0 10px 0 10px;">
-          <a href="http://54.86.139.119/" style="color:black;">
-            <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
-          </a>
+        <div style="padding: 0 12px 0 12px;">
+          <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+        </div>
+        <div style="padding: 0 12px 0 12px;">
+          <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
         </div>
       </div>
     </div>
