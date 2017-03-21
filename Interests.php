@@ -80,12 +80,12 @@ session_start();
       <div class="hidden-icon-group">
         <div>
           <a href="http://54.86.139.119/" style="color:black;">
-            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
           </a>
         </div>
         <div>
           <a href="http://54.86.139.119/" style="color:black;">
-            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+            <i class="fa fa-user fa-2x" aria-hidden="true"></i>
           </a>
         </div>
         <div>
