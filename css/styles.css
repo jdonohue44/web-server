@@ -393,7 +393,7 @@ button{
     display: flex;
     justify-content: center;
     background-color: #fff;
-    padding: 0;
+    padding-top: 20px;
   }
   .hidden-icon-group{
     flex-direction: row;
