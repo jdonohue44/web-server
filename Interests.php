@@ -75,7 +75,7 @@ session_start();
         </div>
       </div>
     </div>
-    <div class="nav-bar-flex-row">
+    <div class="nav-bar-flex-row modal-row">
       <div class="modal">
         <p> This is information about Espress News. </p>
       </div>

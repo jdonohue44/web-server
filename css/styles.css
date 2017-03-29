@@ -320,6 +320,10 @@ button{
   border: 1px solid black;
   padding: 5px;
 }
+.modal-row{
+  padding: 5px 20px 5px 0px;
+  align-items: flex-start;
+}
 
 /*large laptop*/
 @media only screen and (min-width: 1401px){
