@@ -320,6 +320,10 @@ button{
   border: 1px solid black;
   padding: 5px;
   background-color: white;
+  display: none;
+}
+.modal:hover{
+  display: flex;
 }
 .modal-row{
   padding: 5px 60px 5px 0px;
@@ -327,6 +331,10 @@ button{
   justify-content: flex-end;
   border-bottom: 0;
   background-color: #f7f7f7;
+  display: none;
+}
+.modal-row:hover{
+  display: flex;
 }
 
 /*large laptop*/
