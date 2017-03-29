@@ -316,6 +316,10 @@ button{
 .hidden-icon-group div{
   padding: 0 16px 0 16px;
 }
+.modal{
+  border: 1px solid black;
+  padding: 5px;
+}
 
 /*large laptop*/
 @media only screen and (min-width: 1401px){
