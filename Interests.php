@@ -100,7 +100,7 @@ session_start();
     <h2 id="interest-page-subtitle">More interests means more articles in your newsletter!</h2>
 
     <div class = "add_interest_container">
-      <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" maxlength="30" size="30" />
+      <input id="interest_text" type="text" name="Interest" placeholder="Next Interest" spellcheck="true" maxlength="30" size="30" />
       <button type="button" id="add_interest_button">Add</button>
     </div>
 
