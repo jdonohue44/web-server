@@ -77,10 +77,7 @@ session_start();
     </div>
     <div class="nav-bar-flex-row modal-row">
       <div class="modal">
-        <p> This is information about Espress News. </p>
-      </div>
-      <div class="modal">
-        <p> You are logged in as user-name.</p>
+        <p> This is information in a modal. </p>
       </div>
     </div>
 
