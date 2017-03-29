@@ -319,6 +319,7 @@ button{
 .modal{
   border: 1px solid black;
   padding: 5px;
+  background-color: white;
 }
 .modal-row{
   padding: 5px 60px 5px 0px;
