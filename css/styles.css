@@ -323,6 +323,7 @@ button{
 .modal-row{
   padding: 5px 20px 5px 0px;
   align-items: flex-start;
+  justify-content: flex-end;
 }
 
 /*large laptop*/
