@@ -322,9 +322,6 @@ button{
   background-color: white;
   display: none;
 }
-.modal:hover{
-  display: flex;
-}
 .modal-row{
   padding: 5px 60px 5px 0px;
   align-items: flex-start;
@@ -332,9 +329,6 @@ button{
   border-bottom: 0;
   background-color: #f7f7f7;
   display: none;
-}
-.modal-row:hover{
-  display: flex;
 }
 
 /*large laptop*/

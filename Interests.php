@@ -131,6 +131,14 @@ session_start();
 
 
   <script>
+    $('.icon-group div').hover(function(){
+      $('.modal-row').css("display","flex");
+      $('.modal').css("display","flex");
+    },function(){
+      $('.modal-row').css("display","none");
+      $('.modal').css("display","none");
+    });
+
     document.getElementsByName('submit_button')[0].disabled = true;
     checkListLength();
     if($(window).width() < 650){
@@ -141,7 +149,6 @@ session_start();
         $(".submit_button_container").show();
       });
     }
-
 
     $('#add_interest_button').click(function(){
       var interest = $.trim($('#interest_text').val());
