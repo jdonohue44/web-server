@@ -130,18 +130,18 @@ session_start();
   <script>
     $('.icon-group #user-icon').hover(function(){
       $('.modal').css("display","flex");
-      $('.modal').text("<p>You are signed in as <?php echo $name?>.</p>");
+      $('.modal').text("You are signed in as <?php echo $name?>.");
     },function(){
       $('.modal').css("display","none");
-      $('.modal').text("<p></p>");
+      $('.modal').text("");
     });
 
     $('.icon-group #info-icon').hover(function(){
       $('.modal').css("display","flex");
-      $('.modal').text("<p>Espress news will send you an email with articles relating to your interests.</p>");
+      $('.modal').text("Espress news will send you an email with articles relating to your interests.");
     },function(){
       $('.modal').css("display","none");
-      $('.modal').text("<p></p>");
+      $('.modal').text("");
     });
 
     document.getElementsByName('submit_button')[0].disabled = true;

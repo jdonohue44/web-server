@@ -321,6 +321,8 @@ button{
   padding: 5px;
   background-color: white;
   display: none;
+  float: right;
+  margin-right: 10px;
 }
 
 /*large laptop*/
