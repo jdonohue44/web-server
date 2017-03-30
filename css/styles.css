@@ -322,7 +322,9 @@ button{
   background-color: white;
   display: none;
   float: right;
-  margin-right: 10px;
+  margin-right: 80px;
+  margin-bottom: -100px;
+  max-width: 200px;
 }
 
 /*large laptop*/

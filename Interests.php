@@ -138,7 +138,7 @@ session_start();
 
     $('.icon-group #info-icon').hover(function(){
       $('.modal').css("display","flex");
-      $('.modal').text("Espress news will send you an email with articles relating to your interests.");
+      $('.modal').text("Espress News will send you an email with articles relating to your interests.");
     },function(){
       $('.modal').css("display","none");
       $('.modal').text("");
