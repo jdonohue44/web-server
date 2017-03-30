@@ -67,10 +67,10 @@ session_start();
             <i class="fa fa-home fa-2x" aria-hidden="true"></i>
           </a>
         </div>
-        <div style="padding: 0 12px 0 12px;">
+        <div id="user-icon" style="padding: 0 12px 0 12px;">
           <i class="fa fa-user fa-2x" aria-hidden="true"></i>
         </div>
-        <div style="padding: 0 12px 0 12px;">
+        <div id="info-icon" style="padding: 0 12px 0 12px;">
           <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
         </div>
       </div>
@@ -128,7 +128,7 @@ session_start();
 
 
   <script>
-    $('.fa fa-user fa-2x').hover(function(){
+    $('.icon-group #user-icon').hover(function(){
       $('.modal').css("display","flex");
       $('.modal').text("<p>You are signed in as <?php echo $name?>.</p>");
     },function(){
@@ -136,7 +136,7 @@ session_start();
       $('.modal').text("<p></p>");
     });
 
-    $('.fa fa-info-circle fa-2x').hover(function(){
+    $('.icon-group #info-icon').hover(function(){
       $('.modal').css("display","flex");
       $('.modal').text("<p>Espress news will send you an email with articles relating to your interests.</p>");
     },function(){
