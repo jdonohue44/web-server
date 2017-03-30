@@ -75,11 +75,8 @@ session_start();
         </div>
       </div>
     </div>
-    <div class="nav-bar-flex-row modal-row">
       <div class="modal">
-        <p> This is information in a modal. </p>
       </div>
-    </div>
 
     <div class="hidden-nav-bar-flex-row">
       <div class="hidden-icon-group">
@@ -131,12 +128,20 @@ session_start();
 
 
   <script>
-    $('.icon-group div').hover(function(){
-      $('.modal-row').css("display","flex");
+    $('.fa fa-user fa-2x').hover(function(){
       $('.modal').css("display","flex");
+      $('.modal').text("<p>You are signed in as <?php echo $name?>.</p>");
     },function(){
-      $('.modal-row').css("display","none");
       $('.modal').css("display","none");
+      $('.modal').text("<p></p>");
+    });
+
+    $('.fa fa-info-circle fa-2x').hover(function(){
+      $('.modal').css("display","flex");
+      $('.modal').text("<p>Espress news will send you an email with articles relating to your interests.</p>");
+    },function(){
+      $('.modal').css("display","none");
+      $('.modal').text("<p></p>");
     });
 
     document.getElementsByName('submit_button')[0].disabled = true;

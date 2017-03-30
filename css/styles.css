@@ -322,14 +322,6 @@ button{
   background-color: white;
   display: none;
 }
-.modal-row{
-  padding: 5px 60px 5px 0px;
-  align-items: flex-start;
-  justify-content: flex-end;
-  border-bottom: 0;
-  background-color: #f7f7f7;
-  display: none;
-}
 
 /*large laptop*/
 @media only screen and (min-width: 1401px){
