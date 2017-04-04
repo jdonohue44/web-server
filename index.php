@@ -34,7 +34,6 @@ session_start();
     if(!strlen($user_name)){
       $user_name = $user_email;
     }
-    $user_email = test_input($user_email);
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
       echo "<h3>Invalid email.</h3>";
     }else {
