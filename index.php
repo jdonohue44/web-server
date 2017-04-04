@@ -15,8 +15,8 @@ session_start();
 <body>
   <noscript>
     <h3 align="center">JavaScript Required.</h3>
-    <br />
-    <h4>We're sorry, but our site doesn't work properly without JavaScript enabled.</h4>
+    <h4 align="center">We're sorry, but our site doesn't work properly
+      without JavaScript enabled.</h4>
   </noscript>
 <?php
 
