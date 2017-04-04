@@ -34,12 +34,17 @@ session_start();
     if(!strlen($user_name)){
       $user_name = $user_email;
     }
-    AddUser($connection, $user_name, $user_email);
-    $_SESSION["name"] =  $user_name;
-    $_SESSION["email"] = $user_email;
-    $user_name  = '';
-    $user_email = '';
-    header("Location: http://54.86.139.119/Interests.php");
+    $user_email = test_input($user_email);
+    if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+      echo "<h3>Invalid email.</h3>";
+    }else {
+      AddUser($connection, $user_name, $user_email);
+      $_SESSION["name"] =  $user_name;
+      $_SESSION["email"] = $user_email;
+      $user_name  = '';
+      $user_email = '';
+      header("Location: http://54.86.139.119/Interests.php");
+    }
   }
 ?>
 
