@@ -35,6 +35,7 @@ session_start();
       $user_name = $user_email;
     }
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
+      echo "<h6>inalid email.</h6>"
     }else {
       AddUser($connection, $user_name, $user_email);
       $_SESSION["name"] =  $user_name;
