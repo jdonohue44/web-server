@@ -111,6 +111,7 @@ session_start();
       document.getElementsByName('validate_button')[0].style.backgroundColor = "#3897F0";
     } else {
       if(!email.length){
+        $("#email_text").css("border-color", "#ccc");
         document.getElementsByName('validate_button')[0].disabled = true;
       }else{
         $("#email_text").css("border-color", "red");
