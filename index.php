@@ -162,9 +162,9 @@ function AddUser($connection, $name, $email) {
    $num_rows = mysqli_num_rows($present);
    if($num_rows<1){
      $query = "INSERT INTO `USERS` (`Name`,`Email`) VALUES ('$n', '$e');";
-     if(!mysqli_query($connection, $query)) echo("<p>Error adding employee data.</p>");
+     if(!mysqli_query($connection, $query)) echo("<p>Error adding user.</p>");
    }else{
-     echo "<script> alert('Email already registered. Weclome back.'); </script>";
+    console.log("already present");
    }
 }
 
