@@ -14,7 +14,7 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <noscript>
-    <h3 align="center">JavaScript Disabled. Check your browser settings.</h3>
+    <h3 align="center" style="color:#424242;">JavaScript Disabled. Check your browser settings.</h3>
   </noscript>
 <?php
 
@@ -35,7 +35,6 @@ session_start();
       $user_name = $user_email;
     }
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
-      echo "<h3>Invalid email.</h3>";
     }else {
       AddUser($connection, $user_name, $user_email);
       $_SESSION["name"] =  $user_name;
