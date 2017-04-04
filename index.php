@@ -13,7 +13,8 @@ session_start();
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-  <noscript><h2 align="center">JavaScript is disabled in your browser.</h2></noscript>
+  <noscript><h3 align="center">JavaScript Required.We're sorry, but our site
+    doesn't work properly without JavaScript enabled.</h3></noscript>
 <?php
 
   /* Connect to MySQL and select the database. */
