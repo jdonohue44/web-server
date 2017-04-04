@@ -14,8 +14,7 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <noscript>
-    <h3 align="center">JavaScript Disabled.</h3>
-    <h4 align="center">Check your browser settings.</h4>
+    <h3 align="center">JavaScript Disabled. Check your browser settings.</h3>
   </noscript>
 <?php
 
