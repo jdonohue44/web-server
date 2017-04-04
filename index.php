@@ -13,6 +13,7 @@ session_start();
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
+  <noscript><h1>JavaScript is disabled in your browser.</h1></noscript>
 <?php
 
   /* Connect to MySQL and select the database. */
