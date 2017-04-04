@@ -14,9 +14,8 @@ session_start();
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
   <noscript>
-    <h3 align="center">JavaScript Required.</h3>
-    <h4 align="center">We're sorry, but our site doesn't work properly
-      without JavaScript enabled.</h4>
+    <h3 align="center">JavaScript Disabled.</h3>
+    <h4 align="center">Check your browser settings.</h4>
   </noscript>
 <?php
 
