@@ -35,7 +35,7 @@ session_start();
       $user_name = $user_email;
     }
     if (!filter_var($user_email, FILTER_VALIDATE_EMAIL)) {
-      echo "<h5 align='center'>inalid email.</h5>";
+      echo "<h5 align='center' style='color:#424242;'>Invalid email; try again.</h5>";
     }else {
       AddUser($connection, $user_name, $user_email);
       $_SESSION["name"] =  $user_name;
