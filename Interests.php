@@ -18,7 +18,6 @@ session_start();
     $name  = $_SESSION["name"];
     $email = $_SESSION["email"];
 
-
     if(!strlen($email)){
       header("Location: http://54.86.139.119/");
     }
@@ -47,7 +46,7 @@ session_start();
       }
       for($i = 0; $i < sizeof($user_interests); $i++){
           AddInterest($connection, $user_interests[$i]);
-          AddUserInterest($connection, $email, $user_interests[$i]);
+          AddUserInterest($connection, $email, $user_interests[$i], 1);
       }
       header("Location: http://54.86.139.119/Thanks.html");
     }
@@ -236,7 +235,7 @@ function AddInterest($connection, $interest) {
 }
 
 /*Link User with INTEREST in the join table USER_INTERESTS*/
-function AddUserInterest($connection, $email, $interest) {
+function AddUserInterest($connection, $email, $interest, $num_articles) {
    $e = mysqli_real_escape_string($connection, $email);
    $i = mysqli_real_escape_string($connection, $interest);
 
@@ -245,7 +244,7 @@ function AddUserInterest($connection, $email, $interest) {
    $interest_result = mysqli_query($connection, "SELECT INTERESTS.ID FROM INTERESTS WHERE INTERESTS.Interest = '$i'");
    $interest_id = mysqli_fetch_object($interest_result)->ID;
 
-   $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID) VALUES ($user_id, $interest_id);";
+   $query = "INSERT INTO USER_INTERESTS (User_ID, Interest_ID, Num_Articles) VALUES ($user_id, $interest_id, $num_articles);";
    if(!mysqli_query($connection, $query)) echo("<p>Error adding user interest data.</p>");
 }
 
