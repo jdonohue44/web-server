@@ -39,7 +39,7 @@ session_start();
 
     $user_interests = $_POST['interests'];
 
-    echo $user_interests
+    echo $user_interests;
 
     if(sizeof($user_interests)>0){
       if(sizeof($array)>0){
@@ -52,7 +52,7 @@ session_start();
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i], 1);
       }
-      <!-- header("Location: http://54.86.139.119/Thanks.html"); -->
+      /*header("Location: http://54.86.139.119/Thanks.html"); */
     }
 
     ?>
