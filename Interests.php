@@ -39,7 +39,7 @@ session_start();
 
     $user_interests = $_POST['interests'];
 
-    <?php echo $user_interests ?>
+    echo $user_interests
 
     if(sizeof($user_interests)>0){
       if(sizeof($array)>0){
