@@ -38,17 +38,21 @@ session_start();
     $array = GetInterests($connection, $email);
 
     $user_interests = $_POST['interests'];
+
+    <?php echo $user_interests ?>
+
     if(sizeof($user_interests)>0){
       if(sizeof($array)>0){
         for($i = 0; $i < sizeof($array); $i++){
             DeleteUserInterest($connection, $email, $array[$i]);
         }
       }
+
       for($i = 0; $i < sizeof($user_interests); $i++){
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i], 1);
       }
-      header("Location: http://54.86.139.119/Thanks.html");
+      <!-- header("Location: http://54.86.139.119/Thanks.html"); -->
     }
 
     ?>
