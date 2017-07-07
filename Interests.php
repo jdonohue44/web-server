@@ -39,8 +39,6 @@ session_start();
 
     $user_interests = $_POST['interests'];
 
-    echo $user_interests;
-
     if(sizeof($user_interests)>0){
       if(sizeof($array)>0){
         for($i = 0; $i < sizeof($array); $i++){
@@ -49,6 +47,7 @@ session_start();
       }
 
       for($i = 0; $i < sizeof($user_interests); $i++){
+          echo $user_interests[$i];
           AddInterest($connection, $user_interests[$i]);
           AddUserInterest($connection, $email, $user_interests[$i], 1);
       }
