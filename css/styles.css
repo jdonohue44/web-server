@@ -177,7 +177,7 @@ input, label {
 }
 
 .sample_img{
-  background-image: url('http://mason.gmu.edu/~jdonohu2/sample.jpeg');
+  background-image: url('https://espress.s3.amazonaws.com/img/coffee_news_img.jpg');
   width: 540px;
   height: 582px;
 }
@@ -261,7 +261,7 @@ input[type=submit] {
 }
 
 .thank-you-banner{
-  background-image: url('http://mason.gmu.edu/~jdonohu2/banner_img.png');
+  background-image: url('https://espress.s3.amazonaws.com/img/coffee_news_img.jpg');
   width: 548px;
   height: 200px;
   margin: auto;
