@@ -9,6 +9,7 @@ session_start();
   <meta name="keywords" content="Espress, espress, express news, Espress News,">
   <meta name="author" content="Espress">
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  <link rel="shortcut icon" type="image/png" href="https://espress.s3.amazonaws.com/img/espress_logo.png"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +59,7 @@ session_start();
 
         <div class="sign_in_form">
           <div class="logo_img_home">
-            <img src="http://mason.gmu.edu/~jdonohu2/logo1.png"></img>
+            <img src="https://espress.s3.amazonaws.com/img/espress_logo.png"></img>
           </div>
 
           <h2 class="espress-title-message">Sign up to start customizing

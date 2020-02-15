@@ -13,7 +13,7 @@ session_start();
   <div class="centered-div">
     <div class="thanks_logo_img">
       <a href="http://54.86.139.119/">
-        <img src="http://mason.gmu.edu/~jdonohu2/logo1.png" id="thanks_mobile_img_src" alt="espress news homepage"></img>
+        <img src="https://espress.s3.amazonaws.com/img/espress_logo.png" id="thanks_mobile_img_src" alt="espress news homepage"></img>
       </a>
     </div>
       <?php

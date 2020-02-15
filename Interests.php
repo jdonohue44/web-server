@@ -58,7 +58,7 @@ session_start();
     <div class="nav-bar-flex-row">
       <div class="logo_img_interests">
         <a href="http://54.86.139.119/">
-          <img class="espress_news_img" src="http://mason.gmu.edu/~jdonohu2/logo1.png" alt="espress news home"></img>
+          <img class="espress_news_img" src="https://espress.s3.amazonaws.com/img/espress_logo.png" alt="espress news home"></img>
         </a>
       </div>
 
