@@ -177,7 +177,7 @@ input, label {
 }
 
 .sample_img{
-  background-image: url('https://espress.s3.amazonaws.com/img/coffee_news_img.jpg');
+  background-image: url('https://espress.s3.amazonaws.com/img/coffee_news_img_home_page.jpg');
   width: 540px;
   height: 582px;
 }
