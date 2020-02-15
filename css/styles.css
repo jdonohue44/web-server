@@ -365,7 +365,7 @@ button{
 
 /*mobile*/
 @media only screen and (max-width: 650px) {
-  /*home page (index.php)*/
+  /*home page*/
   .testimonials-container{
     display: none;
   }
