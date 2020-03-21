@@ -433,6 +433,9 @@ button{
   #interests_ul li{
     padding: 8px;
   }
+  input {
+    -webkit-appearance: none;
+  }
   input[name="submit_button"] {
     height: 100%;
     width: 100%;
