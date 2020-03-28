@@ -1,9 +1,48 @@
+<?php
+function connect_to_mysql() {
+    $conn = mysqli_connect('dubai.csuhsua8cx8a.us-east-1.rds.amazonaws.com','jdonohue44','dubaiguy$$','Espresso')
+    or die('Error connecting to MySQL server.');
+    return $conn;
+  }
+
+function insert_customer_if_not_exists($conn, $email) {
+  $query = "INSERT IGNORE INTO Customer (email) VALUES ('".$email."')";
+  $conn->query($query);
+}
+
+function retrieve_customer($conn, $email) {
+  $query = "SELECT * FROM Customer WHERE email = ?";
+  $stmt = $conn->prepare($query);
+  $stmt->bind_param("i", $email);
+  $stmt->execute();
+  $result = $stmt->get_result(); // get the mysqli result
+  $customer = $result->fetch_assoc(); // fetch the data
+  return $customer;
+}
+
+function disconnect_from_mysql($conn) {
+  mysqli_close($conn);
+}
+
+$conn = connect_to_mysql();
+if(isset($_POST['validate_button']))
+{
+   session_start();
+   $email = $_POST['Email'];
+   $_SESSION['customer_email'] = $email;
+   insert_customer_if_not_exists($conn, $email);
+   disconnect_from_mysql($conn);
+   header('Location: Interests.php');
+}
+
+?>
+
 <html>
 <head>
   <meta charset=UTF-8>
-  <meta name="description" content="Espress News">
-  <meta name="keywords" content="Espress, espress, express news, Espress News,">
-  <meta name="author" content="Espress">
+  <meta name="description" content="Espresso News">
+  <meta name="keywords" content="personalized news, Espresso, espresso, express news, Espresso News, newsletter">
+  <meta name="author" content="Espresso">
   <link rel="stylesheet" type="text/css" href="./css/styles.css">
   <link rel="shortcut icon" type="image/png" href="https://espress.s3.amazonaws.com/img/coffee_cup_sm.png"/>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -28,27 +67,22 @@
             <img src="https://espress.s3.amazonaws.com/img/espress_logo_banner_login.png"></img>
           </div>
 
-          <h2 class="espress-title-message">Sign up to start customizing
-          your newsletter.</h2>
+          <h2 class="espress-title-message">Tell us where to send your newsletter.</h2>
           <!-- Input form -->
-          <form method="POST">
-            <div id="name_box">
-                <input type="text" name="Name"  id="name_text" placeholder="Name" autocorrect="off" autocapitalize="off" tabindex=1 maxlength="30" size="30" />
-            </div>
-
+          <form method="POST" action="index.php" >
             <div id="email_box">
-              <input type="text" name="Email" id="email_text" placeholder="Email" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
+              <input type="text" name="Email" id="email_text" placeholder="atticuscobain@gmail.com" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
             </div>
 
             <div class="signup-button-container">
-              <input type="submit" name="validate_button" value="Sign up" />
+              <input type="submit" name="validate_button" value="Lets go!" />
             </div>
           </form>
         </div>
 
         <div class="info">
           <p id="info_paragraph">
-            Already signed up? <a class="login_link" href="javascript:void(0)" onclick="displayLoginLayout()">Log in</a>
+            Expect an email from espressmorningnews@gmail.com
           </p>
         </div>
 
@@ -84,24 +118,6 @@
       }
     }
   });
-
-  function displayLoginLayout(){
-    $(".espress-title-message").css("display", "none");
-    $("input[type=submit]").text("Log in");
-    $("#name_text").css("display","none");
-    $("#email_text").css("margin-top","20px");
-    $("input[name=validate_button]").val("Log in");
-    $(".info").html("<p id='info_paragraph'>Dont have an account? <a class='login_link' href='javascript:void(0)'' onclick='displaySignupLayout()'>Sign up</a></p>");
-  }
-
-  function displaySignupLayout(){
-    $(".espress-title-message").css("display", "block");
-    $("input[type=submit]").text("Sign up");
-    $("#name_text").css("display","block");
-    $("#email_text").css("margin-top","8px");
-    $("input[name=validate_button]").val("Sign up");
-    $(".info").html("<p id='info_paragraph'>Already signed up? <a class='login_link' href='javascript:void(0)'' onclick='displayLoginLayout()'>Log in</a></p>");
-  }
 
   function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
