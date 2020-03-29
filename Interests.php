@@ -35,7 +35,7 @@ $customer_email =  $_SESSION['customer_email'];
 
 $conn = connect_to_mysql();
 $customer = retrieve_customer($conn, $customer_email);
-$customer_news_interests = json_decode($customer["news_interests"]);
+$customer_news_interests = $customer["news_interests"];
 
 if(isset($_POST['submit_button']))
 {
@@ -128,8 +128,6 @@ if(isset($_POST['submit_button']))
 
 
   <script>
-    // var interests = '<?php echo $customer_news_interests; ?>';
-    // console.log(interests);
     var customerEmail = '<?php echo $customer_email; ?>';
     $('.icon-group #user-icon').hover(function(){
       $('.modal').css("display","flex");
