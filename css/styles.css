@@ -218,12 +218,20 @@ input, label {
 }
 
 .espress-title-message{
-  color: #535252;
+  color: #424141;
   text-align: center;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
-  margin-top: 35px;
+  font-family: sans-serif;
+}
+
+.espress-title-sub-message{
+  color: #535252;
+  margin: 16px 0px 2px 0px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
   font-family: sans-serif;
 }
 
@@ -233,7 +241,7 @@ input, label {
 
 input[type=text] {
     padding: 12px 20px;
-    margin-top: 8px;
+    margin-top: 2px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;

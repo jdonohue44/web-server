@@ -67,7 +67,8 @@ if(isset($_POST['validate_button']))
             <img src="https://espress.s3.amazonaws.com/img/espress_logo_banner_login.png"></img>
           </div>
 
-          <h2 class="espress-title-message">Tell us where to send your newsletter.</h2>
+          <h2 class="espress-title-message">We find articles on the things you care about and deliver them neatly to your inbox. Just tell us where to send your newsletter.</h2>
+          <!-- <h4 class="espress-title-sub-message"></h4> -->
           <!-- Input form -->
           <form method="POST" action="index.php" >
             <div id="email_box">
