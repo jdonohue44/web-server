@@ -69,18 +69,17 @@ div.centered-div{
 
 #add_interest_button{
   min-width: 100px;
-  margin: 8px 0 0 0;
-  border-radius: 0 4px 4px 0;
-  border-style: solid solid solid none;
-  border-color: #6d6d6d;
-  border-width: 1px;
+  margin: 2px;
+  border-radius: 4px;
+  border: none;
 }
 
 #interest_text{
   width: 310px;
-  border-radius: 4px 0 0 4px;
-  border-right: none;
-  border-color: #6d6d6d;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  margin: 2px;
 }
 
 input, label {
