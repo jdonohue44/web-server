@@ -112,7 +112,6 @@ input, label {
 .footer{
   margin: auto;
   text-align: center;
-  margin-top: 20px;
 }
 
 .interest-form-container{
@@ -224,6 +223,8 @@ input, label {
   font-size: 14px;
   line-height: 20px;
   font-family: sans-serif;
+  width: 400px;
+  align-self: center;
 }
 
 .espress-title-sub-message{

@@ -72,7 +72,7 @@ if(isset($_POST['validate_button']))
           <!-- Input form -->
           <form method="POST" action="index.php" >
             <div id="email_box">
-              <input type="text" name="Email" id="email_text" placeholder="atticuscobain@gmail.com" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
+              <input type="text" name="Email" id="email_text" placeholder="Email" autocorrect="off" autocapitalize="off" tabindex=2 maxlength="35" size="40" />
             </div>
 
             <div class="signup-button-container">
